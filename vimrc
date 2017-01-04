@@ -1,0 +1,265 @@
+" Vim is not vi
+set nocompatible
+
+" Temporarily disable for Vundle to succeed
+filetype off
+
+" ------------------------------------------------------------------------------
+" PLUGINS
+" ------------------------------------------------------------------------------
+
+" First installation:
+"   $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+"   $ vim +PluginInstall
+" See documentation of specific plugins for their postinstall steps.
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+" Color schemes
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tomasr/molokai'
+
+" UI
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+
+" Syntax highlighting
+Plugin 'othree/html5.vim'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'mxw/vim-jsx'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'vim-latex/vim-latex'
+Plugin 'jeaye/color_coded'
+Plugin 'pangloss/vim-javascript'
+
+" Tmux integration
+Plugin 'tmux-plugins/vim-tmux-focus-events'
+Plugin 'tmux-plugins/vim-tmux'
+Plugin 'benmills/vimux'
+Plugin 'christoomey/vim-tmux-navigator'
+
+" Git integration
+Plugin 'tpope/vim-fugitive'
+Plugin 'gregsexton/gitv'
+Plugin 'airblade/vim-gitgutter'
+
+" Autocompletion
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'rdnetto/YCM-Generator'
+
+" Save keystrokes
+Plugin 'easymotion/vim-easymotion'
+Plugin 'Raimondi/delimitMate'
+Plugin 'mattn/emmet-vim'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+
+" Substitutions improvement
+Plugin 'tpope/vim-abolish'
+
+" Code comments
+Plugin 'scrooloose/nerdcommenter'
+
+" Linters integration
+Plugin 'scrooloose/syntastic'
+
+" File and buffer management
+Plugin 'scrooloose/nerdtree'
+Plugin 'wincent/Command-T'
+Plugin 'danro/rename.vim'
+
+" Undo tree
+Plugin 'sjl/gundo.vim'
+
+" Improvements for Node.js
+Plugin 'moll/vim-node'
+
+" ASCII drawing
+Plugin 'vim-scripts/DrawIt'
+
+" LLDB debugger integration
+Plugin 'gilligan/vim-lldb'
+
+" Maintain own working directories for tabs
+Plugin 'kana/vim-tabpagecd'
+
+" Create and resize splits
+Plugin 'wellle/visual-split.vim'
+
+" Search in project
+Plugin 'mileszs/ack.vim'
+ 
+call vundle#end()
+
+" ------------------------------------------------------------------------------
+" SETTINGS
+" ------------------------------------------------------------------------------
+
+" Enable filetype detection, plugins loading and automatic indentation
+filetype plugin indent on
+
+" Enable syntax highlighting and setup colorscheme
+syntax on
+colorscheme solarized
+set background=dark
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
+
+" Make status line informative
+set ruler
+set showmode
+set showcmd
+
+" Line numbers
+set number
+autocmd WinEnter,FocusGained * :setlocal number relativenumber
+autocmd WinLeave,FocusLost   * :setlocal number norelativenumber
+
+" Search settings
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+set gdefault
+
+" Let files be opened over unsaved buffers
+set hidden
+
+" Restore the cursor position
+autocmd BufReadPost *
+  \ if line("'\"") > 1 && line("'\"") <= line("$") |
+  \   exe "normal! g`\"" |
+  \ endif
+
+" Move and delete through the lines
+set backspace=indent,eol,start
+set whichwrap=b,s,<,>,[,]
+
+" Text width and line wrapping
+set nowrap
+autocmd FileType text setlocal textwidth=80
+
+" Enable mouse
+set mouse=a
+set mousehide
+
+" Indentation settings
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+set smarttab
+set expandtab
+set shiftround
+autocmd FileType python setlocal sw=4 sts=4 et
+
+" Disable bells
+set novisualbell
+set noerrorbells
+set vb t_vb=
+
+" File saving and reading
+set autowrite
+set autoread
+set nobackup
+set nowritebackup
+set noswapfile
+
+" Open new windows right and below
+set splitbelow
+set splitright
+
+" Always show the status line
+set laststatus=2
+
+" Make commands and undo history bigger
+set history=1000
+set undolevels=1000
+
+" File and path autocompletion
+set path+=**
+set wildignore=*.o,*.pyc,*.class,*.d,*/.git/*,*/node_modules/*,.DS_Store
+set wildmenu
+
+" Enable spell cheking for certain types of files
+autocmd FileType gitcommit setlocal spell
+autocmd FileType text setlocal spell
+autocmd FileType plaintex setlocal spell
+autocmd FileType tex setlocal spell
+
+" Enable alternative keyboard layout (C-^ to switch)
+set keymap=russian-jcukenmac
+set iminsert=0
+set imsearch=0
+
+" GVim and MacVim settings
+if has("gui_running")
+  set guioptions-=r
+  set guioptions-=L
+  set guioptions-=e
+  set guifont=Source\ Code\ Pro:h12
+endif
+
+" delimitMate settings
+let delimitMate_expand_space = 1
+let delimitMate_expand_cr = 1
+
+" Gundo settings
+let g:gundo_right = 1
+let g:gundo_close_on_revert = 1
+
+" YouCompleteMe settings
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/ycm_extra_conf.py'
+let g:ycm_python_binary_path = '/usr/local/bin/python3'
+let g:ycm_extra_conf_globlist = ['~/projects/*']
+
+" Markdown settings
+let g:vim_markdown_folding_disabled = 1
+
+" Syntastic settings
+let g:syntastic_javascript_checkers = ['eslint']
+
+" JavaScript settings
+let g:javascript_plugin_flow = 1
+let g:jsx_ext_required = 1
+
+" ------------------------------------------------------------------------------
+" KEYBINDINGS
+" ------------------------------------------------------------------------------
+
+" Setup a convenient leader key
+let mapleader = ","
+
+" Clear search highlighting
+nmap <leader>/ :nohlsearch<CR>
+
+" Git keybindings
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gc :Gcommit<CR>
+nnoremap <leader>gp :Gpush<CR>
+nnoremap <leader>gl :Gitv<CR>
+
+" Run tests
+nnoremap <leader>nt :VimuxRunCommand("npm test")<CR>
+
+" Fix style
+nnoremap <leader>jsf :!eslint --fix %<CR>
+
+" Run the file
+nnoremap <leader>nj :VimuxRunCommand("node " . bufname("%"))<CR>
+nnoremap <leader>p3 :VimuxRunCommand("python3.6 " . bufname("%"))<CR>
+nnoremap <leader>lx :VimuxRunCommand("lualatex -pdf " . bufname("%"))<CR>
+
+" Show the undo tree
+nnoremap <leader>u :GundoToggle<CR>
+
+" Simple navigation and refactoring provided by YouCompleteMe
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>rr :YcmCompleter RefactorRename 
+nnoremap <leader>gt :YcmCompleter GetType<CR>
+nnoremap <leader>gd :YcmCompleter GetDoc<CR>
+
+" Some plugins setup their own keybindings, refer to their manuals to learn
+" these keys.  E.g., C-{h,j,k,l} are used to seamlessly switch between Vim
+" windows and tmux panes.
