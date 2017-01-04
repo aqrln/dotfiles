@@ -1,97 +1,96 @@
 " Vim is not vi
 set nocompatible
 
-" Temporarily disable for Vundle to succeed
-filetype off
-
 " ------------------------------------------------------------------------------
 " PLUGINS
 " ------------------------------------------------------------------------------
 
 " First installation:
-"   $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-"   $ vim +PluginInstall
-" See documentation of specific plugins for their postinstall steps.
+"   $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+"       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+"   $ vim +PlugInstall
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
 " Color schemes
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'tomasr/molokai'
+Plug 'altercation/vim-colors-solarized'
+Plug 'tomasr/molokai'
 
-" UI
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+" Powerline
+Plug 'powerline/powerline', { 'rtp': 'powerline/bindings/vim/' }
 
 " Syntax highlighting
-Plugin 'othree/html5.vim'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'mxw/vim-jsx'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'vim-latex/vim-latex'
-Plugin 'jeaye/color_coded'
-Plugin 'pangloss/vim-javascript'
+Plug 'othree/html5.vim'
+Plug 'plasticboy/vim-markdown'
+Plug 'mxw/vim-jsx'
+Plug 'leafgarland/typescript-vim'
+Plug 'vim-latex/vim-latex'
+Plug 'jeaye/color_coded', { 'do': 'cmake . && make && make install' }
+Plug 'pangloss/vim-javascript'
 
 " Tmux integration
-Plugin 'tmux-plugins/vim-tmux-focus-events'
-Plugin 'tmux-plugins/vim-tmux'
-Plugin 'benmills/vimux'
-Plugin 'christoomey/vim-tmux-navigator'
+Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'tmux-plugins/vim-tmux'
+Plug 'benmills/vimux'
+Plug 'christoomey/vim-tmux-navigator'
 
 " Git integration
-Plugin 'tpope/vim-fugitive'
-Plugin 'gregsexton/gitv'
-Plugin 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'gregsexton/gitv'
+Plug 'airblade/vim-gitgutter'
 
 " Autocompletion
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'rdnetto/YCM-Generator'
+Plug 'Valloric/YouCompleteMe', {
+  \   'do':
+  \      './install.py --clang-completer --tern-completer --gocode-completer'
+  \ }
+Plug 'rdnetto/YCM-Generator'
 
 " Save keystrokes
-Plugin 'easymotion/vim-easymotion'
-Plugin 'Raimondi/delimitMate'
-Plugin 'mattn/emmet-vim'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
+Plug 'easymotion/vim-easymotion'
+Plug 'Raimondi/delimitMate'
+Plug 'mattn/emmet-vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 
 " Substitutions improvement
-Plugin 'tpope/vim-abolish'
+Plug 'tpope/vim-abolish'
 
 " Code comments
-Plugin 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdcommenter'
 
 " Linters integration
-Plugin 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'
 
 " File and buffer management
-Plugin 'scrooloose/nerdtree'
-Plugin 'wincent/Command-T'
-Plugin 'danro/rename.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'wincent/Command-T', {
+  \   'do': 'cd ruby/command-t && ruby extconf.rb && make'
+  \ }
+Plug 'danro/rename.vim'
 
 " Undo tree
-Plugin 'sjl/gundo.vim'
+Plug 'sjl/gundo.vim'
 
 " Improvements for Node.js
-Plugin 'moll/vim-node'
+Plug 'moll/vim-node'
 
 " ASCII drawing
-Plugin 'vim-scripts/DrawIt'
+Plug 'vim-scripts/DrawIt'
 
 " LLDB debugger integration
-Plugin 'gilligan/vim-lldb'
+Plug 'gilligan/vim-lldb'
 
 " Maintain own working directories for tabs
-Plugin 'kana/vim-tabpagecd'
+Plug 'kana/vim-tabpagecd'
 
 " Create and resize splits
-Plugin 'wellle/visual-split.vim'
+Plug 'wellle/visual-split.vim'
 
 " Search in project
-Plugin 'mileszs/ack.vim'
+Plug 'mileszs/ack.vim'
  
-call vundle#end()
+call plug#end()
 
 " ------------------------------------------------------------------------------
 " SETTINGS
