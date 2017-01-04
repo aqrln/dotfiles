@@ -25,7 +25,9 @@ Plug 'plasticboy/vim-markdown'
 Plug 'mxw/vim-jsx'
 Plug 'leafgarland/typescript-vim'
 Plug 'vim-latex/vim-latex'
-Plug 'jeaye/color_coded', { 'do': 'cmake . && make && make install' }
+Plug 'jeaye/color_coded', {
+  \   'do': 'cmake -DDOWNLOAD_CLANG=FALSE . && make && make install'
+  \ }
 Plug 'pangloss/vim-javascript'
 
 " Tmux integration
@@ -41,8 +43,7 @@ Plug 'airblade/vim-gitgutter'
 
 " Autocompletion
 Plug 'Valloric/YouCompleteMe', {
-  \   'do':
-  \      './install.py --clang-completer --tern-completer --gocode-completer'
+  \   'do': './install.py --clang-completer --system-libclang --tern-completer --gocode-completer'
   \ }
 Plug 'rdnetto/YCM-Generator'
 
