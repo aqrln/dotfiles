@@ -89,7 +89,7 @@ Plug 'gilligan/vim-lldb'
 " Maintain own working directories for tabs
 Plug 'kana/vim-tabpagecd'
 
-" Create and resize splits
+" Create and resize windows
 Plug 'wellle/visual-split.vim'
 
 " Search in project
