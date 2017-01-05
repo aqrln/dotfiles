@@ -28,7 +28,7 @@ Plug 'othree/html5.vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'mxw/vim-jsx'
 Plug 'leafgarland/typescript-vim'
-Plug 'vim-latex/vim-latex'
+Plug 'lervag/vimtex'
 Plug 'jeaye/color_coded', {
   \   'do': 'cmake -DDOWNLOAD_CLANG=FALSE . && make && make install'
   \ }
