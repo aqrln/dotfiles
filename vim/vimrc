@@ -196,9 +196,9 @@ autocmd BufRead,BufNewFile DEPS   set filetype=python et ts=2 sw=2
 
 " Enable spell cheking for certain types of files
 autocmd FileType gitcommit setlocal spell
-autocmd FileType text setlocal spell
-autocmd FileType plaintex setlocal spell
-autocmd FileType tex setlocal spell
+autocmd FileType text      setlocal spell
+autocmd FileType plaintex  setlocal spell
+autocmd FileType tex       setlocal spell
 
 " Enable alternative keyboard layout (C-^ to switch)
 set keymap=russian-jcukenmac
