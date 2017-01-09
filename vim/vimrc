@@ -189,6 +189,11 @@ set path+=**
 set wildignore=*.o,*.pyc,*.class,*.d,*/.git/*,*/node_modules/*,.DS_Store
 set wildmenu
 
+" Custom filetypes
+autocmd BufRead,BufNewFile *.gyp  set filetype=python et ts=2 sw=2
+autocmd BufRead,BufNewFile *.gypi set filetype=python et ts=2 sw=2
+autocmd BufRead,BufNewFile DEPS   set filetype=python et ts=2 sw=2
+
 " Enable spell cheking for certain types of files
 autocmd FileType gitcommit setlocal spell
 autocmd FileType text setlocal spell
