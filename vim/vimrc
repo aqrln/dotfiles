@@ -206,7 +206,7 @@ set iminsert=0
 set imsearch=0
 
 " GVim and MacVim settings
-if has("gui_running")
+if has('gui_running')
   set guioptions-=r
   set guioptions-=L
   set guioptions-=e
@@ -246,7 +246,7 @@ endif
 " ------------------------------------------------------------------------------
 
 " Setup a convenient leader key
-let mapleader = ","
+let mapleader = ','
 
 " Clear search highlighting
 nmap <leader>/ :nohlsearch<CR>
@@ -258,16 +258,16 @@ nnoremap <leader>gp :Gpush<CR>
 nnoremap <leader>gl :Gitv<CR>
 
 " Run tests
-nnoremap <leader>nt :VimuxRunCommand("npm test")<CR>
+nnoremap <leader>nt :VimuxRunCommand('npm test')<CR>
 
 " Fix style
 nnoremap <leader>jsf :!eslint --fix %<CR>
 
 " Run the file
-nnoremap <leader>nj :VimuxRunCommand("node " . bufname("%"))<CR>
-nnoremap <leader>p3 :VimuxRunCommand("python3.6 " . bufname("%"))<CR>
-nnoremap <leader>pr :VimuxRunCommand("python " . bufname("%"))<CR>
-nnoremap <leader>lx :VimuxRunCommand("lualatex -pdf " . bufname("%"))<CR>
+nnoremap <leader>nj :VimuxRunCommand('node ' . bufname('%'))<CR>
+nnoremap <leader>p3 :VimuxRunCommand('python3.6 ' . bufname('%'))<CR>
+nnoremap <leader>pr :VimuxRunCommand('python ' . bufname('%'))<CR>
+nnoremap <leader>lx :VimuxRunCommand('lualatex -pdf ' . bufname('%'))<CR>
 
 " Show the undo tree
 nnoremap <leader>u :GundoToggle<CR>
