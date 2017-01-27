@@ -261,6 +261,7 @@ nnoremap <leader>jsf :!eslint --fix %<CR>
 " Run the file
 nnoremap <leader>nj :VimuxRunCommand("node " . bufname("%"))<CR>
 nnoremap <leader>p3 :VimuxRunCommand("python3.6 " . bufname("%"))<CR>
+nnoremap <leader>pr :VimuxRunCommand("python " . bufname("%"))<CR>
 nnoremap <leader>lx :VimuxRunCommand("lualatex -pdf " . bufname("%"))<CR>
 
 " Show the undo tree
