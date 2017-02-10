@@ -278,6 +278,10 @@ nnoremap <leader>rr :YcmCompleter RefactorRename
 nnoremap <leader>gt :YcmCompleter GetType<CR>
 nnoremap <leader>gd :YcmCompleter GetDoc<CR>
 
+" Easier keyboard mappings for keyboard layout switching
+inoremap <M-Space> <C-^>
+nnoremap <M-Space> a<C-^><Esc>
+
 " Some plugins setup their own keybindings, refer to their manuals to learn
 " these keys.  E.g., C-{h,j,k,l} are used to seamlessly switch between Vim
 " windows and tmux panes.
