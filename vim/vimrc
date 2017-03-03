@@ -242,6 +242,9 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
+" vim-airline settings
+let g:airline_theme = 'base16_solarized'
+
 " ------------------------------------------------------------------------------
 "  KEYBINDINGS
 " ------------------------------------------------------------------------------
