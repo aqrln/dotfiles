@@ -95,7 +95,7 @@ Plug 'wellle/visual-split.vim'
 
 " Search in project
 Plug 'mileszs/ack.vim'
- 
+
 call plug#end()
 
 " Enable Vim's matchit plugin
@@ -275,7 +275,7 @@ nnoremap <leader>u :GundoToggle<CR>
 
 " Simple navigation and refactoring provided by YouCompleteMe
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-nnoremap <leader>rr :YcmCompleter RefactorRename 
+nnoremap <leader>rr :YcmCompleter RefactorRename
 nnoremap <leader>gt :YcmCompleter GetType<CR>
 nnoremap <leader>gd :YcmCompleter GetDoc<CR>
 
