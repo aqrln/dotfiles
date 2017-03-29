@@ -30,7 +30,7 @@ Plug 'mxw/vim-jsx'
 Plug 'leafgarland/typescript-vim'
 Plug 'lervag/vimtex'
 Plug 'jeaye/color_coded', {
-  \   'do': 'cmake -DDOWNLOAD_CLANG=FALSE . && make && make install'
+  \   'do': 'cmake . && make && make install'
   \ }
 Plug 'pangloss/vim-javascript'
 Plug 'fleischie/vim-styled-components'
