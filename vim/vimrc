@@ -50,7 +50,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'Valloric/YouCompleteMe', {
   \   'do': './install.py --clang-completer --system-libclang --tern-completer --gocode-completer'
   \ }
-Plug 'rdnetto/YCM-Generator'
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 
 " Save keystrokes
 Plug 'easymotion/vim-easymotion'
