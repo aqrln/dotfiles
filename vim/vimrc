@@ -33,6 +33,7 @@ Plug 'jeaye/color_coded', {
   \   'do': 'cmake -DDOWNLOAD_CLANG=FALSE . && make && make install'
   \ }
 Plug 'pangloss/vim-javascript'
+Plug 'fleischie/vim-styled-components'
 
 " Tmux integration
 Plug 'tmux-plugins/vim-tmux-focus-events'
