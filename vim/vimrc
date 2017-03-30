@@ -19,6 +19,7 @@ call plug#begin('~/.vim/plugged')
 " Color schemes
 Plug 'altercation/vim-colors-solarized'
 Plug 'tomasr/molokai'
+Plug 'NigoroJr/color_coded-colorschemes'
 
 " Airline
 Plug 'vim-airline/vim-airline'
@@ -110,7 +111,7 @@ filetype plugin indent on
 
 " Enable syntax highlighting and setup colorscheme
 syntax on
-colorscheme solarized
+colorscheme solarizeded
 set background=dark
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
