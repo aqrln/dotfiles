@@ -111,7 +111,7 @@ filetype plugin indent on
 
 " Enable syntax highlighting and setup colorscheme
 syntax on
-colorscheme solarizeded
+colorscheme molokaied
 set background=dark
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
@@ -248,7 +248,7 @@ if executable('ag')
 endif
 
 " vim-airline settings
-let g:airline_theme = 'base16_solarized'
+let g:airline_theme = 'base16_monokai'
 
 " ------------------------------------------------------------------------------
 "  KEYBINDINGS
