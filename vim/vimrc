@@ -49,7 +49,7 @@ Plug 'airblade/vim-gitgutter'
 
 " Autocompletion
 Plug 'Valloric/YouCompleteMe', {
-  \   'do': './install.py --clang-completer --system-libclang --tern-completer --gocode-completer'
+  \   'do': './install.py --clang-completer --system-libclang --tern-completer --gocode-completer --racer-completer'
   \ }
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 
