@@ -234,6 +234,14 @@ let g:deoplete#sources#clang#clang_header = '/Library/Developer/CommandLineTools
 let g:tern#filetypes = ['javascript', 'jsx', 'javascript.jsx']
 let g:deoplete#sources#rust#rust_source_path = $RUST_SRC_PATH
 
+" ALE settings
+let g:ale_linters = {
+  \   'c':         ['cppcheck',  'clang'],
+  \   'cpp':       ['clangtidy', 'cppcheck', 'cpplint', 'clang'],
+  \   'gitcommit': ['proselint', 'vale'],
+  \   'text':      ['proselint', 'vale']
+  \ }
+
 " ------------------------------------------------------------------------------
 "  KEYBINDINGS
 " ------------------------------------------------------------------------------
