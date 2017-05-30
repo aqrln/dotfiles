@@ -46,6 +46,7 @@ Plug 'zchee/deoplete-clang'
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'zchee/deoplete-jedi'
 Plug 'sebastianmarkow/deoplete-rust'
+Plug 'wellle/tmux-complete.vim'
 
 " Save keystrokes
 Plug 'easymotion/vim-easymotion'
