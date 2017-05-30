@@ -67,7 +67,7 @@ Plug 'tpope/vim-abolish'
 Plug 'scrooloose/nerdcommenter'
 
 " Linters integration
-Plug 'scrooloose/syntastic'
+Plug 'w0rp/ale'
 
 " File and buffer management
 Plug 'scrooloose/nerdtree'
@@ -234,9 +234,6 @@ let g:markdown_fenced_languages = [
   \ 'js=javascript', 'javascript', 'c', 'cpp', 'python', 'html',
   \ 'sh', 'bash=sh', 'console=sh'
   \ ]
-
-" Syntastic settings
-let g:syntastic_javascript_checkers = ['eslint']
 
 " JavaScript settings
 let g:javascript_plugin_flow = 1
