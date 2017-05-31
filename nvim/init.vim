@@ -89,6 +89,9 @@ Plug 'wellle/visual-split.vim'
 " Search in project
 Plug 'mileszs/ack.vim'
 
+" LaTeX live reload
+Plug 'donRaphaco/neotex', { 'for': 'tex', 'do': ':UpdateRemotePlugins' }
+
 call plug#end()
 
 " ------------------------------------------------------------------------------
