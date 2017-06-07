@@ -13,6 +13,9 @@
 
 call plug#begin('~/.local/share/nvim/plugged')
 
+" Support Node.js plugins
+Plug 'neovim/node-host', { 'do': 'npm install' }
+
 " Color schemes
 Plug 'tomasr/molokai'
 
@@ -89,8 +92,9 @@ Plug 'wellle/visual-split.vim'
 " Search in project
 Plug 'mileszs/ack.vim'
 
-" LaTeX live reload
+" Documents live reload
 Plug 'donRaphaco/neotex', { 'for': 'tex', 'do': ':UpdateRemotePlugins' }
+Plug 'vimlab/mdown.vim', { 'do': 'npm install' }
 
 call plug#end()
 
