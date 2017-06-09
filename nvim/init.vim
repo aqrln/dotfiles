@@ -108,9 +108,9 @@ filetype plugin indent on
 
 " Enable syntax highlighting and setup colorscheme
 syntax on
-colorscheme molokai
 set background=dark
 set termguicolors
+colorscheme molokai
 
 " Make status line informative
 set ruler
