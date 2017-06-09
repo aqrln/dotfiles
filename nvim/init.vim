@@ -241,6 +241,7 @@ let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#clang#libclang_path = '/Library/Developer/CommandLineTools/usr/lib/libclang.dylib'
 let g:deoplete#sources#clang#clang_header = '/Library/Developer/CommandLineTools/usr/lib/clang'
 let g:tern#filetypes = ['javascript', 'jsx', 'javascript.jsx']
+let g:deoplete#sources#rust#racer_binary = expand('~/.cargo/bin/racer')
 let g:deoplete#sources#rust#rust_source_path = $RUST_SRC_PATH
 
 " ALE settings
