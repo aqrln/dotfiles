@@ -31,6 +31,7 @@ Plug 'lervag/vimtex'
 Plug 'pangloss/vim-javascript'
 Plug 'fleischie/vim-styled-components'
 Plug 'arakashic/chromatica.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'rust-lang/rust.vim'
 
 " Tmux integration
 Plug 'tmux-plugins/vim-tmux-focus-events'
