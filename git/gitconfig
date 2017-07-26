@@ -1,19 +1,19 @@
 [include]
-	path = ~/.gitconfig.local
+  path = ~/.gitconfig.local
 [push]
-	default = current
+  default = current
 [pull]
-	rebase = true
+  rebase = true
 [commit]
-	gpgsign = true
+  gpgsign = true
 [apply]
-	whitespace = fix
+  whitespace = fix
 [diff]
-	wsErrorHighlight = all
+  wsErrorHighlight = all
 [alias]
-	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [core]
-	excludesfile = ~/.gitignore
+  excludesfile = ~/.gitignore
 [merge]
   tool = nvimdiff
 [mergetool]
