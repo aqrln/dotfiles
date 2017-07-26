@@ -273,6 +273,7 @@ nnoremap <leader>nt :VimuxRunCommand('npm test')<CR>
 
 " Fix style
 nnoremap <leader>jsf :!eslint --fix %<CR>
+nnoremap <leader>rf :RustFmt<CR>
 
 " Run the file
 nnoremap <leader>nj :VimuxRunCommand('node ' . bufname('%'))<CR>
