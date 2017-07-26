@@ -71,7 +71,7 @@ Plug 'w0rp/ale'
 " File and buffer management
 Plug 'scrooloose/nerdtree'
 Plug 'wincent/Command-T', {
-  \   'do': 'cd ruby/command-t && ruby extconf.rb && make'
+  \   'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
   \ }
 Plug 'danro/rename.vim'
 
