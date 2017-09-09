@@ -96,7 +96,6 @@ Plug 'mileszs/ack.vim'
 
 " Documents live reload
 Plug 'donRaphaco/neotex', { 'for': 'tex', 'do': ':UpdateRemotePlugins' }
-Plug 'vimlab/mdown.vim', { 'do': 'npm install' }
 
 call plug#end()
 
