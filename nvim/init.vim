@@ -32,6 +32,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'fleischie/vim-styled-components'
 Plug 'arakashic/chromatica.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'rust-lang/rust.vim'
+Plug 'OrangeT/vim-csharp'
 
 " Tmux integration
 Plug 'tmux-plugins/vim-tmux-focus-events'
@@ -158,6 +159,7 @@ set smarttab
 set expandtab
 set shiftround
 autocmd FileType python setlocal sw=4 sts=4 et
+autocmd FileType cs     setlocal sw=4 sts=4 et
 
 " Disable bells
 set novisualbell
