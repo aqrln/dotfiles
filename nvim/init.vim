@@ -55,6 +55,10 @@ Plug 'zchee/deoplete-jedi'
 Plug 'sebastianmarkow/deoplete-rust'
 Plug 'wellle/tmux-complete.vim'
 
+" Documentation
+Plug 'Shougo/echodoc.vim'
+Plug 'rhysd/rust-doc.vim'
+
 " Save keystrokes
 Plug 'easymotion/vim-easymotion'
 Plug 'Raimondi/delimitMate'
