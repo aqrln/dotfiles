@@ -18,6 +18,7 @@ Plug 'neovim/node-host', { 'do': 'npm install' }
 
 " Color schemes
 Plug 'tomasr/molokai'
+Plug 'morhetz/gruvbox'
 
 " Airline
 Plug 'vim-airline/vim-airline'
@@ -110,7 +111,15 @@ filetype plugin indent on
 syntax on
 set background=dark
 set termguicolors
-colorscheme molokai
+colorscheme gruvbox
+
+" This is only needed for Molokai since the background color doesn't match the
+" one that Molokai colorscheme for my terminal uses.
+"
+" highlight Normal ctermbg=none
+" highlight NonText ctermbg=none
+" highlight Normal guibg=none
+" highlight NonText guibg=none
 
 " Make status line informative
 set ruler
@@ -229,7 +238,7 @@ if executable('ag')
 endif
 
 " vim-airline settings
-let g:airline_theme = 'molokai'
+let g:airline_theme = 'gruvbox'
 
 " Chromatica settings
 let g:chromatica#libclang_path = '/Library/Developer/CommandLineTools/usr/lib/libclang.dylib'
