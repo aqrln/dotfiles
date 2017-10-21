@@ -212,6 +212,8 @@ autocmd FileType gitcommit setlocal spell
 autocmd FileType text      setlocal spell
 autocmd FileType plaintex  setlocal spell
 autocmd FileType tex       setlocal spell
+autocmd FileType markdown  setlocal spell
+autocmd FileType rst       setlocal spell
 
 " Enable alternative keyboard layout (C-^ to switch)
 set keymap=russian-jcukenmac
