@@ -34,6 +34,7 @@ Plug 'fleischie/vim-styled-components'
 Plug 'arakashic/chromatica.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'rust-lang/rust.vim'
 Plug 'OrangeT/vim-csharp'
+Plug 'cespare/vim-toml'
 
 " Tmux integration
 Plug 'tmux-plugins/vim-tmux-focus-events'
