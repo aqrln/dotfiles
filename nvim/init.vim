@@ -45,7 +45,7 @@ Plug 'christoomey/vim-tmux-navigator'
 " Git integration
 Plug 'tpope/vim-fugitive'
 Plug 'gregsexton/gitv'
-Plug 'airblade/vim-gitgutter'
+Plug 'mhinz/vim-signify'
 
 " Autocompletion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
