@@ -54,6 +54,7 @@ Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'zchee/deoplete-jedi'
 Plug 'sebastianmarkow/deoplete-rust'
 Plug 'wellle/tmux-complete.vim'
+Plug 'zchee/deoplete-go', { 'do': 'make' }
 
 " Documentation
 Plug 'Shougo/echodoc.vim'
@@ -214,6 +215,10 @@ autocmd FileType plaintex  setlocal spell
 autocmd FileType tex       setlocal spell
 autocmd FileType markdown  setlocal spell
 autocmd FileType rst       setlocal spell
+
+" Format Go sources automatically
+" autocmd BufWritePost *.go !goimports -w %
+" autocmd FileType go autocmd BufWritePre <buffer> !goimports -w %
 
 " Enable alternative keyboard layout (C-^ to switch)
 set keymap=russian-jcukenmac
