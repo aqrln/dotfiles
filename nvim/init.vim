@@ -102,9 +102,6 @@ Plug 'wellle/visual-split.vim'
 " Search in project
 Plug 'mileszs/ack.vim'
 
-" Documents live reload
-Plug 'donRaphaco/neotex', { 'for': 'tex', 'do': ':UpdateRemotePlugins' }
-
 " Icons
 Plug 'ryanoasis/vim-devicons'
 
