@@ -265,6 +265,7 @@ let g:deoplete#sources#clang#clang_header = '/Library/Developer/CommandLineTools
 let g:tern#filetypes = ['javascript', 'jsx', 'javascript.jsx']
 let g:deoplete#sources#rust#racer_binary = expand('~/.cargo/bin/racer')
 let g:deoplete#sources#rust#rust_source_path = $RUST_SRC_PATH
+let g:deoplete#sources#rust#show_duplicates = 0
 
 " ALE settings
 let g:ale_linters = {
