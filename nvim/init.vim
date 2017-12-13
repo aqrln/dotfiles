@@ -105,6 +105,9 @@ Plug 'mileszs/ack.vim'
 " Documents live reload
 Plug 'donRaphaco/neotex', { 'for': 'tex', 'do': ':UpdateRemotePlugins' }
 
+" Icons
+Plug 'ryanoasis/vim-devicons'
+
 call plug#end()
 
 " ------------------------------------------------------------------------------
