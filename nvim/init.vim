@@ -209,6 +209,9 @@ autocmd BufRead,BufNewFile *.gyp  set filetype=python et ts=2 sw=2
 autocmd BufRead,BufNewFile *.gypi set filetype=python et ts=2 sw=2
 autocmd BufRead,BufNewFile DEPS   set filetype=python et ts=2 sw=2
 
+autocmd BufRead,BufNewFile .eslintrc set filetype=json
+autocmd BufRead,BufNewFile .babelrc  set filetype=json
+
 " Enable spell cheking for certain types of files
 autocmd FileType gitcommit setlocal spell
 autocmd FileType text      setlocal spell
