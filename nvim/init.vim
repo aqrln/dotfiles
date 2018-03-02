@@ -315,6 +315,10 @@ nnoremap <leader>u :GundoToggle<CR>
 inoremap <M-Space> <C-^>
 nnoremap <M-Space> a<C-^><Esc>
 
+" Jump through the quickfix list
+nnoremap <M-n> :cnext<CR>
+nnoremap <M-p> :cprevious<CR>
+
 " Some plugins setup their own keybindings, refer to their manuals to learn
 " these keys.  E.g., C-{h,j,k,l} are used to seamlessly switch between Vim
 " windows and tmux panes.
