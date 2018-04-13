@@ -95,6 +95,9 @@ Plug 'sjl/gundo.vim'
 " Improvements for Node.js
 Plug 'moll/vim-node'
 
+" Frontend development
+Plug 'KabbAmine/vCoolor.vim'
+
 " ASCII drawing
 Plug 'vim-scripts/DrawIt'
 
