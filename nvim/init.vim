@@ -35,6 +35,7 @@ Plug 'arakashic/chromatica.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'rust-lang/rust.vim'
 Plug 'OrangeT/vim-csharp'
 Plug 'cespare/vim-toml'
+Plug 'elzr/vim-json'
 
 " Tmux integration
 Plug 'tmux-plugins/vim-tmux-focus-events'
