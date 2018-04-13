@@ -105,6 +105,9 @@ Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fireplace'
 Plug 'kovisoft/paredit'
 
+" ReasonML
+Plug 'reasonml-editor/vim-reason-plus'
+
 " ASCII drawing
 Plug 'vim-scripts/DrawIt'
 
