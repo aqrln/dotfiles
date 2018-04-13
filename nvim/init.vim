@@ -85,10 +85,9 @@ Plug 'w0rp/ale'
 
 " File and buffer management
 Plug 'scrooloose/nerdtree'
-Plug 'wincent/Command-T', {
-  \   'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
-  \ }
 Plug 'danro/rename.vim'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 
 " Undo tree
 Plug 'sjl/gundo.vim'
@@ -299,6 +298,19 @@ let g:LanguageClient_serverCommands = {
   \ }
 
 " ------------------------------------------------------------------------------
+"  COMMANDS
+" ------------------------------------------------------------------------------
+
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always '
+  \     . shellescape(<q-args>),
+  \   1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
+
+" ------------------------------------------------------------------------------
 "  KEYBINDINGS
 " ------------------------------------------------------------------------------
 
@@ -337,6 +349,11 @@ nnoremap <M-Space> a<C-^><Esc>
 " Jump through the quickfix list
 nnoremap <M-n> :cnext<CR>
 nnoremap <M-p> :cprevious<CR>
+
+" Open fzf window
+nnoremap <leader>o :Files<CR>
+nnoremap <leader>p :GFiles<CR>
+nnoremap <leader>b :Buffers<CR>
 
 " Some plugins setup their own keybindings, refer to their manuals to learn
 " these keys.  E.g., C-{h,j,k,l} are used to seamlessly switch between Vim
