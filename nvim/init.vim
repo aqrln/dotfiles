@@ -341,8 +341,6 @@ nnoremap <leader>gc :Gcommit<CR>
 nnoremap <leader>gp :Gpush<CR>
 nnoremap <leader>gl :Gitv<CR>
 
-" Run tests
-nnoremap <leader>nt :VimuxRunCommand('npm test')<CR>
 " LanguageClient keybindings
 nnoremap <CR> :call LanguageClient_textDocument_hover()<CR>
 nnoremap <leader>ld :call LanguageClient_textDocument_definition()<CR>
@@ -355,12 +353,6 @@ nnoremap <leader>lws :call LanguageClient_textDocument_workspace_symbol()<CR>
 " Fix style
 nnoremap <leader>jsf :!eslint --fix %<CR>
 nnoremap <leader>rf :RustFmt<CR>
-
-" Run the file
-nnoremap <leader>nj :VimuxRunCommand('node ' . bufname('%'))<CR>
-nnoremap <leader>p3 :VimuxRunCommand('python3.6 ' . bufname('%'))<CR>
-nnoremap <leader>pr :VimuxRunCommand('python ' . bufname('%'))<CR>
-nnoremap <leader>lx :VimuxRunCommand('lualatex -pdf ' . bufname('%'))<CR>
 
 " Show the undo tree
 nnoremap <leader>u :GundoToggle<CR>
