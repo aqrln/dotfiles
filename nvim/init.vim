@@ -365,6 +365,10 @@ nnoremap <M-Space> a<C-^><Esc>
 nnoremap <M-n> :cnext<CR>
 nnoremap <M-p> :cprevious<CR>
 
+" Jump through the location list
+nnoremap <M-j> :lnext<CR>
+nnoremap <M-k> :lprevious<CR>
+
 " Open fzf window
 nnoremap <leader>o :Files<CR>
 nnoremap <leader>p :GFiles<CR>
