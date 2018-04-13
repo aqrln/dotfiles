@@ -78,7 +78,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-abolish'
 
 " Code comments
-Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-commentary'
 
 " Linters integration
 Plug 'w0rp/ale'
