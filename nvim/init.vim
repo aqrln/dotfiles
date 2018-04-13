@@ -330,7 +330,7 @@ command! -bang -nargs=* Rg
 " ------------------------------------------------------------------------------
 
 " Setup a convenient leader key
-let mapleader = ','
+let mapleader = ' '
 
 " Clear search highlighting
 nmap <leader>/ :nohlsearch<CR>
