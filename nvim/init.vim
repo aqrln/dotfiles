@@ -49,10 +49,15 @@ Plug 'tpope/vim-fugitive'
 Plug 'gregsexton/gitv'
 Plug 'mhinz/vim-signify'
 
+" Language Server
+Plug 'autozimu/LanguageClient-neovim', {
+  \ 'branch': 'next',
+  \ 'do': 'bash install.sh',
+  \ }
+
 " Autocompletion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-clang'
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'zchee/deoplete-jedi'
 Plug 'sebastianmarkow/deoplete-rust'
 Plug 'wellle/tmux-complete.vim'
@@ -267,7 +272,6 @@ let g:chromatica#highlight_feature_level = 1
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#clang#libclang_path = '/Library/Developer/CommandLineTools/usr/lib/libclang.dylib'
 let g:deoplete#sources#clang#clang_header = '/Library/Developer/CommandLineTools/usr/lib/clang'
-let g:tern#filetypes = ['javascript', 'jsx', 'javascript.jsx']
 let g:deoplete#sources#rust#racer_binary = expand('~/.cargo/bin/racer')
 let g:deoplete#sources#rust#rust_source_path = $RUST_SRC_PATH
 let g:deoplete#sources#rust#show_duplicates = 0
@@ -278,6 +282,20 @@ let g:ale_linters = {
   \   'cpp':       ['clangtidy', 'cppcheck', 'cpplint', 'clang'],
   \   'gitcommit': ['proselint', 'vale'],
   \   'text':      ['proselint', 'vale']
+  \ }
+
+" LanguageClient settings
+
+" Alternative language server for JavaScript:
+"  \ 'javascript': ['flow-language-server', '--stdio'],
+"  \ 'javascript.jsx': ['flow-language-server', '--stdio'],
+"
+let g:LanguageClient_serverCommands = {
+  \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
+  \ 'javascript': ['javascript-typescript-stdio'],
+  \ 'javascript.jsx': ['javascript-typescript-stdio'],
+  \ 'reason': ['ocaml-language-server', '--stdio'],
+  \ 'ocaml': ['ocaml-language-server', '--stdio'],
   \ }
 
 " ------------------------------------------------------------------------------
