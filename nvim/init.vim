@@ -98,6 +98,13 @@ Plug 'moll/vim-node'
 " Frontend development
 Plug 'KabbAmine/vCoolor.vim'
 
+" Clojure and Lisp
+Plug 'tpope/vim-salve'
+Plug 'tpope/vim-projectionist'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-fireplace'
+Plug 'kovisoft/paredit'
+
 " ASCII drawing
 Plug 'vim-scripts/DrawIt'
 
