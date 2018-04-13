@@ -267,7 +267,9 @@ let g:javascript_plugin_flow = 1
 let g:jsx_ext_required = 0
 
 " ack.vim settings
-if executable('ag')
+if executable('rg')
+  let g:ackprg = 'rg --vimgrep'
+elseif executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
