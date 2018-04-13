@@ -328,6 +328,14 @@ nnoremap <leader>gl :Gitv<CR>
 
 " Run tests
 nnoremap <leader>nt :VimuxRunCommand('npm test')<CR>
+" LanguageClient keybindings
+nnoremap <CR> :call LanguageClient_textDocument_hover()<CR>
+nnoremap <leader>ld :call LanguageClient_textDocument_definition()<CR>
+nnoremap <leader>lf :call LanguageClient_textDocument_formatting()<CR>
+nnoremap <leader>lrr :call LanguageClient_textDocument_rename()<CR>
+nnoremap <leader>ls :call LanguageClient_textDocument_documentSymbol()<CR>
+nnoremap <leader>lrf :call LanguageClient_textDocument_references()<CR>
+nnoremap <leader>lws :call LanguageClient_textDocument_workspace_symbol()<CR>
 
 " Fix style
 nnoremap <leader>jsf :!eslint --fix %<CR>
