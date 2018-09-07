@@ -14,9 +14,17 @@
   l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [core]
   excludesfile = ~/.gitignore
+  pager = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
 [merge]
   tool = nvimdiff
 [mergetool]
   prompt = true
 [mergetool "nvimdiff"]
   cmd = nvim -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+[color]
+  ui = always
+[color "diff-highlight"]
+  oldNormal = red bold
+  oldHighlight = red bold 88
+  newNormal = green bold
+  newHighlight = green bold 100
