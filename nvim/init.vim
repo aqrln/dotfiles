@@ -35,7 +35,10 @@ Plug 'arakashic/chromatica.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'rust-lang/rust.vim'
 Plug 'OrangeT/vim-csharp'
 Plug 'cespare/vim-toml'
-Plug 'elzr/vim-json'
+" Plug 'elzr/vim-json'
+Plug 'lifepillar/pgsql.vim'
+Plug 'aklt/plantuml-syntax'
+Plug 'idris-hackers/idris-vim'
 
 " Tmux integration
 Plug 'tmux-plugins/vim-tmux-focus-events'
@@ -80,8 +83,9 @@ Plug 'tpope/vim-abolish'
 " Code comments
 Plug 'tpope/vim-commentary'
 
-" Linters integration
+" Linters and formatters integration
 Plug 'w0rp/ale'
+Plug 'prettier/vim-prettier'
 
 " File and buffer management
 Plug 'scrooloose/nerdtree'
@@ -103,7 +107,8 @@ Plug 'tpope/vim-salve'
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fireplace'
-Plug 'kovisoft/paredit'
+" Plug 'kovisoft/paredit'
+Plug 'eraserhd/parinfer-rust', {'do': 'cargo build --release'}
 
 " ReasonML
 Plug 'reasonml-editor/vim-reason-plus'
@@ -161,7 +166,7 @@ set incsearch
 set hlsearch
 set ignorecase
 set smartcase
-set gdefault
+" set gdefault
 
 " Let files be opened over unsaved buffers
 set hidden
@@ -230,6 +235,11 @@ autocmd BufRead,BufNewFile DEPS   set filetype=python et ts=2 sw=2
 autocmd BufRead,BufNewFile .eslintrc set filetype=json
 autocmd BufRead,BufNewFile .babelrc  set filetype=json
 
+autocmd BufRead,BufNewFile *.tex set filetype=tex
+autocmd BufRead,BufNewFile *.cls set filetype=tex
+autocmd BufRead,BufNewFile *.clo set filetype=tex
+autocmd BufRead,BufNewFile *.sty set filetype=tex
+
 " Enable spell cheking for certain types of files
 autocmd FileType gitcommit setlocal spell
 autocmd FileType text      setlocal spell
@@ -237,6 +247,9 @@ autocmd FileType plaintex  setlocal spell
 autocmd FileType tex       setlocal spell
 autocmd FileType markdown  setlocal spell
 autocmd FileType rst       setlocal spell
+
+" Set the default SQL dialect
+let g:sql_type_default = 'pgsql'
 
 " Format Go sources automatically
 " autocmd BufWritePost *.go !goimports -w %
@@ -303,6 +316,8 @@ let g:ale_linters = {
 " Alternative language server for JavaScript:
 "  \ 'javascript': ['flow-language-server', '--stdio'],
 "  \ 'javascript.jsx': ['flow-language-server', '--stdio'],
+"  \ 'javascript': ['javascript-typescript-stdio'],
+"  \ 'javascript.jsx': ['javascript-typescript-stdio'],
 "
 let g:LanguageClient_serverCommands = {
   \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
@@ -311,6 +326,16 @@ let g:LanguageClient_serverCommands = {
   \ 'reason': ['ocaml-language-server', '--stdio'],
   \ 'ocaml': ['ocaml-language-server', '--stdio'],
   \ }
+
+" Emmet settings
+let g:user_emmet_settings = {
+  \   'javascript.jsx': {
+  \     'extends': 'jsx',
+  \   },
+  \ }
+
+" vim-prettier settings
+let g:prettier#exec_cmd_async = 1
 
 " ------------------------------------------------------------------------------
 "  COMMANDS
@@ -373,6 +398,9 @@ nnoremap <M-k> :lprevious<CR>
 nnoremap <leader>o :Files<CR>
 nnoremap <leader>p :GFiles<CR>
 nnoremap <leader>b :Buffers<CR>
+
+" Toggle NERDTree
+nnoremap <leader>t :NERDTreeToggle<CR>
 
 " Some plugins setup their own keybindings, refer to their manuals to learn
 " these keys.  E.g., C-{h,j,k,l} are used to seamlessly switch between Vim
