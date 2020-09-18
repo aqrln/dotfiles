@@ -2,4 +2,7 @@ source ~/.zprofile
 
 export GPG_TTY=$(tty)
 
+alias e="emacsclient -nw"
+export EDITOR="emacsclient -nw"
+
 eval "$(starship init zsh)"
