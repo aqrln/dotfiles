@@ -9,6 +9,7 @@ ln -s "$(pwd)/zsh/zshrc" ~/.zshrc
 # brew install --HEAD mosh
 
 # brew install --HEAD tmux
+# git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ln -s "$(pwd)/tmux/tmux.conf" ~/.tmux.conf
 
 # brew install git
