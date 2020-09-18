@@ -4,5 +4,6 @@ export GPG_TTY=$(tty)
 
 alias e="emacsclient -nw"
 export EDITOR="emacsclient -nw"
+export ALTERNATE_EDITOR=""
 
 eval "$(starship init zsh)"
