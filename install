@@ -1,0 +1,21 @@
+#!/bin/zsh
+
+# brew install starship
+touch zsh/zprofile.local
+ln -s "$(pwd)/zsh/zprofile.local" ~/.zprofile.local
+ln -s "$(pwd)/zsh/zprofile" ~/.zprofile
+ln -s "$(pwd)/zsh/zshrc" ~/.zshrc
+
+# brew install --HEAD mosh
+
+# brew install --HEAD tmux
+ln -s "$(pwd)/tmux/tmux.conf" ~/.tmux.conf
+
+# brew install git
+ln -s "$(pwd)/git/gitignore.global" ~/.gitignore
+ln -s "$(pwd)/git/gitconfig" ~/.gitconfig
+[ ! -f git/gitconfig.local ] && cp git/gitconfig.local{.template,}
+ln -s "$(pwd)/git/gitconfig.local" ~/.gitconfig.local
+
+# brew install gnupg pinentry-mac
+ln -s "$(pwd)/gpg/gpg-agent-mac.conf" ~/.gnupg/gpg-agent.conf

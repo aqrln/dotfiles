@@ -1,0 +1,5 @@
+source ~/.zprofile
+
+export GPG_TTY=$(tty)
+
+eval "$(starship init zsh)"
