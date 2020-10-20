@@ -1,14 +1,26 @@
+# vim: ts=4 sw=4 sts=4 noet
+
 [include]
-        path = ~/.gitconfig.local
+	path = ~/.gitconfig.local
 [pull]
-        rebase = true
+	rebase = true
 [commit]
-        gpgsign = true
+	gpgsign = true
 [apply]
-        whitespace = fix
+	whitespace = fix
 [merge]
-        conflictStyle = diff3
+	conflictStyle = diff3
 [alias]
-        l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [core]
-        excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore
+[diff]
+	tool = kitty
+	guitool = kitty.gui
+[difftool]
+	prompt = false
+	trustExitCode = true
+[difftool "kitty"]
+	cmd = kitty +kitten diff $LOCAL $REMOTE
+[difftool "kitty.gui"]
+	cmd = kitty kitty +kitten diff $LOCAL $REMOTE
