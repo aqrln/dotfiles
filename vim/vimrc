@@ -6,6 +6,10 @@ syntax on
 set background=dark
 set termguicolors
 colorscheme base16-tomorrow-night
+highlight SpellBad   ctermbg=0  ctermfg=1
+highlight SpellCap   ctermbg=0  ctermfg=9
+highlight SpellRare  ctermfg=10
+highlight SpellLocal ctermfg=15
 
 packadd! matchit
 
