@@ -159,7 +159,7 @@ nnoremap <C-p> :Files<CR>
 nnoremap <C-n> :Buffers<CR>
 
 " Grep for files
-nnoremap <C-s> :grep<Space>
+nnoremap <C-s> :copen<CR>:grep<Space>
 nnoremap <leader>K :grep "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " Open and close quickfix/location lists
