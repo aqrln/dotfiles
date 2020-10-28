@@ -150,10 +150,6 @@ nnoremap <leader>u :UndotreeToggle<CR>
 " Prettier keybindings
 nnoremap <leader>p :PrettierAsync<CR>
 
-" Save buffer
-nnoremap <leader>w :w<CR>
-nnoremap <C-e> :Prettier<CR>:w<CR>
-
 " Find files and buffers with fzf
 nnoremap <C-p> :Files<CR>
 nnoremap <C-n> :Buffers<CR>
