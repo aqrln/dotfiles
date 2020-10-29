@@ -125,6 +125,12 @@ let g:ale_fixers = {
 
 " }}}
 
+" EditorConfig settings {{{
+
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+
+" }}}
+
 " Keybindings {{{
 
 " Setup a convenient leader key

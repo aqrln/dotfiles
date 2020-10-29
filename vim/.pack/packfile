@@ -16,6 +16,11 @@
 - 
   category: default
   local: false
+  name: "editorconfig/editorconfig-vim"
+  opt: false
+- 
+  category: default
+  local: false
   name: "jiangmiao/auto-pairs"
   opt: false
 - 
