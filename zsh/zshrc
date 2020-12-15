@@ -4,10 +4,8 @@ export GPG_TTY=$(tty)
 export VISUAL="vim"
 export CLICOLOR=1
 
-alias dark="kitty @ set-colors ~/dotfiles/kitty/themes/base16-tomorrow-night.conf"
-alias light="kitty @ set-colors ~/dotfiles/kitty/themes/base16-tomorrow.conf"
-alias icat="kitty +kitten icat"
-alias d="kitty +kitten diff"
+alias dark="it2setcolor preset Dracula"
+alias light="it2setcolor preset 'Night Owl Light'"
 alias ll="ls -l"
 alias gdiff="git difftool --no-symlinks --dir-diff"
 
@@ -15,7 +13,9 @@ PS1=$'\n''📁%F{blue}%U%~%u%f✨'$'\n''%B%(?.%(!.#.%F{green}$%f).%F{red}$%f)%b 
 
 autoload -Uz compinit
 compinit
-kitty + complete setup zsh | source /dev/stdin
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files'
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
