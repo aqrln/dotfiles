@@ -4,6 +4,7 @@ touch zsh/zprofile.local
 ln -s "$(pwd)/zsh/zprofile.local" ~/.zprofile.local
 ln -s "$(pwd)/zsh/zprofile" ~/.zprofile
 ln -s "$(pwd)/zsh/zshrc" ~/.zshrc
+ln -s "$(pwd)/zsh/zshenv" ~/.zshenv
 
 ln -s "$(pwd)/.editorconfig" ~/.editorconfig
 
