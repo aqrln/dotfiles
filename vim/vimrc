@@ -5,11 +5,7 @@
 syntax on
 set background=dark
 set termguicolors
-colorscheme base16-tomorrow-night
-highlight SpellBad   ctermbg=0  ctermfg=1
-highlight SpellCap   ctermbg=0  ctermfg=9
-highlight SpellRare  ctermfg=10
-highlight SpellLocal ctermfg=15
+" colorscheme base16-onedark
 
 packadd! matchit
 
@@ -107,21 +103,7 @@ let g:markdown_fenced_languages = [
 
 " Airline settings {{{
 
-let g:airline_theme='base16_tomorrow'
-
-" }}}
-
-" ALE settings {{{
-
-let g:ale_disable_lsp = 1
-let g:airline#extensions#ale#enabled = 1
-
-let g:ale_fixers = {
-      \   'javascript':     ['eslint', 'prettier'],
-      \   'javascript.jsx': ['eslint', 'prettier'],
-      \   'typescript':     ['eslint', 'prettier'],
-      \   'typescript.tsx': ['eslint', 'prettier'],
-      \ }
+" let g:airline_theme='base16'
 
 " }}}
 
@@ -153,9 +135,6 @@ nnoremap <leader>g :Git<CR>
 " Show the undo tree
 nnoremap <leader>u :UndotreeToggle<CR>
 
-" Prettier keybindings
-nnoremap <leader>p :PrettierAsync<CR>
-
 " Find files and buffers with fzf
 nnoremap <C-p> :Files<CR>
 nnoremap <C-n> :Buffers<CR>
@@ -173,105 +152,16 @@ nnoremap <esc>L :lclose<CR>
 " Switch between dark and light themes
 function s:set_dark()
   set background=dark
-  colorscheme base16-tomorrow-night
+"   colorscheme base16-onedark
 endfunction
 
 command Dark :call <SID>set_dark()
 
 function s:set_light()
   set background=light
-  colorscheme base16-tomorrow
+"   colorscheme base16-one-light
 endfunction
 
 command Light :call <SID>set_light()
-
-" }}}
-
-" Coc settings and keybindings{{{
-
-inoremap <silent><expr> <TAB>
-  \ pumvisible() ? "\<C-n>" :
-  \ <SID>check_back_space() ? "\<TAB>" :
-  \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-inoremap <silent><expr> <C-l> <TAB> coc#refresh()
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-inoremap <silent><expr> <c-@> coc#refresh()
-
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
-
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  elseif (coc#rpc#ready())
-    call CocActionAsync('doHover')
-  else
-    execute '!' . &keywordprg . " " . expand('<cword>')
-  endif
-endfunction
-
-autocmd CursorHold * silent call CocActionAsync('highlight')
-
-augroup mygroup
-  autocmd!
-  autocmd FileType javascript,typescript,json setl formatexpr=CocAction('formatSelected')
-  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-augroup end
-
-xmap <leader>fs <Plug>(coc-format-selected)
-nmap <leader>fs <Plug>(coc-format-selected)
-nmap <leader>r  <Plug>(coc-rename)
-xmap <leader>s  <Plug>(coc-codeaction-selected)
-nmap <leader>s  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction)
-nmap <leader>z  <Plug>(coc-fix-current)
-
-xmap if <Plug>(coc-funcobj-i)
-omap if <Plug>(coc-funcobj-i)
-xmap af <Plug>(coc-funcobj-a)
-omap af <Plug>(coc-funcobj-a)
-xmap ic <Plug>(coc-classobj-i)
-omap ic <Plug>(coc-classobj-i)
-xmap ac <Plug>(coc-classobj-a)
-omap ac <Plug>(coc-classobj-a)
-
-nnoremap <expr><C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-nnoremap <expr><C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-inoremap <expr><C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<Right>"
-inoremap <expr><C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<Left>"
-
-nmap <silent> <Bslash>         <Plug>(coc-range-select)
-xmap <silent> <Bslash>         <Plug>(coc-range-select)
-nmap <silent> <leader><Bslash> <Plug>(coc-range-select-backward)
-xmap <silent> <leader><Bslash> <Plug>(coc-range-select-backward)
-
-command! -nargs=0 Format :call CocAction('format')
-command! -nargs=? Fold   :call CocAction('fold', <f-args>)
-command! -nargs=0 OR     :call CocAction('runCommand', 'editor.action.organizeImport')
-
-nnoremap <leader>ff :Format<CR>
-nnoremap <leader>fo :Fold<CR>
-nnoremap <leader>o  :OR<CR>
-
-nnoremap <silent><nowait> <leader>cld :<C-u>CocList diagnostics<cr>
-nnoremap <silent><nowait> <leader>clo :<C-u>CocList outline<cr>
-nnoremap <silent><nowait> <leader>cls :<C-u>CocList -I symbols<cr>
-nnoremap <silent><nowait> <leader>j   :<C-u>CocNext<CR>
-nnoremap <silent><nowait> <leader>k   :<C-u>CocPrev<CR>
-nnoremap <silent><nowait> <leader>clr :<C-u>CocListResume<CR>
 
 " }}}

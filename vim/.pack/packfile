@@ -11,11 +11,6 @@
 - 
   category: default
   local: false
-  name: "dense-analysis/ale"
-  opt: false
-- 
-  category: default
-  local: false
   name: "editorconfig/editorconfig-vim"
   opt: false
 - 
@@ -39,18 +34,6 @@
   name: mbbill/undotree
   opt: false
 - 
-  build: "yarn install --frozen-lockfile"
-  category: default
-  local: false
-  name: neoclide/coc.nvim
-  opt: false
-- 
-  build: yarn install
-  category: default
-  local: false
-  name: "prettier/vim-prettier"
-  opt: false
-- 
   category: default
   local: false
   name: "sheerun/vim-polyglot"
@@ -69,11 +52,6 @@
   category: default
   local: false
   name: "tpope/vim-repeat"
-  opt: false
-- 
-  category: default
-  local: false
-  name: "tpope/vim-rhubarb"
   opt: false
 - 
   category: default
