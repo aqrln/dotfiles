@@ -34,3 +34,4 @@ ln -s "$(pwd)/vim" ~/.vim
 # conda config --set changeps1 False
 
 mkdir -p ~/bin
+swiftc support/SystemThemeChecker.swift -o ~/bin/SystemThemeChecker -O

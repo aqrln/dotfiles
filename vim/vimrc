@@ -1,6 +1,8 @@
 " vim:foldmethod=marker
 
+" ==============================================================================
 " Vim configuration {{{
+" ==============================================================================
 
 syntax on
 set background=dark
@@ -68,7 +70,9 @@ set grepformat=%f:%l:%c:%m,%f:%l:%m
 
 " }}}
 
+" ==============================================================================
 " Custom filetypes {{{
+" ==============================================================================
 
 autocmd BufRead,BufNewFile *.gyp      set filetype=python et ts=2 sw=2
 autocmd BufRead,BufNewFile *.gypi     set filetype=python et ts=2 sw=2
@@ -80,7 +84,9 @@ autocmd BufRead,BufNewFile *.js,*.jsx set filetype=javascript.tsx
 
 " }}}
 
+" ==============================================================================
 " Spell checking {{{
+" ==============================================================================
 
 autocmd FileType gitcommit setlocal spell
 autocmd FileType text      setlocal spell
@@ -91,7 +97,9 @@ autocmd FileType rst       setlocal spell
 
 " }}}
 
+" ==============================================================================
 " Markdown settings {{{
+" ==============================================================================
 
 let g:markdown_fenced_languages = [
   \ 'js=javascript', 'javascript', 'ts=typescript', 'typescript',
@@ -101,19 +109,25 @@ let g:markdown_fenced_languages = [
 
 " }}}
 
+" ==============================================================================
 " Airline settings {{{
+" ==============================================================================
 
 " let g:airline_theme='base16'
 
 " }}}
 
+" ==============================================================================
 " EditorConfig settings {{{
+" ==============================================================================
 
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
 " }}}
 
+" ==============================================================================
 " Keybindings {{{
+" ==============================================================================
 
 " Setup a convenient leader key
 let mapleader = ' '
@@ -163,5 +177,22 @@ function s:set_light()
 endfunction
 
 command Light :call <SID>set_light()
+
+" }}}
+
+" ==============================================================================
+" Detect dark/light mode when running in VSCode {{{
+" ==============================================================================
+
+if $TERM_PROGRAM == "vscode"
+    colorscheme default
+    if has("macunix")
+        if trim(system("SystemThemeChecker")) == "light"
+            set background=light
+        else
+            set background=dark
+        endif
+    endif
+endif
 
 " }}}
