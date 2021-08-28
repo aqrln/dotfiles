@@ -32,3 +32,5 @@ ln -s "$(pwd)/vim" ~/.vim
 # brew install --HEAD mosh
 
 # conda config --set changeps1 False
+
+mkdir -p ~/bin
