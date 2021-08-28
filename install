@@ -20,14 +20,15 @@ ln -s "$(pwd)/gpg/gpg-agent-mac.conf" ~/.gnupg/gpg-agent.conf
 brew install ripgrep fzf nodejs yarn
 
 brew install vim
-brew tap maralla/pack
-brew install pack
+# brew tap maralla/pack
+# brew install pack
 ln -s "$(pwd)/vim" ~/.vim
+# pack install
 
-brew install --HEAD tmux
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-ln -s "$(pwd)/tmux/tmux.conf" ~/.tmux.conf
+# brew install --HEAD tmux
+# git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+# ln -s "$(pwd)/tmux/tmux.conf" ~/.tmux.conf
 
-brew install --HEAD mosh
+# brew install --HEAD mosh
 
 # conda config --set changeps1 False
