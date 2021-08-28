@@ -7,15 +7,47 @@ export CLICOLOR=1
 alias dark="it2setcolor preset Dracula"
 alias light="it2setcolor preset 'Night Owl Light'"
 alias ll="ls -l"
+alias macos_fix_keyboard="sudo killall -9 PAH_Extension TextInputMenuAgent TextInputSwitcher"
+alias brew86="arch -x86_64 /usr/local/bin/brew"
+alias allow="direnv allow"
+
 alias gdiff="git difftool --no-symlinks --dir-diff"
+alias gs="git status -sb"
+alias gd="git diff"
+alias gb="git branch"
 
-PS1=$'\n''📁%F{blue}%U%~%u%f✨'$'\n''%B%(?.%(!.#.%F{green}$%f).%F{red}$%f)%b '
-
-autoload -Uz compinit
-compinit
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+  autoload -Uz compinit
+  compinit
+fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files'
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$("$HOME/miniforge3/bin/conda" 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "$HOME/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "$HOME/miniforge3/etc/profile.d/conda.sh"
+    else
+        export PATH="$HOME/miniforge3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+if type starship &>/dev/null; then
+  eval "$(starship init zsh)"
+fi
+
+if type direnv &>/dev/null; then
+  eval "$(direnv hook zsh)"
+fi
+
+[[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
