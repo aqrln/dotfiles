@@ -1,0 +1,9 @@
+# vim: ts=4 sw=4 sts=4 noet
+
+[credential]
+	helper = /mnt/c/Users/USERNAME/scoop/apps/git/current/mingw64/libexec/git-core/git-credential-wincred.exe
+
+[user]
+	name = 
+	email = 
+	signingkey = 

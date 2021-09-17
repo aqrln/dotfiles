@@ -2,3 +2,6 @@ root = true
 
 [*]
 tab_width = 4
+
+[git/*]
+indent_style = tab

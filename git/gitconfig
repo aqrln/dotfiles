@@ -17,8 +17,6 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[credential]
-	helper = osxkeychain
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustExitCode = true
@@ -33,8 +31,6 @@
 	prompt = false
 [diff]
 	tool = Kaleidoscope
-[gpg]
-	program = /opt/homebrew/bin/gpg
 [init]
 	defaultBranch = main
 [rerere]

@@ -1,0 +1,12 @@
+# vim: ts=4 sw=4 sts=4 noet
+
+[credential]
+	helper = osxkeychain
+
+[gpg]
+	program = /opt/homebrew/bin/gpg
+	
+[user]
+	name = 
+	email = 
+	signingkey = 
