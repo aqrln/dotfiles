@@ -21,6 +21,10 @@ if [[ `uname` == "Darwin" ]]; then
     ln -s "$(pwd)/gpg/gpg-agent-mac.conf" ~/.gnupg/gpg-agent.conf
 fi
 
+if [[ -n "$WSL_DISTRO_NAME" ]]; then
+    ln -s "$(pwd)/gpg/gpg-agent-wsl.conf" ~/.gnupg/gpg-agent.conf
+fi
+
 # brew tap maralla/pack
 # brew install pack
 ln -s "$(pwd)/vim" ~/.vim
