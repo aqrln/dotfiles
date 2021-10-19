@@ -184,7 +184,7 @@ command Light :call <SID>set_light()
 " Detect dark/light mode when running in VSCode {{{
 " ==============================================================================
 
-if $TERM_PROGRAM == "vscode"
+if $TERM_PROGRAM == "vscode" && $VSCODE_VIM_SWITCH_THEME_AUTOMATICALLY == "true"
     colorscheme default
     if has("macunix")
         if trim(system("SystemThemeChecker")) == "light"
