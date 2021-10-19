@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 if [[ `uname` == "Darwin" ]]; then
-    brew install git gnupg pinentry-mac ripgrep fzf nodejs yarn vim
+    brew install git gnupg pinentry-mac ripgrep fzf nodejs yarn vim zoxide
 fi
 
 touch zsh/zprofile.local
