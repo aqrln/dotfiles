@@ -4,8 +4,6 @@ export GPG_TTY=$(tty)
 export VISUAL="vim"
 export CLICOLOR=1
 
-alias dark="it2setcolor preset 'GitHub Dark'"
-alias light="it2setcolor preset 'GitHub Light'"
 alias ll="ls -l"
 alias macos_fix_keyboard="sudo killall -9 PAH_Extension TextInputMenuAgent TextInputSwitcher"
 alias brew86="arch -x86_64 /usr/local/bin/brew"
@@ -16,6 +14,8 @@ alias gs="git status -sb"
 alias gd="git diff"
 alias gb="git branch"
 
+source ~/dotfiles/zsh/lib/iterm.zsh
+
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
   autoload -Uz compinit
@@ -24,8 +24,6 @@ fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files'
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
