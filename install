@@ -36,7 +36,7 @@ ln -s "$(pwd)/vim" ~/.vim
 
 # brew install --HEAD mosh
 
-# conda config --set changeps1 False
+ln -s "$(pwd)/conda/condarc" ~/.condarc
 
 mkdir -p ~/bin
 
