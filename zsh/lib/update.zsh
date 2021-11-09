@@ -1,5 +1,5 @@
 function update {
-    if type apt &>/dev/null; then
+    if type apt-get &>/dev/null; then
         apt update
         apt upgrade -y
     fi
