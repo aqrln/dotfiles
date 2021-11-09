@@ -9,6 +9,11 @@ function update {
         brew upgrade
     fi
 
+    if type nix-env &>/dev/null; then
+        nix-channel --update nixpkgs
+        nix-env -u '*'
+    fi
+
     if type rustup &>/dev/null; then
         rustup update
         rustup upgrade
