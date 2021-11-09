@@ -15,6 +15,7 @@ alias gd="git diff"
 alias gb="git branch"
 
 source ~/dotfiles/zsh/lib/iterm.zsh
+source ~/dotfiles/zsh/lib/update.zsh
 
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
