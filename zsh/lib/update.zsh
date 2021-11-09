@@ -22,10 +22,6 @@ function update {
         nvm install node --reinstall-packages-from=node
     fi
 
-    if type nvs &>/dev/null; then
-        nvs upgrade
-    fi
-
     if type npm &>/dev/null; then
         npm install -g npm@latest
         npm update -g
