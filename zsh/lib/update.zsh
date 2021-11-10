@@ -70,7 +70,7 @@ update_npm () {
 
         npm install -g npm@latest
         npm list -gp --depth 0 | \
-            awk -F / '{ if (NR > 1 && $NF != "npm") print $NF "@latest" }' | \
+            awk -F / '{ if (NR > 1 && $NF != "npm" && $NF != "corepack") print $NF "@latest" }' | \
             xargs npm install -g
     fi
 }
