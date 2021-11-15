@@ -1,7 +1,6 @@
 update () {
     update_apt
     update_brew
-    update_nix
     update_rust
     update_cargo
     update_node
@@ -28,15 +27,6 @@ update_brew () {
 
         brew update
         brew upgrade
-    fi
-}
-
-update_nix () {
-    if type nix-env &>/dev/null; then
-        __update_show_header "Updating Nix packages"
-
-        nix-channel --update nixpkgs
-        nix-env -u '*'
     fi
 }
 
