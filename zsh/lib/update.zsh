@@ -16,8 +16,8 @@ update_apt () {
     if type apt-get &>/dev/null; then
         __update_show_header 'Updating APT packages'
 
-        apt update
-        apt upgrade -y
+        sudo apt update
+        sudo apt upgrade -y
     fi
 }
 
