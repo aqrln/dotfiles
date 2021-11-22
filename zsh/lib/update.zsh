@@ -8,7 +8,7 @@ update () {
 }
 
 __update_show_header () {
-    printf "\033[1;36m\n$1\n\n\033[0m"
+    printf "\033[1;36m\n%s\n\n\033[0m" "$1"
 }
 
 update_apt () {
