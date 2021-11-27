@@ -1,7 +1,9 @@
 #!/bin/zsh
 
+mkdir -p ~/.config
+
 if [[ `uname` == "Darwin" ]]; then
-    brew install git gnupg pinentry-mac ripgrep fzf nodejs yarn vim zoxide
+    brew install git gnupg pinentry-mac ripgrep fzf vim neovim zoxide
 fi
 
 touch zsh/zprofile.local
@@ -29,6 +31,8 @@ fi
 # brew install pack
 ln -s "$(pwd)/vim" ~/.vim
 # pack install
+
+ln -s "$(pwd)/nvim" ~/.config/nvim
 
 # brew install --HEAD tmux
 # git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
