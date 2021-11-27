@@ -1,2 +1,3 @@
-set mouse=a
 set number
+set mouse=a
+set termguicolors
