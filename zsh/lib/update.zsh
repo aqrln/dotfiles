@@ -59,11 +59,13 @@ update_npm () {
         __update_show_header "Updating global npm packages"
 
         npm install -g npm@latest
-        npm list -gp --depth 0 | \
-            awk -F / '{
-                if (NR > 1 && $NF != "npm" && $NF != "corepack")
-                    print $NF "@latest"
-            }' | \
+        npm list -g --json --depth 0 | \
+            jq -r '.dependencies
+                | keys
+                | map(select(. != "npm"))
+                | map(select(. != "corepack"))
+                | map(. + "@latest")
+                | .[]' | \
             xargs npm install -g
     fi
 }
