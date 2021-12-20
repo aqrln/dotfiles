@@ -58,11 +58,9 @@ update_npm () {
     if type npm &>/dev/null; then
         __update_show_header "Updating global npm packages"
 
-        npm install -g npm@latest
         npm list -g --json --depth 0 | \
             jq -r '.dependencies
                 | keys
-                | map(select(. != "npm"))
                 | map(select(. != "corepack"))
                 | map(. + "@latest")
                 | .[]' | \
