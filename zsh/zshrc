@@ -14,6 +14,7 @@ alias gb="git branch"
 
 source ~/dotfiles/zsh/lib/iterm.zsh
 source ~/dotfiles/zsh/lib/update.zsh
+source ~/dotfiles/zsh/lib/wsl.zsh
 
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
