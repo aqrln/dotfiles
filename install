@@ -3,7 +3,7 @@
 mkdir -p ~/.config
 
 if [[ `uname` == "Darwin" ]]; then
-    brew install git gnupg pinentry-mac ripgrep fzf vim neovim zoxide hexyl jq fnm
+    brew install git gnupg pinentry-mac ripgrep fzf vim neovim zoxide hexyl jq
 fi
 
 touch zsh/zprofile.local
