@@ -16,3 +16,5 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$HOME/bin:$PATH"
 
 source ~/.zprofile.local
+
+export ZPROFILE_SOURCED=true

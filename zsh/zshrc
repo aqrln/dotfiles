@@ -1,3 +1,7 @@
+if [[ -z $ZPROFILE_SOURCED ]]; then
+    source ~/.zprofile
+fi
+
 export GPG_TTY=$(tty)
 export VISUAL="vim"
 export CLICOLOR=1
