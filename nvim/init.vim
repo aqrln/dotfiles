@@ -1,10 +1,14 @@
 lua require('plugins')
+lua require('lsp_config')
+lua require('treesitter_config')
+lua require('telescope_config')
 
 set number
 set nowrap
 
 set mouse=a
 set termguicolors
+colorscheme kanagawa
 
 set shiftwidth=4
 set softtabstop=4
@@ -26,7 +30,11 @@ augroup init
     autocmd!
 
     autocmd FileType text setlocal textwidth=80
-    autocmd FileType json setlocal sw=2 sts=2
+
+    autocmd FileType json       setlocal sw=2 sts=2
+    autocmd FileType lua        setlocal sw=2 sts=2
+    autocmd FileType javascript setlocal sw=2 sts=2
+    autocmd FileType typescript setlocal sw=2 sts=2
 
     autocmd BufRead,BufNewFile *.gyp       set filetype=python et ts=2 sw=2
     autocmd BufRead,BufNewFile *.gypi      set filetype=python et ts=2 sw=2
@@ -53,6 +61,8 @@ nnoremap <leader>K :grep "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " Open and close quickfix/location lists
 nnoremap <M-c> :copen<CR>
-nnoremap <M-C> :close<CR>
+nnoremap <M-C> :cclose<CR>
 nnoremap <M-l> :lopen<CR>
 nnoremap <M-L> :lclose<CR>
+
+nnoremap <C-l> :nohl<CR>
