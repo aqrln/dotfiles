@@ -3,7 +3,7 @@ if [[ -z $ZPROFILE_SOURCED ]]; then
 fi
 
 export GPG_TTY=$(tty)
-export VISUAL="vim"
+export VISUAL="nvim"
 export CLICOLOR=1
 
 alias ll="ls -l"
