@@ -1,11 +1,11 @@
 require('gitsigns').setup {}
 
 require('diffview').setup {
-  use_icons = false,
-  signs = {
-    fold_closed = ">",
-    fold_open = "v",
-  }
+  -- use_icons = false,
+  -- signs = {
+  --   fold_closed = ">",
+  --   fold_open = "v",
+  -- }
 }
 
 require('neogit').setup {
