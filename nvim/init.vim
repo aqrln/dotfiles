@@ -17,6 +17,8 @@ set expandtab
 
 set hidden
 
+set undofile
+
 set splitbelow
 set splitright
 
