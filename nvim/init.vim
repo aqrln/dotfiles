@@ -67,3 +67,5 @@ nnoremap <M-l> :lopen<CR>
 nnoremap <M-L> :lclose<CR>
 
 nnoremap <C-l> :nohl<CR>
+
+nnoremap <M-s> :w<CR>
