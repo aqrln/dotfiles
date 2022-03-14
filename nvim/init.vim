@@ -72,3 +72,8 @@ nnoremap <M-L> :lclose<CR>
 nnoremap <C-l> :nohl<CR>
 
 nnoremap <M-s> :w<CR>
+
+nnoremap <C-h> <C-w>h<CR>
+nnoremap <C-j> <C-w>j<CR>
+nnoremap <C-k> <C-w>k<CR>
+nnoremap <C-l> <C-w>l<CR>
