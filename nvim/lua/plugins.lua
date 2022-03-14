@@ -40,4 +40,6 @@ return require('packer').startup(function()
       { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
     }
   }
+
+  use 'gpanders/editorconfig.nvim'
 end)
