@@ -3,6 +3,7 @@ lua require('lsp_config')
 lua require('treesitter_config')
 lua require('telescope_config')
 lua require('git_config')
+lua require('ui_config')
 
 set number
 set nowrap
