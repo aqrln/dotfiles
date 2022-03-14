@@ -57,8 +57,8 @@ augroup init
 augroup END
 
 " Switch between buffers
-nnoremap <C-n> :bn<CR>
-nnoremap <C-p> :bp<CR>
+nnoremap <silent> <C-n> :bn<CR>
+nnoremap <silent> <C-p> :bp<CR>
 
 " Grep for files
 nnoremap <C-s> :copen<CR>:grep<Space>
