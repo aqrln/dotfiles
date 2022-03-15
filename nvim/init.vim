@@ -70,7 +70,7 @@ nnoremap <M-C> :cclose<CR>
 nnoremap <M-l> :lopen<CR>
 nnoremap <M-L> :lclose<CR>
 
-nnoremap <M-h> :nohl<CR>
+nnoremap <silent> <M-h> :nohl<CR>
 
 nnoremap <M-s> :w<CR>
 
