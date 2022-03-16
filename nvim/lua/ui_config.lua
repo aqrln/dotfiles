@@ -8,3 +8,12 @@ require('lualine').setup {
     lualine_x = {'filetype'},
   }
 }
+
+require('indent_blankline').setup {
+  show_current_context = true,
+  char = '│', -- could be fun to try something unconventional
+  use_treesitter = true,
+  enabled = false,
+}
+
+vim.api.nvim_set_keymap('n', '<M-i>', ':IndentBlanklineToggle<CR>', { noremap = true })

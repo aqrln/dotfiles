@@ -81,4 +81,6 @@ return require('packer').startup(function()
   }
 
   use 'onsails/lspkind-nvim'
+
+  use 'lukas-reineke/indent-blankline.nvim'
 end)
