@@ -65,4 +65,20 @@ return require('packer').startup(function()
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
+
+  use 'L3MON4D3/LuaSnip'
+
+  use {
+    'hrsh7th/nvim-cmp',
+    requires = {
+      'hrsh7th/cmp-nvim-lsp',
+      'hrsh7th/cmp-buffer',
+      'hrsh7th/cmp-path',
+      'hrsh7th/cmp-cmdline',
+      'saadparwaiz1/cmp_luasnip',
+      { 'tzachar/cmp-tabnine', run = './install.sh' },
+    }
+  }
+
+  use 'onsails/lspkind-nvim'
 end)
