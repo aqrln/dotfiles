@@ -10,6 +10,3 @@ font:
     style: Medium Italic
 
   size: 15
-
-env:
-  TERM: xterm-256color
