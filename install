@@ -45,6 +45,8 @@ ln -s "$(pwd)/tmux/tmux.conf" ~/.tmux.conf
 
 ln -s "$(pwd)/conda/condarc" ~/.condarc
 
+ln -s "$(pwd)/alacritty" ~/.config/alacritty
+
 mkdir -p ~/bin
 
 if [[ `uname` == "Darwin" ]]; then

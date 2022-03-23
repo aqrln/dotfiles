@@ -1,0 +1,15 @@
+import:
+  - ~/.config/alacritty/kanagawa.yml
+
+font:
+  normal:
+    family: Codelia Nerd Font
+    style: Medium
+
+  italic:
+    style: Medium Italic
+
+  size: 15
+
+env:
+  TERM: xterm-256color
