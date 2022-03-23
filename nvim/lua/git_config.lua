@@ -9,12 +9,17 @@ require('diffview').setup {
 }
 
 require('neogit').setup {
-  disable_commit_confirmation = false,
   disable_commit_confirmation = true,
 
   integrations = {
     diffview = true
-  }
+  },
+
+  signs = {
+    section = { "", "" },
+    item = { "", "" },
+    hunk = { "", "" },
+  },
 }
 
 vim.api.nvim_set_keymap('n', '<space>g', ':Neogit<CR>', { noremap = true, silent = true })
