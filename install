@@ -54,5 +54,5 @@ if [[ `uname` == "Darwin" ]]; then
 fi
 
 if [[ `uname` == "Darwin" ]]; then
-    ./update_terminfo
+    /usr/bin/tic -x support/tmux-256color.src
 fi
