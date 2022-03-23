@@ -52,3 +52,7 @@ mkdir -p ~/bin
 if [[ `uname` == "Darwin" ]]; then
     swiftc support/SystemThemeChecker.swift -o ~/bin/SystemThemeChecker -O
 fi
+
+if [[ `uname` == "Darwin" ]]; then
+    ./update_terminfo
+fi

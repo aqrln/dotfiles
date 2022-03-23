@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -euo pipefail
+
+curl -LO https://invisible-island.net/datafiles/current/terminfo.src.gz
+gunzip terminfo.src.gz
+
+# Use absolute path to /usr/bin/tic to ensure we are using system ncurses
+/usr/bin/tic -xe tmux-256color terminfo.src
