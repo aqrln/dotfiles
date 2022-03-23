@@ -3,6 +3,6 @@ if [[ -v ITERM_SESSION_ID ]]; then
         source "${HOME}/.iterm2_shell_integration.zsh"
     fi
 
-    alias dark="it2setcolor preset 'GitHub Dark'"
+    alias dark="it2setcolor preset kanagawa"
     alias light="it2setcolor preset 'GitHub Light'"
 fi
