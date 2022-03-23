@@ -4,7 +4,7 @@ require('lualine').setup {
     section_separators = { left = '', right = ''},
   },
   sections = {
-    lualine_c = {'buffers'},
+    lualine_c = {'filename'}, -- 'buffers' would be cool but doesn't work good when overflows
     lualine_x = {'filetype'},
   }
 }
