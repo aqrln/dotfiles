@@ -26,7 +26,7 @@ update_brew () {
         __update_show_header "Updating Homebrew packages"
 
         brew update
-        brew upgrade
+        brew upgrade --fetch-HEAD
     fi
 }
 
