@@ -16,6 +16,8 @@ alias gs="git status -sb"
 alias gd="git diff"
 alias gb="git branch"
 
+bindkey -e
+
 source ~/dotfiles/zsh/lib/iterm.zsh
 source ~/dotfiles/zsh/lib/update.zsh
 source ~/dotfiles/zsh/lib/wsl.zsh
