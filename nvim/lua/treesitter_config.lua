@@ -2,7 +2,13 @@ local max_lines = 1000
 
 require('nvim-treesitter.configs').setup {
   -- One of "all", "maintained" (parsers with maintainers), or a list of languages
-  ensure_installed = "maintained",
+  ensure_installed = {
+    'bash',
+    'c', 'cpp', 'rust',
+    'javascript', 'typescript',
+    'json', 'toml',
+    'vim', 'lua',
+  },
   sync_install = false,
   ignore_install = {},
 
