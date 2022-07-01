@@ -1,0 +1,12 @@
+.cache
+
+/auto-save-list
+/eln-cache
+/elpa
+/multisession
+/transient
+
+/projects
+projectile-bookmarks.eld
+
+.lsp-session-*
