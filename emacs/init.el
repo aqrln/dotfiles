@@ -94,7 +94,12 @@
   ("C-c p" . projectile-command-map))
 
 (use-package treemacs)
+
 (add-hook 'treemacs-mode-hook (lambda () (display-line-numbers-mode -1)))
+
+(use-package rg
+  :init
+  (rg-enable-default-bindings))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
