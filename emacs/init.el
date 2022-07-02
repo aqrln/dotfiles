@@ -80,12 +80,10 @@
 (setq bookmark-default-file (expand-file-name "bookmarks" savefile-dir)
       bookmark-save-flag 1)
 
-(use-package diminish)
-
 (use-package editorconfig
+  :diminish editorconfig-mode
   :init
-  (editorconfig-mode 1)
-  (diminish 'editorconfig-mode))
+  (editorconfig-mode 1))
 
 (use-package lsp-mode
   :hook ((typescript-mode . lsp)
