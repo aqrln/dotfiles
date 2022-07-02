@@ -24,7 +24,7 @@
 (column-number-mode t)
 (size-indication-mode t)
 (global-display-line-numbers-mode)
-(global-hl-line-mode +1)
+;(global-hl-line-mode +1)
 
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
