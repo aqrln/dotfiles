@@ -1,6 +1,6 @@
 import AppKit
 
-switch NSAppearance.current.name {
+switch NSAppearance.currentDrawing().name {
 case .aqua, .vibrantLight:
     print("light")
 case .darkAqua, .vibrantDark:
