@@ -48,7 +48,22 @@ update_cargo () {
 }
 
 update_node () {
-    if type nvm &>/dev/null; then
+    if type fnm &>/dev/null; then
+        __update_show_header "Updating Node.js"
+
+        current_node_version=$(fnm current)
+        new_node_version=$(fnm list-remote | tail -n 1)
+
+        if [ "$current_node_version" = "$new_node_version" ]; then
+            echo "Current version $current_node_version is the same as latest, skipping"
+        else
+            fnm install $new_node_version
+            fnm default $new_node_version
+            fnm use $new_node_version
+
+            npm i -g npm pnpm yarn typescript ts-node typescript-language-server
+        fi
+    elif type nvm &>/dev/null; then
         __update_show_header "Updating Node.js"
         nvm install node --reinstall-packages-from=node
     fi
