@@ -61,7 +61,7 @@ update_node () {
             fnm default $new_node_version
             fnm use $new_node_version
 
-            npm i -g npm pnpm yarn typescript ts-node typescript-language-server
+            npm i -g npm pnpm yarn typescript ts-node typescript-language-server prettier
         fi
     elif type nvm &>/dev/null; then
         __update_show_header "Updating Node.js"

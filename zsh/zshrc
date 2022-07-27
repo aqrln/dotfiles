@@ -16,6 +16,8 @@ alias gs="git status -sb"
 alias gd="git diff"
 alias gb="git branch"
 
+alias docker-vm-shell="docker run -it --rm --privileged --pid=host justincormack/nsenter1"
+
 bindkey -e
 
 source ~/dotfiles/zsh/lib/iterm.zsh
