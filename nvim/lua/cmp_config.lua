@@ -1,16 +1,16 @@
 require('luasnip.loaders.from_snipmate').lazy_load()
 require('luasnip.loaders.from_vscode').lazy_load()
 
-local tabnine = require('cmp_tabnine.config')
+-- local tabnine = require('cmp_tabnine.config')
 
-tabnine:setup({
-  max_lines = 1000;
-  max_num_results = 3;
-  sort = true;
-  run_on_every_keystroke = true;
-  snippet_placeholder = '..';
-  ignored_file_types = {};
-})
+-- tabnine:setup({
+--   max_lines = 1000;
+--   max_num_results = 3;
+--   sort = true;
+--   run_on_every_keystroke = true;
+--   snippet_placeholder = '..';
+--   ignored_file_types = {};
+-- })
 
 local cmp = require('cmp')
 local compare = require('cmp.config.compare')
@@ -42,7 +42,7 @@ cmp.setup({
   },
 
   sources = cmp.config.sources({
-    { name = 'cmp_tabnine' },
+    -- { name = 'cmp_tabnine' },
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
   }, {
@@ -51,7 +51,7 @@ cmp.setup({
 
   sorting = {
     comparators = {
-      require('cmp_tabnine.compare'),
+      -- require('cmp_tabnine.compare'),
       compare.offset,
       compare.exact,
       compare.score,
