@@ -87,4 +87,6 @@ return require('packer').startup(function()
   use 'lukas-reineke/indent-blankline.nvim'
 
   use 'pantharshit00/vim-prisma'
+
+  use 'folke/which-key.nvim'
 end)

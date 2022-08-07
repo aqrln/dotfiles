@@ -17,3 +17,9 @@ require('indent_blankline').setup {
 }
 
 vim.api.nvim_set_keymap('n', '<M-i>', ':IndentBlanklineToggle<CR>', { noremap = true })
+
+require('which-key').setup {
+  icons = {
+    separator = ''
+  }
+}
