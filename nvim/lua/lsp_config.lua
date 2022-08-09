@@ -54,6 +54,8 @@ lspconfig['eslint'].setup {
   on_attach = on_attach,
   capabilities = capabilities,
   root_dir = function(fname)
+    -- Split the pattern into two to support nested directories with a package.json
+    -- using parent .eslintrc and tsconfig.json
     return util.root_pattern(
       '.eslintrc',
       '.eslintrc.js',
