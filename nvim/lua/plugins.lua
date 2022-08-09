@@ -26,6 +26,10 @@ return require('packer').startup(function()
 
   use 'rebelot/kanagawa.nvim'
 
+  use 'EdenEast/nightfox.nvim'
+
+  use 'bluz71/vim-nightfly-guicolors'
+
   use 'ggandor/lightspeed.nvim'
 
   use 'neovim/nvim-lspconfig'
