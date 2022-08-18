@@ -95,4 +95,6 @@ return require('packer').startup(function()
   use 'pantharshit00/vim-prisma'
 
   use 'folke/which-key.nvim'
+
+  use 'kyazdani42/nvim-tree.lua'
 end)
