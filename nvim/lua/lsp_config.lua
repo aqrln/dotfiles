@@ -34,7 +34,6 @@ end
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 local servers_with_defaults = {
-  'rust_analyzer',
   'tsserver',
   'prismals',
   'dockerls',
@@ -72,4 +71,18 @@ lspconfig['eslint'].setup {
 
 require('null-ls').setup {
   on_attach = on_attach
+}
+
+local rust_tools = require('rust-tools')
+
+rust_tools.setup {
+  server = {
+    on_attach = function(client, bufnr)
+      on_attach(client, bufnr)
+      -- Hover actions
+      vim.keymap.set("n", "<C-space>", rust_tools.hover_actions.hover_actions, { buffer = bufnr })
+      -- Code action groups
+      vim.keymap.set("n", "<space>a", rust_tools.code_action_group.code_action_group, { buffer = bufnr })
+    end,
+  }
 }

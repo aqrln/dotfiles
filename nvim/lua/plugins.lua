@@ -101,4 +101,13 @@ return require('packer').startup(function()
   use 'MunifTanjim/prettier.nvim'
 
   use 'kyazdani42/nvim-tree.lua'
+
+  use {
+    'simrat39/rust-tools.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    }
+  }
+
+  use 'mfussenegger/nvim-dap'
 end)
