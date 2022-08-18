@@ -58,6 +58,8 @@ augroup init
     autocmd FileType rst       setlocal spell
 augroup END
 
+let mapleader = "\<Space>"
+
 " Switch between buffers
 nnoremap <silent> <C-n> :bn<CR>
 nnoremap <silent> <C-p> :bp<CR>
