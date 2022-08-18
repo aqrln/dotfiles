@@ -47,6 +47,8 @@ return require('packer').startup(function()
     }
   }
 
+  use 'nvim-telescope/telescope-ui-select.nvim'
+
   use 'gpanders/editorconfig.nvim'
 
   use { 'lewis6991/gitsigns.nvim', requires = 'nvim-lua/plenary.nvim' }

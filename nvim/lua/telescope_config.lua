@@ -5,11 +5,16 @@ require('telescope').setup {
       override_generic_sorter = true,
       override_file_sorter = true,
       case_mode = 'smart_case',
+    },
+
+    ['ui-select'] = {
+      require('telescope.themes').get_dropdown {}
     }
   }
 }
 
 require('telescope').load_extension('fzf')
+require('telescope').load_extension('ui-select')
 
 local prefix = '<space>'
 
@@ -27,8 +32,6 @@ local keybindings = {
   lr = 'lsp_references()',
   ls = 'lsp_document_symbols()',
   lS = 'lsp_dynamic_workspace_symbols()',
-  la = 'lsp_code_actions()',
-  lA = 'lsp_range_code_actions()',
   lD = 'diagnostics()',
   li = 'lsp_implementations()',
   ld = 'lsp_definitions()',
