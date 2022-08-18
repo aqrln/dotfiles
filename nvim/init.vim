@@ -5,6 +5,7 @@ lua require('telescope_config')
 lua require('git_config')
 lua require('ui_config')
 lua require('cmp_config')
+lua require('prettier_config')
 lua require('tree_config')
 
 set number

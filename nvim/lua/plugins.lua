@@ -96,5 +96,9 @@ return require('packer').startup(function()
 
   use 'folke/which-key.nvim'
 
+  use 'jose-elias-alvarez/null-ls.nvim'
+
+  use 'MunifTanjim/prettier.nvim'
+
   use 'kyazdani42/nvim-tree.lua'
 end)

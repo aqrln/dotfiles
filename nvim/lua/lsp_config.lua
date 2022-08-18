@@ -69,3 +69,7 @@ lspconfig['eslint'].setup {
     )(fname)
   end,
 }
+
+require('null-ls').setup {
+  on_attach = on_attach
+}
