@@ -22,8 +22,8 @@ local keybindings = {
   [' '] = 'builtin()',
 
   fr = 'resume()',
-  ff = 'find_files()',
-  fF = 'git_files()',
+  ff = 'find_files({ hidden = true })',
+  fF = 'find_files({ hidden = true, no_ignore = true, no_ignore_parent = true })',
   fg = 'live_grep()',
   fG = 'grep_string()',
   fb = 'buffers()',
