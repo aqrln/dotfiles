@@ -71,6 +71,10 @@ return require('packer').startup(function()
     }
   }
 
+  use 'tpope/vim-fugitive'
+
+  use 'rhysd/git-messenger.vim'
+
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
