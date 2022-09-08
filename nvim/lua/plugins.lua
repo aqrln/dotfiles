@@ -34,6 +34,8 @@ return require('packer').startup(function()
 
   use 'neovim/nvim-lspconfig'
 
+  use 'folke/lsp-colors.nvim'
+
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
   use 'nvim-treesitter/playground'
