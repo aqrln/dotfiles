@@ -17,6 +17,9 @@ if type fnm &>/dev/null; then
     eval "$(fnm env --shell zsh --use-on-cd --fnm-dir "$HOME/.fnm")"
 fi
 
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env"
+[ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
+
 export PATH="$HOME/bin:$PATH"
 
 source ~/.zprofile.local
