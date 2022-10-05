@@ -27,8 +27,8 @@
 (size-indication-mode t)
 (global-display-line-numbers-mode)
 
-(dolist (mode '(help-mode
-                messages-buffer-mode
+(dolist (mode '(help-mode-hook
+                messages-buffer-mode-hook
                 eshell-mode-hook
                 term-mode-hook
                 vterm-mode-hook))
@@ -37,9 +37,9 @@
 (setq-default show-trailing-whitespace t)
 (setq-default indicate-empty-lines t)
 
-(dolist (mode '(vterm-mode
-                Buffer-menu-mode
-                calendar-mode))
+(dolist (mode '(vterm-mode-hook
+                Buffer-menu-mode-hook
+                calendar-mode-hook))
   (add-hook mode (lambda () (setq show-trailing-whitespace nil))))
 
 ;(global-hl-line-mode +1)
