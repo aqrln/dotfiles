@@ -9,4 +9,10 @@
 /projects
 projectile-bookmarks.eld
 
+/games
+/url
+
 .lsp-session-*
+
+.emacs.desktop
+.emacs.desktop.lock

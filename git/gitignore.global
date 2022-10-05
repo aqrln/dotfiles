@@ -2,3 +2,6 @@
 
 # emacs-lsp
 .log/*.log
+
+# magit-forge
+forge-database.sqlite

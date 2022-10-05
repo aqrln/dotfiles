@@ -10,3 +10,6 @@
 	name = 
 	email = 
 	signingkey = 
+
+[github]
+	user = 
