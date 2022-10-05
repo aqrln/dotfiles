@@ -28,6 +28,11 @@ return require('packer').startup(function()
 
   use 'EdenEast/nightfox.nvim'
 
+  -- use 'shaunsingh/solarized.nvim'
+  use 'ishan9299/nvim-solarized-lua'
+
+  use 'ellisonleao/gruvbox.nvim'
+
   use 'bluz71/vim-nightfly-guicolors'
 
   use 'ggandor/lightspeed.nvim'
@@ -116,4 +121,6 @@ return require('packer').startup(function()
   }
 
   use 'mfussenegger/nvim-dap'
+
+  -- use 'akinsho/bufferline.nvim'
 end)

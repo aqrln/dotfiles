@@ -23,3 +23,5 @@ require('which-key').setup {
     separator = ''
   }
 }
+
+-- require('bufferline').setup {}
