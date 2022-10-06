@@ -346,7 +346,7 @@
   (my-leader-def
 	"gg" 'magit-status
 
-	"vh" 'multi-vterm
+	"vv" 'multi-vterm
 	"vp" 'multi-vterm-project
 	"vP" 'multi-vterm-prev
 	"vN" 'multi-vterm-next))
