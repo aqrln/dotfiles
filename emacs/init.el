@@ -34,6 +34,7 @@
 ;;                 messages-buffer-mode-hook
 ;;                 dired-mode-hook
 ;;                 ement-room-mode-hook
+;;                 treemacs-mode-hook
 ;;                 eshell-mode-hook
 ;;                 term-mode-hook
 ;;                 vterm-mode-hook))
@@ -160,9 +161,7 @@
   :hook ((typescript-mode . lsp)
 		 (rust-mode . lsp)))
 
-(use-package treemacs
-  :config
-  (add-hook 'treemacs-mode-hook (lambda () (display-line-numbers-mode -1))))
+(use-package treemacs)
 
 (use-package rg
   :config
