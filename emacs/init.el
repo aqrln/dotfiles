@@ -305,6 +305,9 @@
   :custom
   (adaptive-wrap-extra-indent 4))
 
+;; (use-package all-the-icons-dired
+;;   :hook (dired-mode . all-the-icons-dired-mode))
+
 (use-package general
   :config
   (general-create-definer my-leader-def
