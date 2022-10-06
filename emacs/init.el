@@ -53,6 +53,13 @@
 
 (set-default 'imenu-auto-rescan t)
 
+(setq dired-use-ls-dired t
+      ;; consider --group-directories-first
+      dired-listing-switches "-ahl")
+
+(when (string= system-type "darwin")
+  (setq insert-directory-program "/opt/homebrew/bin/gls"))
+
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")
                          ("org"   . "https://orgmode.org/elpa/")
                          ("elpa"  . "https://elpa.gnu.org/packages/")))
