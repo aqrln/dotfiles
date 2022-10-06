@@ -25,22 +25,31 @@
 (line-number-mode t)
 (column-number-mode t)
 (size-indication-mode t)
-(global-display-line-numbers-mode)
 
-(dolist (mode '(help-mode-hook
-                messages-buffer-mode-hook
-                eshell-mode-hook
-                term-mode-hook
-                vterm-mode-hook))
-  (add-hook mode (lambda () (display-line-numbers-mode 0))))
-
-(setq-default show-trailing-whitespace t)
 (setq-default indicate-empty-lines t)
 
-(dolist (mode '(vterm-mode-hook
-                Buffer-menu-mode-hook
-                calendar-mode-hook))
-  (add-hook mode (lambda () (setq show-trailing-whitespace nil))))
+;; (global-display-line-numbers-mode)
+;;
+;; (dolist (mode '(help-mode-hook
+;;                 messages-buffer-mode-hook
+;;                 dired-mode-hook
+;;                 ement-room-mode-hook
+;;                 eshell-mode-hook
+;;                 term-mode-hook
+;;                 vterm-mode-hook))
+;;   (add-hook mode (lambda () (display-line-numbers-mode 0))))
+;;
+(dolist (mode '(prog-mode-hook))
+  (add-hook mode (lambda () (display-line-numbers-mode 1))))
+
+;; (setq-default show-trailing-whitespace t)
+;;
+;; (dolist (mode '(vterm-mode-hook
+;;                 Buffer-menu-mode-hook
+;;                 calendar-mode-hook))
+;;   (add-hook mode (lambda () (setq show-trailing-whitespace nil))))
+;;
+(add-hook 'prog-mode-hook (lambda () (setq show-trailing-whitespace t)))
 
 ;(global-hl-line-mode +1)
 
