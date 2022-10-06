@@ -203,7 +203,7 @@
 
 (use-package ivy-rich
   :config
-  (ivi-rich-mode 1))
+  (ivy-rich-mode 1))
 
 (use-package swiper
   :bind (("C-s" . swiper)))
