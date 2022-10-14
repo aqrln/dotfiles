@@ -65,7 +65,8 @@
 
 (setq dired-use-ls-dired t
       ;; consider --group-directories-first
-      dired-listing-switches "-ahl")
+      dired-listing-switches "-ahl"
+      dired-dwim-target t)
 
 (when (string= system-type "darwin")
   (setq insert-directory-program "/opt/homebrew/bin/gls"))
