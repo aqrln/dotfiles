@@ -325,6 +325,13 @@
   :hook (ement-room-mode . (lambda ()
 							 (evil-emacs-state))))
 
+(use-package golden-ratio
+  :init
+  ;; (setq golden-ratio-auto-scale t)
+  (setq golden-ratio-extra-commands
+		'(windmove-left windmove-right windmove-down windmove-up
+          evil-window-left evil-window-right evil-window-down evil-window-up)))
+
 (use-package general
   :config
   (general-create-definer my-leader-def
@@ -350,6 +357,7 @@
 
   (my-leader-def
 	"gg" 'magit-status
+	"gr" 'golden-ratio-mode
 
 	"vv" 'multi-vterm
 	"vp" 'multi-vterm-project
