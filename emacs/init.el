@@ -162,6 +162,10 @@
   :hook ((typescript-mode . lsp)
 		 (rust-mode . lsp)))
 
+(use-package lsp-ivy)
+
+(use-package lsp-ui)
+
 (use-package treemacs)
 
 (use-package rg
