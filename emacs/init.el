@@ -162,11 +162,16 @@
 
 (use-package lsp-mode
   :hook ((typescript-mode . lsp)
-		 (rust-mode . lsp)))
+		 (rust-mode       . lsp)
+		 ;; (prisma-mode     . lsp)
+         ))
 
 (use-package lsp-ivy)
 
 (use-package lsp-ui)
+
+;; (add-to-list 'load-path "~/.emacs.d/emacs-prisma-mode")
+;; (require 'prisma-mode)
 
 (use-package treemacs)
 
