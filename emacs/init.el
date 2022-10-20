@@ -263,6 +263,8 @@
   (evil-mode 1)
   (evil-set-undo-system 'undo-tree))
 
+(add-hook 'calculator-mode-hook (lambda () (evil-emacs-state)))
+
 (use-package evil-surround
   :after evil
   :config
