@@ -68,6 +68,8 @@
       dired-listing-switches "-ahl"
       dired-dwim-target t)
 
+(setq tramp-default-method "ssh")
+
 (when (string= system-type "darwin")
   (setq insert-directory-program "/opt/homebrew/bin/gls"))
 
