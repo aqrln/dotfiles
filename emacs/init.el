@@ -372,8 +372,14 @@
    "M-<tab>" 'company-complete)
 
   (my-leader-def
+	"ff" 'counsel-find-file
+	"fd" 'dired
+
 	"gg" 'magit-status
 	"gr" 'golden-ratio-mode
+
+	;; "l" 'lsp-command-map
+	"p" 'projectile-command-map
 
 	"vv" 'multi-vterm
 	"vp" 'multi-vterm-project
