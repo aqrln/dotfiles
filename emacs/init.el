@@ -28,6 +28,11 @@
 
 (setq-default indicate-empty-lines t)
 
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+(setq c-basic-offset 4)
+(setq js-indent-level 2)
+
 ;; (global-display-line-numbers-mode)
 ;;
 ;; (dolist (mode '(help-mode-hook
