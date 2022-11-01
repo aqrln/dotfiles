@@ -174,7 +174,7 @@
   :hook ((typescript-mode . lsp)
 		 (rust-mode       . lsp)
 		 ;; (prisma-mode     . lsp)
-         ))
+		 (lsp-mode . lsp-enable-which-key-integration)))
 
 (use-package lsp-ivy)
 
