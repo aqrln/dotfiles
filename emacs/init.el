@@ -33,6 +33,8 @@
 (setq c-basic-offset 4)
 (setq js-indent-level 2)
 
+(electric-pair-mode 1)
+
 ;; (global-display-line-numbers-mode)
 ;;
 ;; (dolist (mode '(help-mode-hook
@@ -121,11 +123,14 @@
   :config
   (global-flycheck-mode +1))
 
-(use-package smartparens
-  :diminish smartparens-mode
-  :hook (prog-mode . smartparens-mode)
-  :config
-  (require 'smartparens-config))
+;; (use-package smartparens
+;;   :diminish smartparens-mode
+;;   :hook (prog-mode . smartparens-mode)
+;;   :init
+;;   (require 'smartparens-config))
+
+;; ;; (use-package smartparens-config
+;; ;;  :hook (prog-mode . smartparens-mode))
 
 (use-package recentf
   :init
@@ -183,9 +188,6 @@
 (use-package rg
   :config
   (rg-enable-default-bindings))
-
-(use-package smartparens-config
-  :hook (prog-mode . smartparens-mode))
 
 ;; (use-package undo-fu
 ;;   :config
