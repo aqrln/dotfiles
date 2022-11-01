@@ -5,6 +5,7 @@
 /elpa
 /multisession
 /transient
+/savefile
 
 /projects
 projectile-bookmarks.eld
