@@ -17,7 +17,7 @@
 (setq ring-bell-function 'ignore)
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
 
-(set-frame-font "Fira Mono 14" nil t)
+(set-frame-font "Iosevka Term 14" nil t)
 ;; (load-theme 'wombat t)
 
 (tool-bar-mode -1)
