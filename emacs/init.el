@@ -356,6 +356,8 @@
 
 (use-package aggressive-indent)
 
+(use-package yaml-mode)
+
 (use-package general
   :config
   (general-create-definer my-leader-def
