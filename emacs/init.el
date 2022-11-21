@@ -326,9 +326,9 @@
 
 (use-package vterm
   :hook (vterm-mode . (lambda ()
-						(setq-local evil-insert-state-cursor 'box)
-						(setq-local evil-normal-state-cursor 'hollow)
-						(evil-insert-state))))
+                        (setq-local evil-insert-state-cursor 'box)
+                        (setq-local evil-normal-state-cursor 'hollow)
+                        (evil-insert-state))))
 
 (use-package multi-vterm)
 
@@ -345,7 +345,7 @@
 
 (use-package ement
   :hook (ement-room-mode . (lambda ()
-							 (evil-emacs-state))))
+                             (evil-emacs-state))))
 
 (use-package golden-ratio
   :init
