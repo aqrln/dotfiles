@@ -354,6 +354,8 @@
 		'(windmove-left windmove-right windmove-down windmove-up
           evil-window-left evil-window-right evil-window-down evil-window-up)))
 
+(use-package aggressive-indent)
+
 (use-package general
   :config
   (general-create-definer my-leader-def
