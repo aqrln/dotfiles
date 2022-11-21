@@ -14,6 +14,9 @@ projectile-bookmarks.eld
 /url
 /tramp
 
+/persist
+/mastodon.plstore
+
 .lsp-session-*
 
 .emacs.desktop
