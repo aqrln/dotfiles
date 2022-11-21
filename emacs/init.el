@@ -356,14 +356,20 @@
 
 (use-package aggressive-indent)
 
+(use-package mastodon
+  :hook (mastodon-mode . (lambda () (evil-emacs-state)))
+  :init
+  (setq mastodon-instance-url "https://hachyderm.io"
+        mastodon-active-user "aqrln"))
+
 (use-package yaml-mode)
 
 (use-package general
   :config
   (general-create-definer my-leader-def
-						  :keymaps '(normal insert visual emacs)
-						  :prefix "SPC"
-						  :global-prefix "C-SPC")
+	:keymaps '(normal insert visual emacs)
+	:prefix "SPC"
+	:global-prefix "C-SPC")
   (general-define-key
    "s-{" 'tab-bar-switch-to-prev-tab
    "s-}" 'tab-bar-switch-to-next-tab)
