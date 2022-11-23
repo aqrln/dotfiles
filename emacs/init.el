@@ -186,8 +186,13 @@
 
 (use-package lsp-ui)
 
-;; (add-to-list 'load-path "~/.emacs.d/emacs-prisma-mode")
-;; (require 'prisma-mode)
+(add-to-list 'load-path "~/.emacs.d/emacs-prisma-mode")
+(require 'prisma-mode)
+
+(use-package eglot
+  :hook ((prisma-mode . eglot-ensure))
+  :config
+  (add-to-list 'eglot-server-programs '(prisma-mode . ("prisma-language-server" "--stdio"))))
 
 (use-package treemacs)
 
@@ -333,6 +338,7 @@
 (use-package multi-vterm)
 
 (use-package prettier
+  :hook (prisma-mode . (lambda () (prettier-mode -1)))
   :config
   (global-prettier-mode))
 
