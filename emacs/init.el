@@ -282,6 +282,7 @@
   (setq evil-vsplit-window-right t)
   (setq evil-split-window-below t)
   (setq evil-want-C-u-scroll t)
+  (setq evil-want-keybinding nil)
   :config
   (evil-mode 1)
   (evil-set-undo-system 'undo-tree))
