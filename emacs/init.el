@@ -179,8 +179,7 @@
 (use-package lsp-mode
   :hook ((typescript-mode . lsp)
 		 (rust-mode       . lsp)
-		 ;; (prisma-mode     . lsp)
-		 (lsp-mode . lsp-enable-which-key-integration)))
+		 (lsp-mode        . lsp-enable-which-key-integration)))
 
 (use-package lsp-ivy)
 
