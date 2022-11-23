@@ -408,16 +408,39 @@
 	"ff" 'counsel-find-file
 	"fd" 'dired
 
+    "bb" 'ivy-switch-buffer
+    "bi" 'ibuffer
+
 	"gg" 'magit-status
 	"gr" 'golden-ratio-mode
 
 	;; "l" 'lsp-command-map
 	"p" 'projectile-command-map
 
+    ;; "ls" 'eglot-server-menu
+    "lf" 'eglot-format
+    "aa" 'eglot-code-actions
+    "ao" 'eglot-code-action-organize-imports
+    "af" 'eglot-code-action-quickfix
+    "ae" 'eglot-code-action-extract
+    "ai" 'eglot-code-action-inline
+    "ar" 'eglot-code-action-rewrite
+
 	"vv" 'multi-vterm
 	"vp" 'multi-vterm-project
 	"vP" 'multi-vterm-prev
-	"vN" 'multi-vterm-next))
+	"vN" 'multi-vterm-next)
+
+  ;; (my-leader-def
+  ;;  :keymaps 'eglot-mode-map
+  ;;  :states '(normal visual)
+  ;;  "aa" 'eglot-code-actions
+  ;;  "ao" 'eglot-code-action-organize-imports
+  ;;  "af" 'eglot-code-action-quickfix
+  ;;  "ae" 'eglot-code-action-extract
+  ;;  "ai" 'eglot-code-action-inline
+  ;;  "ar" 'eglot-code-action-rewrite)
+  )
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
