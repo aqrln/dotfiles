@@ -432,7 +432,8 @@
 	"vv" 'multi-vterm
 	"vp" 'multi-vterm-project
 	"vP" 'multi-vterm-prev
-	"vN" 'multi-vterm-next)
+	"vN" 'multi-vterm-next
+    "v ESC" 'vterm-send-escape)
 
   ;; (my-leader-def
   ;;  :keymaps 'eglot-mode-map
