@@ -261,6 +261,9 @@
   :custom ((projectile-completion-system 'ivy))
   :bind-keymap
   ("C-c p" . projectile-command-map)
+  ("s-p" . projectile-command-map)
+  :init
+  (setq projectile-switch-project-action #'projectile-dired)
   :config
   (projectile-mode))
 
