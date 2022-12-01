@@ -123,4 +123,6 @@ return require('packer').startup(function()
   use 'mfussenegger/nvim-dap'
 
   -- use 'akinsho/bufferline.nvim'
+
+  use 'LnL7/vim-nix'
 end)
