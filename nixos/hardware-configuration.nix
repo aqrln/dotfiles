@@ -35,4 +35,11 @@
   # networking.interfaces.enp0s6.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "aarch64-linux";
+
+  services.qemuGuest.enable = true;
+  services.spice-vdagentd.enable = true;
+  # services.xserver.videoDrivers = [ "qxl" ];
+  # services.xserver.videoDrivers = [ "virgl" ];
+
+  hardware.opengl.enable = true;
 }

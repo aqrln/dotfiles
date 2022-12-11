@@ -35,7 +35,9 @@
   # };
 
   # Enable the X11 windowing system.
-  # services.xserver.enable = true;
+  services.xserver.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
   # services.xserver.layout = "us";
@@ -45,11 +47,11 @@
   # };
 
   # Enable CUPS to print documents.
-  # services.printing.enable = true;
+  services.printing.enable = true;
 
   # Enable sound.
-  # sound.enable = true;
-  # hardware.pulseaudio.enable = true;
+  sound.enable = true;
+  hardware.pulseaudio.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
@@ -85,6 +87,7 @@
     rr
     ripgrep
     fzf
+    firefox-wayland
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -100,6 +103,19 @@
 
   services.openssh.enable = true;
   services.pcscd.enable = true;
+  services.dbus.enable = true;
+  services.pipewire.enable = true;
+
+  environment.sessionVariables = {
+    MOZ_ENABLE_WAYLAND = "1";
+    MOZ_USE_XINPUT2 = "1";
+    # XDG_CURRENT_DESKTOP = "sway";
+  };
+
+  # programs.sway = {
+  #   enable = true;
+  #   wrapperFeatures.gtk = true;
+  # };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
