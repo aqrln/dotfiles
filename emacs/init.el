@@ -83,6 +83,9 @@
           (lambda ()
             (modify-syntax-entry ?_ "w")))
 
+(unless (display-graphic-p)
+  (xterm-mouse-mode 1))
+
 (when (string= system-type "darwin")
   (setq insert-directory-program "/opt/homebrew/bin/gls"))
 
