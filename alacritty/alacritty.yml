@@ -3,10 +3,10 @@ import:
 
 font:
   normal:
-    family: Codelia Nerd Font
+    family: Iosevka Term
     style: Medium
 
   italic:
     style: Medium Italic
 
-  size: 15
+  size: 14
