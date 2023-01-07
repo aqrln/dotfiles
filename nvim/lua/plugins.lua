@@ -125,4 +125,6 @@ return require('packer').startup(function()
   -- use 'akinsho/bufferline.nvim'
 
   use 'LnL7/vim-nix'
+
+  use 'direnv/direnv.vim'
 end)
