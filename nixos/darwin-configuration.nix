@@ -6,6 +6,7 @@
   environment.systemPackages = with pkgs;
     [ neovim
       nixpkgs-fmt
+      nixfmt
     ];
 
   # Use a custom configuration.nix location.
