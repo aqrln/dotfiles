@@ -6,6 +6,7 @@ export GPG_TTY=$(tty)
 export VISUAL="nvim"
 export CLICOLOR=1
 
+alias ls="ls --color=auto"
 alias ll="ls -l"
 alias macos_fix_keyboard="sudo killall -9 PAH_Extension TextInputMenuAgent TextInputSwitcher"
 alias macos_show_login_items="sudo sfltool dumpbtm"
