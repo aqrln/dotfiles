@@ -1,4 +1,5 @@
 update () {
+    update_nix
     update_apt
     update_brew
     update_rust
@@ -9,6 +10,21 @@ update () {
 
 __update_show_header () {
     printf "\033[1;36m\n%s\n\n\033[0m" "$1"
+}
+
+update_nix () {
+    if type darwin-rebuild &>/dev/null; then
+        __update_show_header 'Updating Darwin with Nix'
+
+        nix-channel --update
+        sudo nix-channel --update
+        darwin-rebuild switch
+    fi
+
+    if type nixos-rebuild &>/dev/null; then
+        __update_show_header 'Updating NixOS'
+        sudo nixos-rebuild switch --upgrade
+    fi
 }
 
 update_apt () {
