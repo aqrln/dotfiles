@@ -391,6 +391,8 @@
 
 (use-package dockerfile-mode)
 
+(add-to-list 'auto-mode-alist '("\\.mdx\\'" . markdown-mode))
+
 (use-package general
   :config
   (general-create-definer my-leader-def
