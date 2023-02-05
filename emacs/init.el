@@ -108,7 +108,7 @@
 
 (use-package doom-themes
   :config
-  (load-theme 'doom-solarized-dark-high-contrast t))
+  (load-theme 'doom-solarized-light t))
 
 (use-package exec-path-from-shell
   :if (memq window-system '(mac ns))
