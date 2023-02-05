@@ -7,6 +7,7 @@
     [ neovim
       nixpkgs-fmt
       nixfmt
+      tmux
     ];
 
   # Use a custom configuration.nix location.
