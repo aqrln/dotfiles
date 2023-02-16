@@ -178,11 +178,12 @@
 (use-package rustic
   :config
   (setq rustic-format-trigger 'on-save)
-  (push 'rustic-clippy flycheck-checkers))
+  (push 'rustic-clippy flycheck-checkers)
+  (setq rustic-lsp-client 'eglot))
 
 (use-package lsp-mode
   :hook ((typescript-mode . lsp)
-		 (rust-mode       . lsp)
+		 ;;(rust-mode       . lsp)
 		 (lsp-mode        . lsp-enable-which-key-integration)))
 
 (use-package lsp-ivy)
@@ -193,9 +194,16 @@
 (require 'prisma-mode)
 
 (use-package eglot
-  :hook ((prisma-mode . eglot-ensure))
+  :hook ((prisma-mode . eglot-ensure)
+         (rust-mode   . eglot-ensure)
+         (nix-mode    . eglot-ensure))
   :config
-  (add-to-list 'eglot-server-programs '(prisma-mode . ("prisma-language-server" "--stdio"))))
+  (add-to-list 'eglot-server-programs '(prisma-mode . ("prisma-language-server" "--stdio")))
+  (add-to-list 'eglot-server-programs '(nix-mode . ("nil"))))
+
+(add-hook 'eglot-managed-mode-hook
+          (lambda ()
+            (setq eldoc-documentation-strategy #'eldoc-documentation-compose)))
 
 (use-package treemacs)
 
