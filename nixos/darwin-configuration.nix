@@ -5,9 +5,19 @@
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs;
     [ neovim
+      git
+      direnv
+
+      tmux
+      fd
+      fzf
+      zoxide
+
       nixpkgs-fmt
       nixfmt
-      tmux
+      nil
+
+      rust-analyzer-unwrapped
     ];
 
   # Use a custom configuration.nix location.
