@@ -11,6 +11,7 @@
     neovim
     git
     direnv
+    htop
 
     tmux
     fd
