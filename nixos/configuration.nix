@@ -159,6 +159,11 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
+  };
+
   fonts.fonts = with pkgs; [
     iosevka-bin
   ];
