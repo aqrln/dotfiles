@@ -447,6 +447,7 @@
     "ae" 'eglot-code-action-extract
     "ai" 'eglot-code-action-inline
     "ar" 'eglot-code-action-rewrite
+    "lF" 'lsp-ui-flycheck-list
 
 	"vv" 'multi-vterm
 	"vp" 'multi-vterm-project
