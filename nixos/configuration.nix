@@ -121,6 +121,7 @@
     rr
     ripgrep
     fzf
+    alacritty
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -157,5 +158,9 @@
   system.stateVersion = "22.11"; # Did you read the comment?
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  fonts.fonts = with pkgs; [
+    iosevka-bin
+  ];
 }
 
