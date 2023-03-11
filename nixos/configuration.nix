@@ -54,14 +54,42 @@
   services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  # services.xserver.displayManager.gdm.enable = true;
+  # services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
     layout = "us";
     xkbVariant = "";
   };
+
+  services.xserver.desktopManager = {
+    xfce = {
+      enable = true;
+      noDesktop = true;
+      enableXfwm = false;
+    };
+  };
+
+  services.xserver.displayManager = {
+    gdm.enable = true;
+    defaultSession = "xfce+i3";
+    sessionCommands = ''
+      ${pkgs.xorg.xrdb}/bin/xrdb -merge <<EOF
+      Xft.dpi: 180
+      EOF
+    '';
+  };
+
+  services.xserver.windowManager.i3 = {
+    enable = true;
+    extraPackages = with pkgs; [
+      dmenu
+      i3status
+    ];
+  };
+
+  environment.pathsToLink = [ "/libexec" ];
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
