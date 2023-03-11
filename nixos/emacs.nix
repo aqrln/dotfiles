@@ -1,18 +1,21 @@
 { pkgs, ... }:
 
-let emacsPackage = pkgs.emacsWithPackagesFromUsePackage {
-  config = ../emacs/init.el;
-  alwaysEnsure = true;
+let
+  emacsPackage = with pkgs;
+    emacsWithPackagesFromUsePackage {
+      config = ../emacs/init.el;
+      alwaysEnsure = true;
 
-  package = pkgs.emacsPgtk.overrideAttrs (prev: {
-    patches = (prev.patches or []) ++ [
-      (pkgs.fetchpatch {
-        url = "https://raw.githubusercontent.com/d12frosted/homebrew-emacs-plus/master/patches/emacs-28/fix-window-role.patch";
-        sha256 = "sha256-+z/KfsBm1lvZTZNiMbxzXQGRTjkCFO4QPlEK35upjsE=";
-      })
-    ];
-  });
-};
+      package = emacsPgtk.overrideAttrs (prev: {
+        patches = (prev.patches or [ ]) ++ [
+          (fetchpatch {
+            url =
+              "https://raw.githubusercontent.com/d12frosted/homebrew-emacs-plus/master/patches/emacs-28/fix-window-role.patch";
+            sha256 = "sha256-+z/KfsBm1lvZTZNiMbxzXQGRTjkCFO4QPlEK35upjsE=";
+          })
+        ];
+      });
+    };
 
 in {
   nixpkgs.overlays = [
