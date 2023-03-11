@@ -1,24 +1,28 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ./emacs.nix
+  ];
+
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
-  environment.systemPackages = with pkgs;
-    [ neovim
-      git
-      direnv
+  environment.systemPackages = with pkgs; [
+    neovim
+    git
+    direnv
 
-      tmux
-      fd
-      fzf
-      zoxide
+    tmux
+    fd
+    fzf
+    zoxide
 
-      nixpkgs-fmt
-      nixfmt
-      nil
+    nixpkgs-fmt
+    nixfmt
+    nil
 
-      rust-analyzer-unwrapped
-    ];
+    rust-analyzer-unwrapped
+  ];
 
   # Use a custom configuration.nix location.
   # $ darwin-rebuild switch -I darwin-config=$HOME/.config/nixpkgs/darwin/configuration.nix
@@ -38,7 +42,7 @@
   };
 
   # Create /etc/zshrc that loads the nix-darwin environment.
-  programs.zsh.enable = true;  # default shell on catalina
+  programs.zsh.enable = true; # default shell on catalina
   programs.bash.enable = true;
   # programs.fish.enable = true;
 
