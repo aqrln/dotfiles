@@ -138,6 +138,7 @@
 
   home-manager.users.aqrln = {
     home.stateVersion = "22.11";
+    programs.bash.enable = true;
   };
 
   # Allow unfree packages
