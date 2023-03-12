@@ -205,8 +205,6 @@
           (lambda ()
             (setq eldoc-documentation-strategy #'eldoc-documentation-compose)))
 
-(use-package treemacs)
-
 (use-package rg
   :config
   (rg-enable-default-bindings))
