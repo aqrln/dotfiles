@@ -29,7 +29,7 @@
   ];
 
   users.users.aqrln = {
-    name = "Alexey Orlenko";
+    name = "aqrln";
     home = "/Users/aqrln";
   };
 
