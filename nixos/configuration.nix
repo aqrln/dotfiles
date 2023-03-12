@@ -153,7 +153,6 @@
     htop
     wget
     git
-    direnv
     zsh
     gnupg
     pinentry
