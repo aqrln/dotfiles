@@ -7,8 +7,10 @@
 {
   imports =
     [ # Include the results of the hardware scan.
+      <home-manager/nixos>
       ./hardware-configuration.nix
       ./emacs.nix
+      ../alacritty
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -127,6 +129,15 @@
       cargo-show-asm
       cargo-watch
     ];
+  };
+
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+  };
+
+  home-manager.users.aqrln = {
+    home.stateVersion = "22.11";
   };
 
   # Allow unfree packages
