@@ -10,6 +10,7 @@
       <home-manager/nixos>
       ./hardware-configuration.nix
       ./home.nix
+      ./sway.nix
       ./emacs.nix
       ../alacritty
     ];
@@ -66,31 +67,31 @@
     xkbVariant = "";
   };
 
-  services.xserver.desktopManager = {
-    xfce = {
-      enable = true;
-      noDesktop = true;
-      enableXfwm = false;
-    };
-  };
+  # services.xserver.desktopManager = {
+  #   xfce = {
+  #     enable = true;
+  #     noDesktop = true;
+  #     enableXfwm = false;
+  #   };
+  # };
 
-  services.xserver.displayManager = {
-    gdm.enable = true;
-    defaultSession = "xfce+i3";
-    sessionCommands = ''
-      ${pkgs.xorg.xrdb}/bin/xrdb -merge <<EOF
-      Xft.dpi: 180
-      EOF
-    '';
-  };
+  # services.xserver.displayManager = {
+  #   gdm.enable = true;
+  #   defaultSession = "xfce+i3";
+  #   sessionCommands = ''
+  #     ${pkgs.xorg.xrdb}/bin/xrdb -merge <<EOF
+  #     Xft.dpi: 180
+  #     EOF
+  #   '';
+  # };
 
-  services.xserver.windowManager.i3 = {
-    enable = true;
-    extraPackages = with pkgs; [
-      dmenu
-      i3status
-    ];
-  };
+  # services.xserver.windowManager.i3 = {
+  #   enable = true;
+  #   extraPackages = with pkgs; [
+  #     dmenu
+  #     i3status
+  #   ];
+  # };
 
   environment.pathsToLink = [ "/libexec" ];
 
