@@ -34,17 +34,6 @@
     home = "/Users/aqrln";
   };
 
-  home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = true;
-  };
-
-  home-manager.users.aqrln = {
-    home.stateVersion = "22.11";
-    # programs.bash.enable = true;
-    # programs.zsh.enable = true;
-  };
-
   # Use a custom configuration.nix location.
   # $ darwin-rebuild switch -I darwin-config=$HOME/.config/nixpkgs/darwin/configuration.nix
   # environment.darwinConfig = "$HOME/.config/nixpkgs/darwin/configuration.nix";
