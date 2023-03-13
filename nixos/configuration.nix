@@ -6,9 +6,10 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
       <home-manager/nixos>
       ./hardware-configuration.nix
+      ./home.nix
       ./emacs.nix
       ../alacritty
     ];
@@ -129,18 +130,6 @@
       cargo-show-asm
       cargo-watch
     ];
-  };
-
-  home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = true;
-  };
-
-  home-manager.users.aqrln = {
-    home.stateVersion = "22.11";
-    programs.bash.enable = true;
-    programs.direnv.enable = true;
-    programs.direnv.nix-direnv.enable = true;
   };
 
   # Allow unfree packages

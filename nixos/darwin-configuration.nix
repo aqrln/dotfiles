@@ -3,6 +3,7 @@
 {
   imports = [
     <home-manager/nix-darwin>
+    ./home.nix
     ./emacs.nix
     ../alacritty
   ];
