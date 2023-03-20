@@ -17,8 +17,10 @@
 (setq ring-bell-function 'ignore)
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
 
-(set-frame-font "Iosevka Term 14" nil t)
-;; (load-theme 'wombat t)
+
+(if (eq system-type 'darwin)
+    (set-frame-font "Iosevka Term 14" nil t)
+  (set-frame-font "Iosevka Term Medium 10" nil t))
 
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
