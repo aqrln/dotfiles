@@ -27,5 +27,5 @@ in {
 
   services.emacs.package = emacsPackage;
 
-  environment.systemPackages = [ emacsPackage ];
+  environment.systemPackages = with pkgs; [ emacsPackage aspell ];
 }
