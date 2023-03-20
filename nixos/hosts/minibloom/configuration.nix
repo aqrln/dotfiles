@@ -8,6 +8,9 @@
   imports =
     [
       <home-manager/nixos>
+      <nixos-hardware/common/gpu/intel>
+      <nixos-hardware/common/pc>
+      <nixos-hardware/common/pc/ssd>
       ./hardware-configuration.nix
       ../../home.nix
       # ../../sway.nix
@@ -17,10 +20,12 @@
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
+  # boot.loader.systemd-boot.consoleMode = "auto";
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
+  powerManagement.cpuFreqGovernor = "ondemand";
 
   # Setup keyfile
   boot.initrd.secrets = {
@@ -122,6 +127,8 @@
     fzf
     alacritty
     tmux
+    fd
+    wl-clipboard
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
