@@ -21,3 +21,5 @@ projectile-bookmarks.eld
 
 .emacs.desktop
 .emacs.desktop.lock
+
+forge-database.sqlite
