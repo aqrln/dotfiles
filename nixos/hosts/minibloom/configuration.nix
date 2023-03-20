@@ -135,6 +135,7 @@
     fd
     wl-clipboard
     python3
+    nixfmt
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
