@@ -423,10 +423,12 @@
    "s-w" 'evil-window-delete)
 
   (general-define-key
-   "s-b" 'ivy-switch-buffer)
+   "s-b" 'ivy-switch-buffer
+   "s-s" 'save-buffer)
 
   (general-define-key
-   "M-<tab>" 'company-complete)
+   "M-<tab>" 'company-complete
+   "C-<tab>" 'company-complete)
 
   (my-leader-def
 	"ff" 'counsel-find-file
