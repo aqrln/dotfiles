@@ -27,6 +27,8 @@
     nil
 
     rust-analyzer-unwrapped
+
+    tailscale
   ];
 
   users.users.aqrln = {
