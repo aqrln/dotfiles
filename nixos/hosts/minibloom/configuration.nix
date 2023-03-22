@@ -137,6 +137,7 @@
     python3
     nixfmt
     tailscale
+    man-pages
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -191,4 +192,10 @@
     iosevka-bin
     (nerdfonts.override { fonts = [ "Iosevka" ]; })
   ];
+
+  documentation = {
+    man.man-db.enable = true;
+    man.generateCaches = true;
+    dev.enable = true;
+  };
 }
