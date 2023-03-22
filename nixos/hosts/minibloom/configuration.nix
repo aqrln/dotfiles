@@ -17,6 +17,7 @@
       ../../emacs.nix
       ../../../alacritty
       ../../debug.nix
+      ../../fonts.nix
     ];
 
   # Bootloader.
@@ -187,11 +188,6 @@
     enable = true;
     dockerCompat = true;
   };
-
-  fonts.fonts = with pkgs; [
-    iosevka-bin
-    (nerdfonts.override { fonts = [ "Iosevka" ]; })
-  ];
 
   documentation = {
     man.man-db.enable = true;
