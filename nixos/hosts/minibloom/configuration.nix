@@ -16,6 +16,7 @@
       # ../../sway.nix
       ../../emacs.nix
       ../../../alacritty
+      ../../debug.nix
     ];
 
   # Bootloader.
@@ -125,7 +126,6 @@
     gnupg
     pinentry
     gcc
-    gdb
     gnumake
     rr
     ripgrep
