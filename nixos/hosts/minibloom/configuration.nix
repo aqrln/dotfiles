@@ -119,26 +119,28 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    neovim
-    htop
-    wget
-    git
-    zsh
-    gnupg
-    pinentry
-    gcc
-    gnumake
-    rr
-    ripgrep
-    fzf
     alacritty
-    tmux
     fd
-    wl-clipboard
-    python3
-    nixfmt
-    tailscale
+    fzf
+    gcc
+    git
+    gnumake
+    gnupg
+    htop
     man-pages
+    neovim
+    nil
+    nixfmt
+    nixpkgs-fmt
+    pinentry
+    python3
+    ripgrep
+    rr
+    tailscale
+    tmux
+    wget
+    wl-clipboard
+    zsh
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
