@@ -9,8 +9,10 @@ in {
     programs.alacritty = {
       enable = true;
       settings = {
-        "import" = [ ./kanagawa.yml ]
-          ++ lib.optionals isDarwin [ ./mac_meta_keys.yml ];
+        "import" = [
+          # ./kanagawa.yml
+          ./solarized_light.yaml
+        ] ++ lib.optionals isDarwin [ ./mac_meta_keys.yml ];
 
         font = {
           size = if isDarwin then 14 else 12;
