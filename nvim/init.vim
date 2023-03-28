@@ -13,7 +13,9 @@ set nowrap
 
 set mouse=a
 set termguicolors
-colorscheme kanagawa
+" colorscheme kanagawa
+set bg=light
+colorscheme solarized
 
 set shiftwidth=4
 set softtabstop=4
