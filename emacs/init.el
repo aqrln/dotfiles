@@ -471,6 +471,20 @@
   ;;  "ar" 'eglot-code-action-rewrite)
   )
 
+;; Fix lsp servers null character issue with emacs 28
+(if (version< emacs-version "29.0")
+    (progn
+      (advice-add 'json-parse-string :around
+                  (lambda (orig string &rest rest)
+                    (apply orig (s-replace "\\u0000" "" string)
+                           rest)))
+      (advice-add 'json-parse-buffer :around
+                  (lambda (oldfn &rest args)
+                    (save-excursion
+                      (while (search-forward "\\u0000" nil t)
+                        (replace-match "" nil t)))
+                    (apply oldfn args)))))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
