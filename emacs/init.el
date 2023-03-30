@@ -424,7 +424,8 @@
 
   (general-define-key
    "s-b" 'ivy-switch-buffer
-   "s-s" 'save-buffer)
+   "s-s" 'save-buffer
+   "s-v" 'yank)
 
   (general-define-key
    "M-<tab>" 'company-complete
