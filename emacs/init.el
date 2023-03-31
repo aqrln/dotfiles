@@ -364,9 +364,9 @@
 ;; (use-package all-the-icons-dired
 ;;   :hook (dired-mode . all-the-icons-dired-mode))
 
-(use-package ement
-  :hook (ement-room-mode . (lambda ()
-                             (evil-emacs-state))))
+;; (use-package ement
+;;   :hook (ement-room-mode . (lambda ()
+;;                              (evil-emacs-state))))
 
 (use-package golden-ratio
   :init
@@ -377,11 +377,11 @@
 
 (use-package aggressive-indent)
 
-(use-package mastodon
-  :hook (mastodon-mode . (lambda () (evil-emacs-state)))
-  :init
-  (setq mastodon-instance-url "https://hachyderm.io"
-        mastodon-active-user "aqrln"))
+;; (use-package mastodon
+;;   :hook (mastodon-mode . (lambda () (evil-emacs-state)))
+;;   :init
+;;   (setq mastodon-instance-url "https://hachyderm.io"
+;;         mastodon-active-user "aqrln"))
 
 (use-package yaml-mode)
 
