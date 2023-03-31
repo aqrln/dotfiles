@@ -16,7 +16,7 @@
     direnv
     htop
 
-    alacritty
+    # alacritty
     tmux
     fd
     fzf
