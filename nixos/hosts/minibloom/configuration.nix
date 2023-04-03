@@ -12,6 +12,7 @@
       <nixos-hardware/common/pc>
       <nixos-hardware/common/pc/ssd>
       ./hardware-configuration.nix
+      ../../cachix.nix
       ../../home.nix
       # ../../sway.nix
       ../../emacs.nix
@@ -120,6 +121,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     alacritty
+    cachix
     fd
     fzf
     gcc
