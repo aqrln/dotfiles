@@ -3,8 +3,13 @@ if [[ -z $ZPROFILE_SOURCED ]]; then
 fi
 
 export GPG_TTY=$(tty)
-export VISUAL="nvim"
 export CLICOLOR=1
+
+if [[ -z "$INSIDE_EMACS" ]]; then
+    export VISUAL="nvim"
+else
+    export VISUAL="emacsclient"
+fi
 
 alias ls="ls --color=auto"
 alias ll="ls -l"
