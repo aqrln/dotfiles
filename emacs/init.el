@@ -404,6 +404,8 @@
 
 (use-package gnuplot-mode)
 
+(use-package cmake-mode)
+
 (use-package general
   :config
   (general-create-definer my-leader-def
