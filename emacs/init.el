@@ -81,9 +81,9 @@
 
 ;; consider underscore character a part of word
 ;; can't use superword-mode due to a bug in evil-mode: https://github.com/emacs-evil/evil/issues/721
-(add-hook 'prog-mode-hook
-          (lambda ()
-            (modify-syntax-entry ?_ "w")))
+(dolist (hook '(prog-mode-hook yaml-mode-hook))
+  (add-hook hook (lambda ()
+                   (modify-syntax-entry ?_ "w"))))
 
 ;; (unless (display-graphic-p)
 ;;   (xterm-mouse-mode 1))
