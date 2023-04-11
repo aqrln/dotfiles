@@ -23,6 +23,7 @@ update_nix () {
 
     if type nixos-rebuild &>/dev/null; then
         __update_show_header 'Updating NixOS'
+        sudo nix-channel --update
         sudo nixos-rebuild switch --upgrade
     fi
 }
