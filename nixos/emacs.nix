@@ -6,7 +6,7 @@ let
       config = ../emacs/init.el;
       alwaysEnsure = true;
 
-      package = emacsUnstable;
+      package = emacs-gtk;
       # package = emacsPgtk.overrideAttrs (prev: {
       #   patches = (prev.patches or [ ]) ++ [
       #     (fetchpatch {
