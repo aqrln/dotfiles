@@ -11,24 +11,21 @@
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
-    neovim
-    git
+    bun
+    deno
     direnv
-    htop
-
-    # alacritty
-    tmux
     fd
     fzf
-    zoxide
-
-    nixpkgs-fmt
-    nixfmt
+    git
+    htop
+    neovim
     nil
-
+    nixfmt
+    nixpkgs-fmt
     rust-analyzer-unwrapped
-
     tailscale
+    tmux
+    zoxide
   ];
 
   users.users.aqrln = {
