@@ -303,45 +303,6 @@
 
 (use-package goto-chg)
 
-(use-package evil
-  :init
-  (setq evil-vsplit-window-right t)
-  (setq evil-split-window-below t)
-  (setq evil-want-C-u-scroll t)
-  (setq evil-want-keybinding nil)
-  :config
-  (evil-mode 1)
-  (evil-set-undo-system 'undo-tree))
-
-(add-hook 'calculator-mode-hook (lambda () (evil-emacs-state)))
-
-(use-package evil-surround
-  :after evil
-  :config
-  (global-evil-surround-mode 1))
-
-(use-package evil-commentary
-  :after evil
-  :diminish
-  :config
-  (evil-commentary-mode))
-
-(use-package evil-matchit
-  :after evil
-  :config
-  (global-evil-matchit-mode 1))
-
-(use-package evil-visualstar
-  :after evil
-  :config
-  (global-evil-visualstar-mode))
-
-(use-package evil-collection
-  :after evil
-  :diminish evil-collection-unimpaired-mode
-  :config
-  (evil-collection-init))
-
 (use-package tree-sitter
   :hook (tree-sitter-after-on . tree-sitter-hl-mode)
   :config
@@ -417,6 +378,45 @@
 (use-package gnuplot-mode)
 
 (use-package cmake-mode)
+
+(use-package evil
+  :init
+  (setq evil-vsplit-window-right t)
+  (setq evil-split-window-below t)
+  (setq evil-want-C-u-scroll t)
+  (setq evil-want-keybinding nil)
+  :config
+  (evil-mode 1)
+  (evil-set-undo-system 'undo-tree))
+
+(add-hook 'calculator-mode-hook (lambda () (evil-emacs-state)))
+
+(use-package evil-surround
+  :after evil
+  :config
+  (global-evil-surround-mode 1))
+
+(use-package evil-commentary
+  :after evil
+  :diminish
+  :config
+  (evil-commentary-mode))
+
+(use-package evil-matchit
+  :after evil
+  :config
+  (global-evil-matchit-mode 1))
+
+(use-package evil-visualstar
+  :after evil
+  :config
+  (global-evil-visualstar-mode))
+
+(use-package evil-collection
+  :after evil
+  :diminish evil-collection-unimpaired-mode
+  :config
+  (evil-collection-init))
 
 (use-package general
   :config
