@@ -460,6 +460,7 @@
 
     ;; "ls" 'eglot-server-menu
     "lf" 'eglot-format
+    "la" 'eglot-code-actions
     "aa" 'eglot-code-actions
     "ao" 'eglot-code-action-organize-imports
     "af" 'eglot-code-action-quickfix
@@ -467,6 +468,9 @@
     "ai" 'eglot-code-action-inline
     "ar" 'eglot-code-action-rewrite
     "lF" 'lsp-ui-flycheck-list
+    "lr" 'eglot-rename
+    "lwr" 'eglot-reconnect
+    "lh" 'eglot-inlay-hints-mode
 
 	"vv" 'multi-vterm
 	"vp" 'multi-vterm-project
