@@ -30,6 +30,10 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
   powerManagement.cpuFreqGovernor = "ondemand";
 
+  boot.extraModprobeConfig = ''
+    options hid_apple iso_layout=0
+  '';
+
   # Setup keyfile
   boot.initrd.secrets = {
     "/crypto_keyfile.bin" = null;
