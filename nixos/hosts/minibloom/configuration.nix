@@ -112,7 +112,7 @@
   users.users.aqrln = {
     isNormalUser = true;
     description = "Alexey Orlenko";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
     packages = with pkgs; [
       firefox
     ];
@@ -130,6 +130,7 @@
     fzf
     gcc
     git
+    gnome.gnome-boxes
     gnumake
     gnupg
     htop
@@ -144,6 +145,7 @@
     rr
     tailscale
     tmux
+    virt-manager
     wget
     wl-clipboard
     zsh
@@ -161,6 +163,8 @@
     enable = true;
     defaultEditor = true;
   };
+
+  programs.dconf.enable = true;
 
   # List services that you want to enable:
 
@@ -191,6 +195,8 @@
   system.stateVersion = "22.11"; # Did you read the comment?
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  virtualisation.libvirtd.enable = true;
 
   virtualisation.podman = {
     enable = true;
