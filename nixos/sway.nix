@@ -37,8 +37,8 @@
       wl-clipboard
     ];
 
-    home.sessionVariables.WLR_RENDERER = "pixman";
-    systemd.user.sessionVariables.WLR_RENDERER = "pixman";
+    # home.sessionVariables.WLR_RENDERER = "pixman";
+    # systemd.user.sessionVariables.WLR_RENDERER = "pixman";
 
     wayland.windowManager.sway = {
       enable = true;
