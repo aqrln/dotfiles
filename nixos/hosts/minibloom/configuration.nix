@@ -115,6 +115,11 @@
     extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
     packages = with pkgs; [
       firefox
+      rustup
+      nodejs_latest
+      nodejs_latest.pkgs.typescript-language-server
+      nodejs_latest.pkgs.vscode-langservers-extracted
+      nodejs_latest.pkgs.pnpm
     ];
   };
 
@@ -127,6 +132,7 @@
     alacritty
     cachix
     fd
+    file
     fzf
     gcc
     git
@@ -140,6 +146,7 @@
     nixfmt
     nixpkgs-fmt
     pinentry
+    podman-compose
     python3
     ripgrep
     rr
