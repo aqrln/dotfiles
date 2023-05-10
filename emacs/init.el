@@ -505,8 +505,12 @@
                         (replace-match "" nil t)))
                     (apply oldfn args)))))
 
+(setenv "EDITOR" "emacsclient")
 (setenv "VISUAL" "emacsclient")
 (server-start)
+
+(setq eshell-visual-subcommands
+      '('("git" "log" "diff" "show")))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
