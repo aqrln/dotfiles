@@ -358,6 +358,8 @@
 
 (use-package yaml-mode)
 
+(use-package json-mode)
+
 (use-package org
   :hook (org-mode . (lambda ()
                       (org-indent-mode)
