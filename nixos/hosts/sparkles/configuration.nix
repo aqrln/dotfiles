@@ -9,10 +9,11 @@
     [
       <home-manager/nixos>
       ./hardware-configuration.nix
-      ./home.nix
-      ./sway.nix
-      ./emacs.nix
-      ../alacritty
+      ../../home.nix
+      ../../sway.nix
+      ../../emacs.nix
+      ../../fonts.nix
+      ../../../alacritty
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -21,7 +22,7 @@
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "nixos";
+  networking.hostName = "sparkles";
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -146,7 +147,7 @@
     zsh
     gnupg
     pinentry
-    gcc12
+    gcc
     gdb
     gnumake
     rr
@@ -199,10 +200,5 @@
     enable = true;
     dockerCompat = true;
   };
-
-  fonts.fonts = with pkgs; [
-    iosevka-bin
-    (nerdfonts.override { fonts = [ "Iosevka" ]; })
-  ];
 }
 
