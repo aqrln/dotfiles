@@ -20,6 +20,10 @@ fi
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env"
 [ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
 
+if [ -d /opt/X11/bin ]; then
+    export PATH="$PATH:/opt/X11/bin"
+fi
+
 export PATH="$HOME/bin:$PATH"
 
 source ~/.zprofile.local
