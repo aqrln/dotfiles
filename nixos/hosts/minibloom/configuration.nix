@@ -134,6 +134,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     alacritty
+    buildah
     cachix
     fd
     file
