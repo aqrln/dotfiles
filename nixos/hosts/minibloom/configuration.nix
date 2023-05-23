@@ -121,9 +121,10 @@
       firefox
       rustup
       nodejs_latest
+      nodejs_latest.pkgs.pnpm
+      nodejs_latest.pkgs.prettier
       nodejs_latest.pkgs.typescript-language-server
       nodejs_latest.pkgs.vscode-langservers-extracted
-      nodejs_latest.pkgs.pnpm
     ];
   };
 
