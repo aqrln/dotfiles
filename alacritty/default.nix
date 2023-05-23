@@ -15,7 +15,7 @@ in {
         ] ++ lib.optionals isDarwin [ ./mac_meta_keys.yml ];
 
         font = {
-          size = if isDarwin then 14 else 12;
+          size = if isDarwin then 14 else 10;
 
           normal = {
             family = "IosevkaTerm Nerd Font";
