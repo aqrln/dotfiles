@@ -14,7 +14,7 @@ return require('packer').startup(function()
 
   use 'editorconfig/editorconfig-vim'
 
-  use 'jiangmiao/auto-pairs'
+  use 'windwp/nvim-autopairs'
 
   use 'tpope/vim-commentary'
 
