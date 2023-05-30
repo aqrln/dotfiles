@@ -35,6 +35,8 @@ local prefix = '<space>'
 local keybindings = {
   [' '] = 'builtin()',
 
+  bb = 'buffers()',
+
   fr = 'resume()',
   ff = 'find_files({ hidden = true })',
   fF = 'find_files({ hidden = true, no_ignore = true, no_ignore_parent = true })',
