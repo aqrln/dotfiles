@@ -86,7 +86,7 @@ nnoremap [c :cprev<CR>
 nnoremap <silent> <M-h> :nohl<CR>
 
 nnoremap <M-s> :w<CR>
-nnoremap <space>w :w<CR>
+" nnoremap <space>w :w<CR>
 
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
