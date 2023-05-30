@@ -39,6 +39,11 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>pp', function() 
     vim.lsp.buf.format { async = true }
   end, { buffer = bufnr })
+
+  vim.keymap.set('n', '<space>w', function()
+    vim.lsp.buf.format()
+    vim.api.nvim_command('write')
+  end, { buffer = bufnr })
 end
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
