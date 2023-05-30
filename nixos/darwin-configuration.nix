@@ -22,6 +22,7 @@
     nil
     nixfmt
     nixpkgs-fmt
+    pgcli
     rust-analyzer-unwrapped
     tailscale
     tmux
