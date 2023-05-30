@@ -1,4 +1,7 @@
-require('telescope').setup {
+local telescope = require('telescope')
+local trouble = require('trouble.providers.telescope')
+
+telescope.setup {
   extensions = {
     fzf = {
       fuzzy = true,
@@ -9,12 +12,23 @@ require('telescope').setup {
 
     ['ui-select'] = {
       require('telescope.themes').get_dropdown {}
-    }
-  }
+    },
+  },
+
+  defaults = {
+    mappings = {
+      i = {
+        ['<c-j>'] = trouble.open_with_trouble,
+      },
+      n = {
+        ['<c-j>'] = trouble.open_with_trouble,
+      },
+    },
+  },
 }
 
-require('telescope').load_extension('fzf')
-require('telescope').load_extension('ui-select')
+telescope.load_extension('fzf')
+telescope.load_extension('ui-select')
 
 local prefix = '<space>'
 

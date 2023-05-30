@@ -127,4 +127,6 @@ return require('packer').startup(function()
   use 'LnL7/vim-nix'
 
   use 'direnv/direnv.vim'
+
+  use { 'folke/trouble.nvim', requires = 'nvim-tree/nvim-web-devicons' }
 end)

@@ -101,3 +101,12 @@ rust_tools.setup {
     end,
   }
 }
+
+require('trouble').setup {}
+
+vim.keymap.set("n", "<space>xx", "<cmd>TroubleToggle<cr>", opts)
+vim.keymap.set("n", "<space>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", opts)
+vim.keymap.set("n", "<space>xd", "<cmd>TroubleToggle document_diagnostics<cr>", opts)
+vim.keymap.set("n", "<space>xl", "<cmd>TroubleToggle loclist<cr>", opts)
+vim.keymap.set("n", "<space>xq", "<cmd>TroubleToggle quickfix<cr>", opts)
+vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", opts)
