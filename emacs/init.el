@@ -473,12 +473,15 @@
     "lr" 'eglot-rename
     "lwr" 'eglot-reconnect
     "lh" 'eglot-inlay-hints-mode
+    "lgt" 'eglot-find-typeDefinition
 
 	"vv" 'multi-vterm
 	"vp" 'multi-vterm-project
 	"vP" 'multi-vterm-prev
 	"vN" 'multi-vterm-next
-    "v ESC" 'vterm-send-escape)
+    "v ESC" 'vterm-send-escape
+
+    "w" 'save-buffer)
 
   ;; (my-leader-def
   ;;  :keymaps 'eglot-mode-map
