@@ -35,7 +35,6 @@ prettier.setup {
   vue_indent_script_and_style = false,
 }
 
-
 vim.api.nvim_set_keymap('n', '<space>pP', '<cmd>Prettier<CR>', {
   noremap = true,
   silent = true,
