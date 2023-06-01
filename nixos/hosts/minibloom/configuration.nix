@@ -157,6 +157,7 @@
     python3
     ripgrep
     rr
+    rust-analyzer
     tailscale
     tmux
     virt-manager
