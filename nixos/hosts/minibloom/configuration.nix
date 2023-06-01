@@ -121,6 +121,7 @@
       firefox
       rustup
       nodejs_latest
+      nodejs_latest.pkgs.dockerfile-language-server-nodejs
       nodejs_latest.pkgs.pnpm
       nodejs_latest.pkgs.prettier
       nodejs_latest.pkgs.typescript-language-server
