@@ -20,5 +20,9 @@
       extraPackages = with pkgs.bat-extras; [ batman batdiff batgrep ];
       config.theme = "ansi";
     };
+
+    programs.gh = {
+      enable = true;
+    };
   };
 }
