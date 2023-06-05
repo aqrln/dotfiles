@@ -8,6 +8,7 @@ lua require('cmp_config')
 lua require('prettier_config')
 lua require('tree_config')
 lua require('autopairs_config')
+lua require('orgmode_config')
 
 set number
 set nowrap

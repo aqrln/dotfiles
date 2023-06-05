@@ -129,4 +129,8 @@ return require('packer').startup(function()
   use 'direnv/direnv.vim'
 
   use { 'folke/trouble.nvim', requires = 'nvim-tree/nvim-web-devicons' }
+
+  use 'nvim-orgmode/orgmode'
+  
+  use 'akinsho/org-bullets.nvim'
 end)
