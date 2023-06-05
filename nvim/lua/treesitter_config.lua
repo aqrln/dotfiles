@@ -7,7 +7,7 @@ require('nvim-treesitter.configs').setup {
   ensure_installed = {
     'bash',
     'c', 'cpp', 'rust',
-    'javascript', 'typescript',
+    'javascript', 'typescript', 'prisma',
     'json', 'toml', 'yaml',
     'vim', 'lua', 'org'
   },
