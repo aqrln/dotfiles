@@ -5,8 +5,8 @@ require('orgmode').setup_ts_grammar()
 require('nvim-treesitter.configs').setup {
   -- One of "all", "maintained" (parsers with maintainers), or a list of languages
   ensure_installed = {
-    'bash',
-    'c', 'cpp', 'rust',
+    'bash', 'sql', 'make',
+    'c', 'cpp', 'rust', 'zig',
     'javascript', 'typescript', 'prisma',
     'json', 'toml', 'yaml',
     'vim', 'lua', 'org'
