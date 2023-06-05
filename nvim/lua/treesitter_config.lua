@@ -1,4 +1,4 @@
-local max_lines = 1000
+local max_lines = 10000
 
 require('nvim-treesitter.configs').setup {
   -- One of "all", "maintained" (parsers with maintainers), or a list of languages
