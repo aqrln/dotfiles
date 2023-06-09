@@ -22,5 +22,7 @@ require('neogit').setup {
   },
 }
 
+require('git-conflict').setup {}
+
 vim.api.nvim_set_keymap('n', '<space>gg', ':Neogit<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<space>gm', ':GitMessenger<CR>', { noremap = true, silent = true })

@@ -133,4 +133,6 @@ return require('packer').startup(function()
   use 'nvim-orgmode/orgmode'
   
   use 'akinsho/org-bullets.nvim'
+
+  use 'akinsho/git-conflict.nvim'
 end)
