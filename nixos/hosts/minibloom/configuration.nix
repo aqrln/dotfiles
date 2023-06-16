@@ -139,6 +139,7 @@
     alacritty
     buildah
     cachix
+    docker-compose
     fd
     file
     fzf
@@ -154,7 +155,6 @@
     nixfmt
     nixpkgs-fmt
     pinentry
-    podman-compose
     python3
     ripgrep
     rr
@@ -216,7 +216,13 @@
 
   virtualisation.podman = {
     enable = true;
-    dockerCompat = true;
+    # dockerCompat = true;
+  };
+
+  virtualisation.docker.enable = true;
+  virtualisation.docker.rootless = {
+    enable = true;
+    setSocketVariable = true;
   };
 
   documentation = {
