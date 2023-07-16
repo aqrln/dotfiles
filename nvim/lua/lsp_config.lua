@@ -99,7 +99,24 @@ rust_tools.setup {
       -- Code action groups
       vim.keymap.set("n", "<space>a", rust_tools.code_action_group.code_action_group, { buffer = bufnr })
     end,
-  }
+
+    settings = {
+      ["rust-analyzer"] = {
+        check = {
+          command = "clippy",
+        },
+        cargo = {
+          buildScripts = {
+            enable = true,
+          },
+          features = "all",
+        },
+        procMacro = {
+          enable = true,
+        },
+      },
+    },
+  },
 }
 
 require('trouble').setup {}
