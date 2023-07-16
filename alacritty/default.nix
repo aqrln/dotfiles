@@ -8,6 +8,7 @@ in {
   home-manager.users.aqrln = {
     programs.alacritty = {
       enable = true;
+
       settings = {
         "import" = [
           # ./kanagawa.yml
@@ -33,6 +34,15 @@ in {
           bold_italic = {
             style = if isDarwin then "Bold Italic" else "HeavyItalic";
           };
+
+          offset = {
+            x = 0;
+            y = -2;
+          };
+        };
+
+        window = {
+          decorations = if isDarwin then "Buttonless" else "Full";
         };
       };
     };
