@@ -15,7 +15,7 @@
       ../../cachix.nix
       ../../home.nix
       # ../../sway.nix
-      ../../emacs.nix
+      # ../../emacs.nix
       ../../../alacritty
       ../../debug.nix
       ../../fonts.nix
