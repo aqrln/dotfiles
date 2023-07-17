@@ -9,9 +9,10 @@
     [
       <home-manager/nixos>
       ./hardware-configuration.nix
+      ../../cachix.nix
       ../../home.nix
-      ../../sway.nix
-      ../../emacs.nix
+      # ../../sway.nix
+      # ../../emacs.nix
       ../../fonts.nix
       ../../../alacritty
     ];
@@ -21,6 +22,10 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
+
+  boot.extraModprobeConfig = ''
+    options hid_apple iso_layout=0
+  '';
 
   networking.hostName = "sparkles";
 
@@ -58,43 +63,18 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
+  # Enable touchpad support (enabled default in most desktopManager).
+  services.xserver.libinput.enable = true;
+
   # Enable the GNOME Desktop Environment.
-  # services.xserver.displayManager.gdm.enable = true;
-  # services.xserver.desktopManager.gnome.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
     layout = "us";
     xkbVariant = "";
   };
-
-  # services.xserver.desktopManager = {
-  #   xfce = {
-  #     enable = true;
-  #     noDesktop = true;
-  #     enableXfwm = false;
-  #   };
-  # };
-
-  # services.xserver.displayManager = {
-  #   gdm.enable = true;
-  #   defaultSession = "xfce+i3";
-  #   sessionCommands = ''
-  #     ${pkgs.xorg.xrdb}/bin/xrdb -merge <<EOF
-  #     Xft.dpi: 180
-  #     EOF
-  #   '';
-  # };
-
-  # services.xserver.windowManager.i3 = {
-  #   enable = true;
-  #   extraPackages = with pkgs; [
-  #     dmenu
-  #     i3status
-  #   ];
-  # };
-
-  environment.pathsToLink = [ "/libexec" ];
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -116,9 +96,6 @@
     #media-session.enable = true;
   };
 
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.aqrln = {
     isNormalUser = true;
@@ -131,6 +108,13 @@
       cargo-edit
       cargo-show-asm
       cargo-watch
+      nodejs_latest
+      nodejs_latest.pkgs.dockerfile-language-server-nodejs
+      nodejs_latest.pkgs.pnpm
+      nodejs_latest.pkgs.prettier
+      nodejs_latest.pkgs."@prisma/language-server"
+      nodejs_latest.pkgs.typescript-language-server
+      nodejs_latest.pkgs.vscode-langservers-extracted
     ];
   };
 
@@ -140,20 +124,33 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    neovim
-    htop
-    wget
-    git
-    zsh
-    gnupg
-    pinentry
+    alacritty
+    cachix
+    docker-compose
+    fd
+    file
+    fzf
     gcc
     gdb
+    git
     gnumake
-    rr
+    gnupg
+    htop
+    man-pages
+    neovim
+    nil
+    nixfmt
+    nixpkgs-fmt
+    pinentry
+    python3
     ripgrep
-    fzf
-    alacritty
+    rr
+    rust-analyzer
+    tailscale
+    tmux
+    wget
+    wl-clipboard
+    zsh
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -175,11 +172,20 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
+  services.tailscale.enable = true;
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
+
+  networking.firewall = {
+    enable = true;
+    trustedInterfaces = [ config.services.tailscale.interfaceName ];
+    allowedUDPPorts = [ config.services.tailscale.port ];
+    allowedTCPPorts = [ 22 ];
+  };
 
   # Copy the NixOS configuration file and link it from the resulting system
   # (/run/current-system/configuration.nix). This is useful in case you
@@ -196,9 +202,16 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  virtualisation.podman = {
+  virtualisation.docker.enable = true;
+  virtualisation.docker.rootless = {
     enable = true;
-    dockerCompat = true;
+    setSocketVariable = true;
+  };
+
+  documentation = {
+    man.man-db.enable = true;
+    man.generateCaches = true;
+    dev.enable = true;
   };
 }
 
