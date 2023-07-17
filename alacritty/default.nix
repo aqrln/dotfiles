@@ -42,7 +42,7 @@ in {
         };
 
         window = {
-          decorations = if isDarwin then "Buttonless" else "Full";
+          decorations = if isDarwin then "Buttonless" else "None";
         };
       };
     };
