@@ -142,6 +142,7 @@
     nixfmt
     nixpkgs-fmt
     pinentry
+    pgcli
     python3
     ripgrep
     rr
