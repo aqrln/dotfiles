@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     iosevka-bin
     (nerdfonts.override { fonts = [ "Iosevka" "IosevkaTerm" ]; })
   ];
