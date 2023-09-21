@@ -9,6 +9,7 @@ lua require('prettier_config')
 lua require('tree_config')
 lua require('autopairs_config')
 lua require('orgmode_config')
+lua require('neovide_config')
 
 set number
 set nowrap
@@ -16,8 +17,10 @@ set nowrap
 set mouse=a
 set termguicolors
 " colorscheme kanagawa
-set bg=light
-colorscheme solarized
+" set bg=light
+" colorscheme solarized
+set bg=dark
+colorscheme gruvbox
 
 set shiftwidth=4
 set softtabstop=4
