@@ -26,6 +26,7 @@
     rust-analyzer-unwrapped
     tailscale
     tmux
+    visidata
     xplr
     zoxide
   ];
