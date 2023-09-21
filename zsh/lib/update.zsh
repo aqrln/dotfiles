@@ -94,8 +94,11 @@ update_npm () {
             jq -r '.dependencies
                 | keys
                 | map(select(. != "corepack"))
+                | map(select(. != "@prisma/language-server"))
                 | map(. + "@latest")
                 | .[]' | \
             xargs npm install -g
+
+        npm install -g @prisma/language-server@dev
     fi
 }
