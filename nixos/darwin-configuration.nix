@@ -17,6 +17,7 @@
     fd
     fzf
     git
+    git-branchless
     htop
     neovim
     nil
