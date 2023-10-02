@@ -34,4 +34,4 @@
 [init]
 	defaultBranch = main
 [rerere]
-	# enabled = true
+	enabled = true
