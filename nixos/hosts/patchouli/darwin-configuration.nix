@@ -3,9 +3,9 @@
 {
   imports = [
     <home-manager/nix-darwin>
-    ./home.nix
-    # ./emacs.nix
-    ../alacritty
+    ../../home.nix
+    # ../../emacs.nix
+    ../../../alacritty
   ];
 
   # List packages installed in system profile. To search by name, run:
