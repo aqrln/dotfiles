@@ -11,9 +11,9 @@ in {
 
       settings = {
         "import" = [
-          # ./kanagawa.yml
+          ./kanagawa.yml
           # ./solarized_light.yaml
-          ./gruvbox_dark.yml
+          # ./gruvbox_dark.yml
         ] ++ lib.optionals isDarwin [ ./mac_meta_keys.yml ];
 
         font = {
