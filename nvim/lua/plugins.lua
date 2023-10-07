@@ -1,138 +1,156 @@
-local install_path = vim.fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
-  packer_bootstrap = vim.fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
 end
+vim.opt.rtp:prepend(lazypath)
 
-return require('packer').startup(function()
-  use 'wbthomason/packer.nvim'
+return require('lazy').setup({
+  'folke/lazy.nvim',
 
-  use {
+  {
     'tpope/vim-dispatch',
-    opt = true,
+    lazy = true,
     cmd = {'Dispatch', 'Make', 'Focus', 'Start'}
-  }
+  },
 
-  use 'editorconfig/editorconfig-vim'
+  'editorconfig/editorconfig-vim',
 
-  use 'windwp/nvim-autopairs'
+  'windwp/nvim-autopairs',
 
-  use 'tpope/vim-commentary'
+  'tpope/vim-commentary',
 
-  use 'tpope/vim-surround'
+  'tpope/vim-surround',
 
-  use 'tpope/vim-repeat'
+  'tpope/vim-repeat',
 
-  use 'tpope/vim-unimpaired'
+  'tpope/vim-unimpaired',
 
-  use 'rebelot/kanagawa.nvim'
+  'rebelot/kanagawa.nvim',
 
-  use 'EdenEast/nightfox.nvim'
+  'EdenEast/nightfox.nvim',
 
   -- use 'shaunsingh/solarized.nvim'
-  use 'ishan9299/nvim-solarized-lua'
+  'ishan9299/nvim-solarized-lua',
 
-  use 'ellisonleao/gruvbox.nvim'
+  'ellisonleao/gruvbox.nvim',
 
-  use 'bluz71/vim-nightfly-guicolors'
+  'bluz71/vim-nightfly-guicolors',
 
-  use 'ggandor/lightspeed.nvim'
+  'ggandor/lightspeed.nvim',
 
-  use 'neovim/nvim-lspconfig'
+  'neovim/nvim-lspconfig',
 
-  use 'folke/lsp-colors.nvim'
+  'folke/lsp-colors.nvim',
 
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
 
-  use 'nvim-treesitter/playground'
+  'nvim-treesitter/playground',
 
-  use {
+  {
     'nvim-telescope/telescope.nvim',
-    requires = {
+    dependencies = {
       { 'nvim-lua/plenary.nvim' },
       { 'nvim-treesitter/nvim-treesitter' },
-      { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+      { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' }
     }
-  }
+  },
 
-  use 'nvim-telescope/telescope-ui-select.nvim'
+  'nvim-telescope/telescope-ui-select.nvim',
 
-  use 'gpanders/editorconfig.nvim'
+  'gpanders/editorconfig.nvim',
 
-  use { 'lewis6991/gitsigns.nvim', requires = 'nvim-lua/plenary.nvim' }
+  {
+    'lewis6991/gitsigns.nvim',
+    dependencies = {
+      'nvim-lua/plenary.nvim'
+    }
+  },
 
-  use {
+  {
     'sindrets/diffview.nvim',
-    requires = {
+    dependencies = {
       'nvim-lua/plenary.nvim',
-      'kyazdani42/nvim-web-devicons'
+      'nvim-tree/nvim-web-devicons'
     }
-  }
+  },
 
-  use {
+  {
     'TimUntersberger/neogit',
-    requires = {
+    dependencies = {
       'nvim-lua/plenary.nvim',
       'sindrets/diffview.nvim',
     }
-  }
+  },
 
-  use 'tpope/vim-fugitive'
+  'tpope/vim-fugitive',
 
-  use 'rhysd/git-messenger.vim'
+  'rhysd/git-messenger.vim',
 
-  use {
+  {
     'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
+    dependencies = { 'nvim-tree/nvim-web-devicons', lazy = true }
+  },
 
-  use 'L3MON4D3/LuaSnip'
+  'L3MON4D3/LuaSnip',
 
-  use {
+  {
     'hrsh7th/nvim-cmp',
-    requires = {
+    dependencies = {
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-path',
       'hrsh7th/cmp-cmdline',
       'saadparwaiz1/cmp_luasnip',
-      -- { 'tzachar/cmp-tabnine', run = './install.sh' },
+      -- { 'tzachar/cmp-tabnine', build = './install.sh' },
     }
-  }
+  },
 
-  use 'onsails/lspkind-nvim'
+  'onsails/lspkind-nvim',
 
-  -- use 'lukas-reineke/indent-blankline.nvim'
+  -- 'lukas-reineke/indent-blankline.nvim',
 
-  use 'pantharshit00/vim-prisma'
+  'pantharshit00/vim-prisma',
 
-  use 'folke/which-key.nvim'
+  'folke/which-key.nvim',
 
-  use 'jose-elias-alvarez/null-ls.nvim'
+  'jose-elias-alvarez/null-ls.nvim',
 
-  use 'MunifTanjim/prettier.nvim'
+  'MunifTanjim/prettier.nvim',
 
-  use 'kyazdani42/nvim-tree.lua'
+  'nvim-tree/nvim-tree.lua',
 
-  use {
+  {
     'simrat39/rust-tools.nvim',
-    requires = {
+    dependencies = {
       'nvim-lua/plenary.nvim'
     }
-  }
+  },
 
-  use 'mfussenegger/nvim-dap'
+  'mfussenegger/nvim-dap',
 
-  -- use 'akinsho/bufferline.nvim'
+  -- 'akinsho/bufferline.nvim',
 
-  use 'LnL7/vim-nix'
+  'LnL7/vim-nix',
 
-  use 'direnv/direnv.vim'
+  'direnv/direnv.vim',
 
-  use { 'folke/trouble.nvim', requires = 'nvim-tree/nvim-web-devicons' }
+  {
+    'folke/trouble.nvim',
+    dependencies = {
+      'nvim-tree/nvim-web-devicons'
+    }
+  },
 
-  use 'nvim-orgmode/orgmode'
+  'nvim-orgmode/orgmode',
   
-  use 'akinsho/org-bullets.nvim'
+  'akinsho/org-bullets.nvim',
 
-  use 'akinsho/git-conflict.nvim'
-end)
+  'akinsho/git-conflict.nvim',
+})
