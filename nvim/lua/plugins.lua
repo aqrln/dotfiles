@@ -101,7 +101,7 @@ return require('packer').startup(function()
 
   use 'onsails/lspkind-nvim'
 
-  use 'lukas-reineke/indent-blankline.nvim'
+  -- use 'lukas-reineke/indent-blankline.nvim'
 
   use 'pantharshit00/vim-prisma'
 

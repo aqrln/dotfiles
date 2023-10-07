@@ -9,12 +9,12 @@ require('lualine').setup {
   }
 }
 
-require('indent_blankline').setup {
-  show_current_context = true,
-  char = '│', -- could be fun to try something unconventional
-  use_treesitter = true,
-  enabled = false,
-}
+-- require('indent_blankline').setup {
+--   show_current_context = true,
+--   char = '│', -- could be fun to try something unconventional
+--   use_treesitter = true,
+--   enabled = false,
+-- }
 
 vim.api.nvim_set_keymap('n', '<M-i>', ':IndentBlanklineToggle<CR>', { noremap = true })
 
