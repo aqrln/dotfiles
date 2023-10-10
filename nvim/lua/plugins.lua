@@ -41,6 +41,8 @@ return require('lazy').setup({
 
   'ellisonleao/gruvbox.nvim',
 
+  { "catppuccin/nvim", name = "catppuccin" },
+
   'bluz71/vim-nightfly-guicolors',
 
   {
