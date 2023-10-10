@@ -43,7 +43,12 @@ return require('lazy').setup({
 
   'bluz71/vim-nightfly-guicolors',
 
-  'ggandor/lightspeed.nvim',
+  {
+    'ggandor/leap.nvim',
+    config = function()
+      require('leap').add_default_mappings()
+    end
+  },
 
   'neovim/nvim-lspconfig',
 
