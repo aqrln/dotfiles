@@ -127,7 +127,7 @@ return require('lazy').setup({
 
   'folke/which-key.nvim',
 
-  'jose-elias-alvarez/null-ls.nvim',
+  'nvimtools/none-ls.nvim',
 
   'MunifTanjim/prettier.nvim',
 
