@@ -52,6 +52,7 @@ augroup init
     autocmd FileType javascript setlocal sw=2 sts=2
     autocmd FileType typescript setlocal sw=2 sts=2
     autocmd FileType prisma     setlocal sw=2 sts=2
+    autocmd FileType go         setlocal noet
 
     autocmd BufRead,BufNewFile *.gyp       set filetype=python et ts=2 sw=2
     autocmd BufRead,BufNewFile *.gypi      set filetype=python et ts=2 sw=2
