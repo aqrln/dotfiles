@@ -20,6 +20,7 @@
     git
     git-branchless
     htop
+    jq
     neovim
     nil
     nixfmt
