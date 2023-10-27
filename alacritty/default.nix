@@ -11,10 +11,10 @@ in {
 
       settings = {
         "import" = [
+          # ./catppuccin_mocha.yml
           # ./kanagawa.yml
           # ./solarized_light.yaml
-          # ./gruvbox_dark.yml
-          ./catppuccin_mocha.yml
+          ./gruvbox_dark.yml
         ] ++ lib.optionals isDarwin [ ./mac_meta_keys.yml ];
 
         font = {

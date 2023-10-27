@@ -19,9 +19,9 @@ set termguicolors
 " colorscheme kanagawa
 " set bg=light
 " colorscheme solarized
-" set bg=dark
-" colorscheme gruvbox
-colorscheme catppuccin
+set bg=dark
+colorscheme gruvbox
+" colorscheme catppuccin
 
 set shiftwidth=4
 set softtabstop=4
