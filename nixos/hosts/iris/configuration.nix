@@ -129,8 +129,10 @@ with lib;
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # Disable container module of starship to get rid of "Systemd" in the prompt.
+  # Make the starship prompt normal and remove things that are only printed because of LXC and SSH.
   home-manager.users.aqrln.programs.starship.settings = {
     container.disabled = true;
+    username.disabled = true;
+    hostname.disabled = true;
   };
 }
