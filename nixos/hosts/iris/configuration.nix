@@ -128,4 +128,9 @@ with lib;
 
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  # Disable container module of starship to get rid of "Systemd" in the prompt.
+  home-manager.users.aqrln.programs.starship.settings = {
+    container.disabled = true;
+  };
 }
