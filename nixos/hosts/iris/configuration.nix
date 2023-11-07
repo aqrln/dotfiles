@@ -133,6 +133,6 @@ with lib;
   home-manager.users.aqrln.programs.starship.settings = {
     container.disabled = true;
     username.disabled = true;
-    hostname.disabled = true;
+    # hostname.disabled = true;
   };
 }
