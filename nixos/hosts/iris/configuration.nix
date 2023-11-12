@@ -73,7 +73,9 @@ with lib;
     htop
     jq
     man-pages
+    man-pages-posix
     nil
+    perl
     pinentry
     python3
     ripgrep
@@ -121,9 +123,12 @@ with lib;
   documentation = {
     enable = true;
     dev.enable = true;
-    nixos.enable = true;
+    doc.enable = true;
+    info.enable = true;
+    man.enable = true;
     man.man-db.enable = true;
     man.generateCaches = true;
+    nixos.enable = true;
   };
 
   nixpkgs.config.allowUnfree = true;
