@@ -53,6 +53,7 @@ local servers_with_defaults = {
   'prismals',
   'dockerls',
   'gopls',
+  'nil_ls',
 }
 
 local lspconfig = require('lspconfig')
