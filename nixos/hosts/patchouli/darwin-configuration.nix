@@ -31,7 +31,7 @@
     starship
     tailscale
     tmux
-    visidata
+    # visidata
     wget
     xplr
     zoxide
