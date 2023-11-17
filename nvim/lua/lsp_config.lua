@@ -49,11 +49,12 @@ end
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 local servers_with_defaults = {
-  'tsserver',
-  'prismals',
   'dockerls',
   'gopls',
   'nil_ls',
+  'prismals',
+  'tsserver',
+  'yamlls',
 }
 
 local lspconfig = require('lspconfig')
