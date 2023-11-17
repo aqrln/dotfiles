@@ -91,20 +91,16 @@ require('null-ls').setup {
   on_attach = on_attach
 }
 
-local rust_tools = require('rust-tools')
+vim.g.rustaceanvim = {
+  tools = {},
 
-rust_tools.setup {
   server = {
     on_attach = function(client, bufnr)
       on_attach(client, bufnr)
-      -- Hover actions
-      vim.keymap.set("n", "<C-space>", rust_tools.hover_actions.hover_actions, { buffer = bufnr })
-      -- Code action groups
-      vim.keymap.set("n", "<space>a", rust_tools.code_action_group.code_action_group, { buffer = bufnr })
     end,
 
     settings = {
-      ["rust-analyzer"] = {
+      ['rust-analyzer'] = {
         check = {
           command = "clippy",
         },
@@ -120,6 +116,8 @@ rust_tools.setup {
       },
     },
   },
+
+  dap = {},
 }
 
 require('trouble').setup {}

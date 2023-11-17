@@ -134,10 +134,9 @@ return require('lazy').setup({
   'nvim-tree/nvim-tree.lua',
 
   {
-    'simrat39/rust-tools.nvim',
-    dependencies = {
-      'nvim-lua/plenary.nvim'
-    }
+    'mrcjkb/rustaceanvim',
+    version = '^3',
+    ft = { 'rust' },
   },
 
   'mfussenegger/nvim-dap',
