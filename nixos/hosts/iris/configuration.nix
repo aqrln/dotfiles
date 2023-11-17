@@ -72,6 +72,7 @@ with lib;
     git
     gnumake
     gnupg
+    graphviz
     htop
     jq
     man-pages
