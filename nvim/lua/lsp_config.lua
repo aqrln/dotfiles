@@ -91,6 +91,16 @@ require('null-ls').setup {
   on_attach = on_attach
 }
 
+require('lspconfig').jsonls.setup {
+  on_attach = on_attach,
+  settings = {
+    json = {
+      schemas = require('schemastore').json.schemas(),
+      validate = { enable = true },
+    },
+  },
+}
+
 vim.g.rustaceanvim = {
   tools = {},
 

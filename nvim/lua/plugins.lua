@@ -180,4 +180,6 @@ return require('lazy').setup({
   --     require('octo').setup()
   --   end
   -- },
+
+  'b0o/schemastore.nvim',
 })
