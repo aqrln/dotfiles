@@ -48,6 +48,7 @@
         theme = "gruvbox";
         keys.normal.space = {
           o = "file_picker_in_current_buffer_directory";
+          w = ":w";
         };
       };
     };
