@@ -4,12 +4,8 @@ fi
 
 export GPG_TTY=$(tty)
 export CLICOLOR=1
-
-if [[ -z "$INSIDE_EMACS" ]]; then
-    export VISUAL="nvim"
-else
-    export VISUAL="emacsclient"
-fi
+export VISUAL=nvim
+export EDITOR=nvim
 
 alias ls="ls --color=auto"
 alias ll="ls -l"
