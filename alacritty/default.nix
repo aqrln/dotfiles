@@ -21,7 +21,7 @@ in {
           size = if isDarwin then 14 else 10;
 
           normal = {
-            family = "IosevkaTerm Nerd Font";
+            family = if isDarwin then "IosevkaTerm NF" else "IosevkaTerm Nerd Font";
             style = if isDarwin then "Regular" else "Medium";
           };
 
