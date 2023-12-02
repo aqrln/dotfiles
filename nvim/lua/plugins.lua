@@ -39,7 +39,7 @@ return require('lazy').setup({
   -- use 'shaunsingh/solarized.nvim'
   'ishan9299/nvim-solarized-lua',
 
-  'ellisonleao/gruvbox.nvim',
+  { 'ellisonleao/gruvbox.nvim', config = true },
 
   { "catppuccin/nvim", name = "catppuccin" },
 
