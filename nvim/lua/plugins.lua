@@ -169,6 +169,24 @@ return require('lazy').setup({
     end
   },
 
+  'b0o/schemastore.nvim',
+
+  {
+   'stevearc/oil.nvim',
+    opts = {
+      columns = {
+        "icon",
+        "permissions",
+        "size",
+        "mtime",
+      },
+      view_options = {
+        show_hidden = true,
+      },
+    },
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
+
   -- {
   --   'pwntester/octo.nvim',
   --   dependencies = {
@@ -180,6 +198,4 @@ return require('lazy').setup({
   --     require('octo').setup()
   --   end
   -- },
-
-  'b0o/schemastore.nvim',
 })
