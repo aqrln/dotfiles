@@ -50,6 +50,7 @@ with lib;
     description = "Alexey Orlenko";
     extraGroups = [ "wheel" ];
     packages = with pkgs; [
+      flyctl
       nodejs_latest
       nodejs_latest.pkgs."@prisma/language-server"
       nodejs_latest.pkgs.dockerfile-language-server-nodejs
