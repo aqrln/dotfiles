@@ -40,7 +40,7 @@ ln -s "$(pwd)/tmux/tmux.conf" ~/.tmux.conf
 
 # brew install --HEAD mosh
 
-ln -s "$(pwd)/conda/condarc" ~/.condarc
+# ln -s "$(pwd)/conda/condarc" ~/.condarc
 
 ln -s "$(pwd)/starship/starship.toml" ~/.config/starship.toml
 
