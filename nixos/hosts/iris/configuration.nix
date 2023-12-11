@@ -82,6 +82,7 @@ with lib;
     pinentry
     python3
     ripgrep
+    tailscale
     tmux
     wget
     zsh
@@ -143,4 +144,13 @@ with lib;
     username.disabled = true;
     # hostname.disabled = true;
   };
+
+  services.tailscale.enable = true;
+
+  # networking.firewall = {
+  #   enable = true;
+  #   trustedInterfaces = [ config.services.tailscale.interfaceName ];
+  #   allowedUDPPorts = [ config.services.tailscale.port ];
+  #   allowedTCPPorts = [ 22 ];
+  # };
 }
