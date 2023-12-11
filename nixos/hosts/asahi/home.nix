@@ -78,6 +78,10 @@
     EDITOR = "nvim";
   };
 
+  home.shellAliases = {
+    ls = "ls --color=auto";
+  };
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
