@@ -85,7 +85,14 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  programs.bash.enable = true;
+  programs.bash = {
+    enable = true;
+    bashrcExtra = ''
+      if [ -f /etc/bashrc ]; then
+          . /etc/bashrc
+      fi
+    '';
+  };
 
   programs.neovim = {
     enable = true;
