@@ -86,7 +86,12 @@
   programs.home-manager.enable = true;
 
   programs.bash.enable = true;
-  programs.neovim.enable = true;
+
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+  };
+
   programs.ripgrep.enable = true;
 
   programs.direnv = {
