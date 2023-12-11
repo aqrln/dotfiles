@@ -62,9 +62,29 @@
   #
   # if you don't want to manage your shell through Home Manager.
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    EDITOR = "nvim";
   };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  programs.neovim.enable = true;
+  programs.ripgrep.enable = true;
+
+  programs.direnv = {
+    enable = true;
+    enableBashIntegration = true;
+    nix-direnv.enable = true;
+  };
+
+  programs.alacritty = {
+    enable = true;
+    settings = {
+      "import" = [ ./alacritty ];
+      font = {
+        size = 12;
+        normal = {};
+      };
+    };
+  };
 }
