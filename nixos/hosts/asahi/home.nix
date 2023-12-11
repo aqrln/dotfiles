@@ -80,7 +80,7 @@
   programs.alacritty = {
     enable = true;
     settings = {
-      "import" = [ ./alacritty ];
+      "import" = [ ./gruvbox_dark.yml ];
       font = {
         size = 12;
         normal = {};
