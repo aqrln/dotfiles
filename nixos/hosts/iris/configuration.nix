@@ -88,6 +88,7 @@ with lib;
     tmux
     wget
     zsh
+    xorg.xauth
   ];
 
   programs.neovim = {
@@ -161,4 +162,12 @@ with lib;
   #   allowedUDPPorts = [ config.services.tailscale.port ];
   #   allowedTCPPorts = [ 22 ];
   # };
+
+  services.openssh = {
+    enable = lib.mkForce true;
+    ports = [ 2222 ];
+    settings = {
+      X11Forwarding = true;
+    };
+  };
 }
