@@ -187,6 +187,11 @@ return require('lazy').setup({
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
 
+  {
+    "NoahTheDuke/vim-just",
+    ft = { "just" },
+  },
+
   -- {
   --   'pwntester/octo.nvim',
   --   dependencies = {
