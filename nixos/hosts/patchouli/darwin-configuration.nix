@@ -16,6 +16,7 @@
     deno
     direnv
     fd
+    fx
     fzf
     git
     git-branchless
