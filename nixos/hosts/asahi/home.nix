@@ -39,7 +39,7 @@
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
     # # fonts?
     # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
-    (pkgs.nerdfonts.override { fonts = [ "Iosevka" ]; })
+    (pkgs.nerdfonts.override { fonts = [ "Iosevka" "FiraMono" ]; })
 
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
@@ -81,6 +81,8 @@
   home.shellAliases = {
     ls = "ls --color=auto";
   };
+
+  fonts.fontconfig.enable = true;
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -129,8 +131,11 @@
     settings = {
       "import" = [ ./gruvbox_dark.yml ];
       font = {
-        size = 12;
-        normal = {};
+        size = 11;
+        normal = {
+          family = "FiraMono Nerd Font";
+          # style = "Medium";
+        };
       };
     };
   };
