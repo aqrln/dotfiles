@@ -192,6 +192,8 @@ return require('lazy').setup({
     ft = { "just" },
   },
 
+  'compnerd/arm64asm-vim',
+
   -- {
   --   'pwntester/octo.nvim',
   --   dependencies = {
