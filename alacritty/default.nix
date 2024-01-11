@@ -2,7 +2,6 @@
 
 let
   isDarwin = pkgs.stdenv.isDarwin;
-  lib = pkgs.lib;
 
 in {
   home-manager.users.aqrln = {
@@ -11,11 +10,11 @@ in {
 
       settings = {
         "import" = [
-          # ./catppuccin_mocha.yml
-          # ./kanagawa.yml
-          # ./solarized_light.yaml
-          ./gruvbox_dark.yml
-        ] ++ lib.optionals isDarwin [ ./mac_meta_keys.yml ];
+          # ./catppuccin_mocha.toml
+          # ./kanagawa.toml
+          # ./solarized_light.toml
+          ./gruvbox_dark.toml
+        ];
 
         font = {
           size = if isDarwin then 14 else 10;
@@ -45,6 +44,7 @@ in {
 
         window = {
           decorations = if isDarwin then "Buttonless" else "None";
+          option_as_alt = if isDarwin then "Both" else "None";
         };
       };
     };
