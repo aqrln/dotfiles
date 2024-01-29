@@ -61,6 +61,7 @@ augroup init
     autocmd BufRead,BufNewFile .babelrc    set filetype=json
     autocmd BufRead,BufNewFile .prettierrc set filetype=json
     autocmd BufRead,BufNewFile .envrc      set filetype=bash
+    autocmd BufRead,BufNewFile *.wat       set filetype=wast
 
     autocmd FileType gitcommit  setlocal spell
     autocmd FileType html       setlocal spell
