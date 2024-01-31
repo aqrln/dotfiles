@@ -54,6 +54,7 @@ local servers_with_defaults = {
   'gopls',
   'html',
   'nil_ls',
+  'pest_ls',
   'prismals',
   'tsserver',
   'yamlls',

@@ -194,6 +194,8 @@ return require('lazy').setup({
 
   'compnerd/arm64asm-vim',
 
+  'pest-parser/pest.vim',
+
   -- 'github/copilot.vim',
 
   -- {
