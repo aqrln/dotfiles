@@ -20,6 +20,11 @@
       nix-direnv.enable = true;
     };
 
+    programs.zoxide = {
+      enable = true;
+      enableBashIntegration = true;
+    };
+
     programs.bat = {
       enable = true;
       extraPackages = with pkgs.bat-extras; [ batman batdiff batgrep ];
