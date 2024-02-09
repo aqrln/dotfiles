@@ -170,4 +170,17 @@ with lib;
       X11Forwarding = true;
     };
   };
+
+  home-manager.users.aqrln.home.file.".gnupg/gpg-agent.conf".text =
+    let
+      pinentry-mac = pkgs.writeShellApplication {
+        name = "pinentry-mac";
+        text = ''
+          /opt/orbstack-guest/bin/mac "/Volumes/Macintosh HD/opt/homebrew/bin/pinentry-mac" "$@"
+        '';
+      };
+    in
+    ''
+    pinentry-program ${pinentry-mac}/bin/pinentry-mac
+    '';
 }
