@@ -32,6 +32,8 @@ return require('lazy').setup({
 
   'tpope/vim-unimpaired',
 
+  'tpope/vim-abolish',
+
   'rebelot/kanagawa.nvim',
 
   'EdenEast/nightfox.nvim',
