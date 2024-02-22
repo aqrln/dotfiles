@@ -39,7 +39,7 @@
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
     # # fonts?
     # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
-    (pkgs.nerdfonts.override { fonts = [ "Iosevka" "FiraMono" ]; })
+    (pkgs.nerdfonts.override { fonts = [ "Iosevka" "FiraMono" "Inconsolata" ]; })
 
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
@@ -93,6 +93,9 @@
       if [ -f /etc/bashrc ]; then
           . /etc/bashrc
       fi
+
+      # uncomment this if there are any issues with rootless docker socket not being found
+      # export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
     '';
   };
 
@@ -129,12 +132,22 @@
   programs.alacritty = {
     enable = true;
     settings = {
-      "import" = [ ./gruvbox_dark.yml ];
+      "import" = [ ./gruvbox_dark.toml ];
+
+      # # preset 1:
+      # font = {
+      #   size = 10;
+      #   normal = {
+      #     family = "Iosevka Nerd Font";
+      #     style = "Medium";
+      #   };
+      # };
+
       font = {
-        size = 11;
+        size = 12;
         normal = {
-          family = "FiraMono Nerd Font";
-          # style = "Medium";
+          family = "Inconsolata Nerd Font";
+          style = "Medium";
         };
       };
     };
