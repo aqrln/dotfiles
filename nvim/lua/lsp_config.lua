@@ -116,12 +116,18 @@ vim.g.rustaceanvim = {
       ['rust-analyzer'] = {
         check = {
           command = "clippy",
+          features = "all";
         },
         cargo = {
           buildScripts = {
             enable = true,
           },
           features = "all",
+        },
+        hover = {
+          memoryLayout = {
+            niches = true,
+          },
         },
         procMacro = {
           enable = true,

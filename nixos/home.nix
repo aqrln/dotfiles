@@ -42,7 +42,7 @@
 
     programs.starship = {
       enable = true;
-      settings =  {
+      settings = {
         character.success_symbol = "[\\$](bold green)";
         character.error_symbol = "[\\$](bold red)";
       };
@@ -55,6 +55,19 @@
         keys.normal.space = {
           o = "file_picker_in_current_buffer_directory";
           w = ":w";
+        };
+      };
+      languages = {
+        language-server = {
+          rust-analyzer.config = {
+            check = {
+              command = "clippy";
+              features = "all";
+            };
+            cargo = {
+              features = "all";
+            };
+          };
         };
       };
     };
