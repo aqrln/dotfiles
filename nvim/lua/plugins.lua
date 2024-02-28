@@ -56,7 +56,8 @@ return require('lazy').setup({
 
   'neovim/nvim-lspconfig',
 
-  'folke/lsp-colors.nvim',
+  -- TODO: deprecated, remove
+  -- 'folke/lsp-colors.nvim',
 
   { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
 
