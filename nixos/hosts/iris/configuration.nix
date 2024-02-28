@@ -48,7 +48,7 @@ with lib;
   users.users.aqrln = {
     isNormalUser = true;
     description = "Alexey Orlenko";
-    extraGroups = [ "wheel" ];
+    extraGroups = [ "wheel" "docker" ];
     packages = with pkgs; [
       flyctl
       nodejs_latest
@@ -151,10 +151,10 @@ with lib;
   };
 
   virtualisation.docker.enable = true;
-  virtualisation.docker.rootless = {
-    enable = true;
-    setSocketVariable = true;
-  };
+  # virtualisation.docker.rootless = {
+  #   enable = true;
+  #   setSocketVariable = true;
+  # };
 
   services.tailscale.enable = true;
 
