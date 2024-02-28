@@ -56,6 +56,8 @@ return require('lazy').setup({
 
   'neovim/nvim-lspconfig',
 
+  'folke/neoconf.nvim',
+
   -- TODO: deprecated, remove
   -- 'folke/lsp-colors.nvim',
 

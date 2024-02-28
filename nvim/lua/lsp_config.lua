@@ -1,3 +1,8 @@
+-- neoconf needs to be configured before nvim-lspconfig
+-- See https://github.com/folke/neoconf.nvim
+require('neoconf').setup {}
+
+-- nvim-lspconfig configuration
 -- See https://github.com/neovim/nvim-lspconfig
 
 -- Mappings.
