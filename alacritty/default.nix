@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 let
   isDarwin = pkgs.stdenv.isDarwin;
@@ -45,7 +45,8 @@ in {
 
         window = {
           decorations = if isDarwin then "Buttonless" else "None";
-          option_as_alt = if isDarwin then "Both" else "None";
+        } // lib.optionalAttrs isDarwin {
+          option_as_alt = "Both";
         };
       };
     };
