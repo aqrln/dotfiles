@@ -9,7 +9,7 @@ npairs.setup {
   -- check_ts = true,
 }
 
-cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
+-- cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
 
 npairs.add_rules {
   Rule('<', '>', {'rust', 'typescript'})
