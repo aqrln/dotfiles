@@ -201,7 +201,7 @@ return require('lazy').setup({
 
   'pest-parser/pest.vim',
 
-  -- 'github/copilot.vim',
+  'github/copilot.vim',
 
   -- {
   -- "folke/todo-comments.nvim",
