@@ -47,12 +47,13 @@ augroup init
 
     autocmd FileType text setlocal textwidth=80
 
-    autocmd FileType json       setlocal sw=2 sts=2
-    autocmd FileType lua        setlocal sw=2 sts=2
-    autocmd FileType javascript setlocal sw=2 sts=2
-    autocmd FileType typescript setlocal sw=2 sts=2
-    autocmd FileType prisma     setlocal sw=2 sts=2
-    autocmd FileType go         setlocal noet
+    autocmd FileType json            setlocal sw=2 sts=2
+    autocmd FileType lua             setlocal sw=2 sts=2
+    autocmd FileType javascript      setlocal sw=2 sts=2
+    autocmd FileType typescript      setlocal sw=2 sts=2
+    autocmd FileType typescriptreact setlocal sw=2 sts=2
+    autocmd FileType prisma          setlocal sw=2 sts=2
+    autocmd FileType go              setlocal noet
 
     autocmd BufRead,BufNewFile *.gyp       set filetype=python et ts=2 sw=2
     autocmd BufRead,BufNewFile *.gypi      set filetype=python et ts=2 sw=2

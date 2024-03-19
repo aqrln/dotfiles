@@ -6,8 +6,8 @@ require('nvim-treesitter.configs').setup {
   -- One of "all", "maintained" (parsers with maintainers), or a list of languages
   ensure_installed = {
     'bash', 'c', 'cpp', 'css', 'html', 'javascript', 'json', 'lua', 'make',
-    'nix', 'org', 'prisma', 'rust', 'scss', 'sql', 'toml', 'typescript', 'vim',
-    'yaml', 'zig',
+    'nix', 'org', 'prisma', 'rust', 'scss', 'sql', 'toml', 'tsx', 'typescript',
+    'vim', 'yaml', 'zig',
   },
   sync_install = false,
   ignore_install = {},
