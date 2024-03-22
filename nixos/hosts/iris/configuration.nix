@@ -103,7 +103,7 @@ with lib;
   programs.gnupg.agent = {
     enable = true;
     # enableSSHSupport = true;
-    pinentryFlavor = "curses";
+    # pinentryFlavor = "curses";
   };
 
   programs.nix-ld.enable = true;
