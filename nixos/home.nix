@@ -13,6 +13,10 @@
       EDITOR = "nvim";
     };
 
+    home.packages = with pkgs; [
+      ncdu
+    ];
+
     programs.bash.enable = true;
 
     programs.direnv = {
