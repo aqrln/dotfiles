@@ -4,6 +4,16 @@
 
 { modulesPath, config, pkgs, lib, ... }:
 
+let
+  x-www-browser = pkgs.writeShellApplication {
+    name = "x-www-browser";
+    text = ''
+      exec mac open "$@"
+    '';
+  };
+
+in
+
 with lib;
 
 {
@@ -62,7 +72,10 @@ with lib;
       nodejs_latest.pkgs.yarn
       rustup
       vscode-extensions.vadimcn.vscode-lldb.adapter
+      xdg-utils
       yaml-language-server
+
+      x-www-browser
     ];
   };
 
