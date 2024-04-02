@@ -1,7 +1,5 @@
 local max_lines = 10000
 
-require('orgmode').setup_ts_grammar()
-
 require('nvim-treesitter.configs').setup {
   -- One of "all", "maintained" (parsers with maintainers), or a list of languages
   ensure_installed = {
