@@ -3,8 +3,8 @@ local config = wezterm.config_builder()
 
 -- config.color_scheme = 'catppuccin-mocha'
 config.color_scheme = 'GruvboxDark'
-config.font = wezterm.font 'Iosevka Term Medium'
-config.font_size = 14
+config.font = wezterm.font 'Inconsolata'
+config.font_size = 16
 config.freetype_load_target = "Light"
 -- config.freetype_load_flags = "NO_HINTING"
 
