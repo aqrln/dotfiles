@@ -19,7 +19,7 @@
     fx
     fzf
     git
-    git-branchless
+    # git-branchless
     htop
     jq
     neovim
