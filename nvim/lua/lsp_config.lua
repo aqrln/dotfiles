@@ -61,6 +61,7 @@ local servers_with_defaults = {
   'nil_ls',
   'pest_ls',
   'prismals',
+  'tailwindcss',
   'tsserver',
   'yamlls',
 }

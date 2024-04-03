@@ -71,6 +71,7 @@ with lib;
       nodejs_latest.pkgs.vscode-langservers-extracted
       nodejs_latest.pkgs.yarn
       rustup
+      tailwindcss-language-server
       turso-cli
       vscode-extensions.vadimcn.vscode-lldb.adapter
       xdg-utils
