@@ -76,7 +76,12 @@ for _, lsp in pairs(servers_with_defaults) do
 end
 
 lspconfig['eslint'].setup {
-  on_attach = on_attach,
+  on_attach = function(client, bufnr)
+    on_attach(client, bufnr)
+    vim.keymap.set('n', '<space>lef', function()
+      vim.api.nvim_command('EslintFixAll')
+    end, { buffer = bufnr })
+  end,
   capabilities = capabilities,
   root_dir = function(fname)
     -- Split the pattern into two to support nested directories with a package.json
