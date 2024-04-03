@@ -87,12 +87,23 @@ lspconfig['eslint'].setup {
       '.eslintrc.cjs',
       '.eslintrc.yaml',
       '.eslintrc.yml',
-      '.eslintrc.json'
+      '.eslintrc.json',
+      '.eslint.config.js',
+      '.eslint.config.mjs',
+      '.eslint.config.cjs',
+      '.eslint.config.ts',
+      '.eslint.config.mts',
+      '.eslint.config.cts'
     )(fname) or util.root_pattern(
       'package.json',
       '.git'
     )(fname)
   end,
+  settings = {
+    experimental = {
+      useFlatConfig = true,
+    }
+  },
 }
 
 require('null-ls').setup {
