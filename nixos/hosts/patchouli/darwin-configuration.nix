@@ -11,10 +11,8 @@
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
-    bat
     bun
     deno
-    direnv
     fd
     fx
     fzf
@@ -24,12 +22,10 @@
     jq
     neovim
     nil
-    nixfmt
     nixpkgs-fmt
     pgcli
     ripgrep
     rust-analyzer-unwrapped
-    starship
     tailscale
     tmux
     # visidata

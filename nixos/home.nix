@@ -15,6 +15,9 @@
 
     home.packages = with pkgs; [
       ncdu
+      nixfmt-rfc-style
+      tailwindcss-language-server
+      yaml-language-server
     ];
 
     programs.bash.enable = true;
