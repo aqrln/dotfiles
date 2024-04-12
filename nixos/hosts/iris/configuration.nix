@@ -122,6 +122,7 @@ with lib;
   };
 
   programs.nix-ld.enable = true;
+  programs.nix-index.enable = true;
 
   # List services that you want to enable:
 
