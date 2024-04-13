@@ -4,7 +4,6 @@
   fonts.packages = with pkgs; [
     iosevka-bin
     (nerdfonts.override { fonts = [ "Inconsolata" "Iosevka" "IosevkaTerm" ]; })
-    zpix-pixel-font
   ];
 
   fonts.fontconfig = {
