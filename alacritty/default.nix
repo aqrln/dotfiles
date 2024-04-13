@@ -17,7 +17,7 @@ in {
         ];
 
         font = {
-          size = if isDarwin then 14 else 10;
+          size = if isDarwin then 14 else 11;
 
           normal = {
             # family = if isDarwin then "IosevkaTerm NF" else "IosevkaTerm Nerd Font";
