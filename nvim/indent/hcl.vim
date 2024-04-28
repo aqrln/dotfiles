@@ -1,1 +1,1 @@
-runtime! indent/c.vim
+runtime! indent/javascript.vim
