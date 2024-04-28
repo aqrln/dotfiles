@@ -53,6 +53,7 @@ augroup init
     autocmd FileType typescript      setlocal sw=2 sts=2
     autocmd FileType typescriptreact setlocal sw=2 sts=2
     autocmd FileType prisma          setlocal sw=2 sts=2
+    autocmd FileType hcl             setlocal sw=2 sts=2
     autocmd FileType go              setlocal noet
 
     autocmd BufRead,BufNewFile *.gyp       set filetype=python et ts=2 sw=2
