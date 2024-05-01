@@ -1,7 +1,12 @@
 { pkgs, ... }:
 
+let
+  cargo-embassy = import ./cargo-embassy { inherit pkgs; };
+
+in
 {
   environment.systemPackages = with pkgs; [
+    cargo-embassy
     probe-rs
     stlink
     stlink-gui
