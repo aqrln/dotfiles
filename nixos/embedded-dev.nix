@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+    probe-rs
     stlink
     stlink-gui
     usbutils
