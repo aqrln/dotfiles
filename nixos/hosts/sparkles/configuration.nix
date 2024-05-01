@@ -10,6 +10,7 @@
       <home-manager/nixos>
       ./hardware-configuration.nix
       ../../cachix.nix
+      ../../embedded-dev.nix
       ../../home.nix
       # ../../sway.nix
       # ../../emacs.nix
