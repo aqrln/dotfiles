@@ -25,6 +25,7 @@
     nil
     nixpkgs-fmt
     pgcli
+    probe-rs
     ripgrep
     rust-analyzer-unwrapped
     tailscale
