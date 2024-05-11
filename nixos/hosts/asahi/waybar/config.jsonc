@@ -1,0 +1,43 @@
+[
+    {
+        "layer": "top",
+        "output": "eDP-1",
+        "height": 32,
+        "spacing": 4,
+        "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad", "sway/window"],
+        "modules-center": [],
+        "modules-right": [
+            "wireplumber",
+            "network",
+            "backlight",
+            "sway/language",
+            "battery",
+            "clock",
+            "tray"
+        ],
+        "include": ["~/.config/waybar/default-modules.jsonc"]
+    },
+
+    {
+        "layer": "top",
+        "output": "HDMI-A-1",
+        "height": 24,
+        "spacing": 4,
+        "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad"],
+        "modules-center": ["sway/window"],
+        "modules-right": [
+            "idle_inhibitor",
+            "wireplumber",
+            "network",
+            "cpu",
+            "memory",
+            "temperature",
+            "backlight",
+            "sway/language",
+            "battery",
+            "clock",
+            "tray"
+        ],
+        "include": ["~/.config/waybar/default-modules.jsonc"]
+    }
+]
