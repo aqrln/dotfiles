@@ -101,6 +101,10 @@
       # uncomment this if there are any issues with rootless docker socket not being found
       # export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
 
+      if [[ -z "$SSH_AUTH_SOCK" ]]; then
+        export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+      fi
+
       osc7_cwd() {
         local strlen=''${#PWD}
         local encoded=""
