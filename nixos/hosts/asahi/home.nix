@@ -133,6 +133,8 @@
     };
   };
 
+  programs.zoxide.enable = true;
+
   programs.alacritty = {
     enable = true;
     settings = {
