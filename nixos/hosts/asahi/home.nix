@@ -186,11 +186,11 @@
       main = {
         font = "Inconsolata Nerd Font:size=10";
         # dpi-aware = "yes";
+        include = "${pkgs.foot.themes}/share/foot/themes/gruvbox-dark";
       };
       mouse = {
         hide-when-typing = "yes";
       };
     };
-
   };
 }
