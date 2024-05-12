@@ -98,6 +98,9 @@
           . /etc/bashrc
       fi
 
+      # Somehow something in Fedora configs overrides it to nano
+      export EDITOR="nvim"
+
       # uncomment this if there are any issues with rootless docker socket not being found
       # export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
 
