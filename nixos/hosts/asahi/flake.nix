@@ -2,18 +2,30 @@
   description = "Home Manager configuration of aqrln";
 
   inputs = {
-    # Specify the source of Home Manager and Nixpkgs.
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixos-apple-silicon = {
+      url = "github:tpwrules/nixos-apple-silicon";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, ... }:
+  outputs = { nixpkgs, home-manager, nixos-apple-silicon, ... }:
     let
       system = "aarch64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+      pkgs = import nixpkgs {
+        inherit system;
+        overlays = [
+          nixos-apple-silicon.overlays.default
+          (final: prev: {
+            mesa = final.mesa-asahi-edge;
+          })
+        ];
+      };
+
     in {
       homeConfigurations."aqrln" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
