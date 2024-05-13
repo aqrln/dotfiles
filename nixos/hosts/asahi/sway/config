@@ -19,6 +19,7 @@ set $term alacritty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $menu dmenu_path | bemenu -i -b --hp 8 | xargs swaymsg exec --
+set $menu_desktop j4-dmenu-desktop --dmenu='bemenu -i -b --hp 8' --term=$term
 
 ### Output configuration
 #
@@ -83,6 +84,7 @@ input * {
 
     # Start your launcher
     bindsym $mod+d exec $menu
+    bindsym $mod+Shift+d exec $menu_desktop
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
