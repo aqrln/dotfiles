@@ -133,6 +133,11 @@ vim.g.rustaceanvim = {
   server = {
     on_attach = function(client, bufnr)
       on_attach(client, bufnr)
+
+      vim.keymap.set("n", "K", function() vim.cmd.RustLsp { 'hover', 'actions' } end, { buffer = bufnr })
+      vim.keymap.set("x", "K", function() vim.cmd.RustLsp { 'hover', 'range' } end, { buffer = bufnr })
+      vim.keymap.set("n", "<space>e", function() vim.cmd.RustLsp('renderDiagnostic') end, { buffer = bufnr })
+      vim.keymap.set({"n", "x"}, "<space>a", function() vim.cmd.RustLsp('codeAction') end, { buffer = bufnr })
     end,
 
     settings = {
