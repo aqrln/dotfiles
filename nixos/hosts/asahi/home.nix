@@ -101,6 +101,7 @@
   home.sessionVariables = {
     EDITOR = "nvim";
     VISUAL = "nvim";
+    DBX_CONTAINER_MANAGER = "podman";
   };
 
   home.sessionPath = [
