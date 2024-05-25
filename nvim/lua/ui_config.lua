@@ -15,8 +15,8 @@ require('lualine').setup {
 --   use_treesitter = true,
 --   enabled = false,
 -- }
-
-vim.api.nvim_set_keymap('n', '<M-i>', ':IndentBlanklineToggle<CR>', { noremap = true })
+--
+-- vim.api.nvim_set_keymap('n', '<M-i>', ':IndentBlanklineToggle<CR>', { noremap = true })
 
 require('which-key').setup {
   icons = {
