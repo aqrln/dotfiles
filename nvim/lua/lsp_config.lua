@@ -138,6 +138,10 @@ vim.g.rustaceanvim = {
       vim.keymap.set("x", "K", function() vim.cmd.RustLsp { 'hover', 'range' } end, { buffer = bufnr })
       vim.keymap.set("n", "<space>e", function() vim.cmd.RustLsp('renderDiagnostic') end, { buffer = bufnr })
       vim.keymap.set({"n", "x"}, "<space>a", function() vim.cmd.RustLsp('codeAction') end, { buffer = bufnr })
+
+      vim.keymap.set("n", "<space>K", function() vim.cmd.RustLsp("openDocs") end, { buffer = bufnr })
+      vim.keymap.set("n", "gp", function() vim.cmd.RustLsp("parentModule") end, { buffer = bufnr })
+      vim.keymap.set("n", "gC", function() vim.cmd.RustLsp("openCargo") end, { buffer = bufnr })
     end,
 
     settings = {
