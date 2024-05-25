@@ -65,6 +65,27 @@
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
+
+    ".config/nixpkgs/overlays/asahi-mesa.nix".text =
+      let
+        flakeLock = builtins.fromJSON (builtins.readFile ./flake.lock);
+        inherit (flakeLock.nodes.nixos-apple-silicon.locked) rev narHash;
+      in
+      ''
+        final: prev:
+        let
+          nixos-apple-silicon = fetchTarball {
+            url = "https://github.com/tpwrules/nixos-apple-silicon/archive/${rev}.tar.gz";
+            sha256 = "${narHash}";
+          };
+          nas = import nixos-apple-silicon { };
+          inherit (nas.packages.aarch64-linux) mesa-asahi-edge;
+        in
+        {
+          mesa-asahi-edge = mesa-asahi-edge;
+          mesa = mesa-asahi-edge;
+        }
+      '';
   };
 
   # You can also manage environment variables but you will have to manually
