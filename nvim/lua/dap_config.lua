@@ -17,8 +17,8 @@ vim.keymap.set('n', '<space>dlp', function() dap.set_breakpoint(nil, nil, vim.fn
 vim.keymap.set({'n', 'v'}, '<space>dh', function() widgets.hover() end, { desc = "hover value" })
 vim.keymap.set({'n', 'v'}, '<space>dp', function() widgets.preview() end, { desc = "preview value" })
 
-vim.keymap.set('n', '<Leader>dr', function() dap.repl.open() end, { desc = "debug repl" })
-vim.keymap.set('n', '<Leader>dl', function() dap.run_last() end, { desc = "run last" })
+vim.keymap.set('n', '<space>dr', function() dap.repl.open() end, { desc = "debug repl" })
+vim.keymap.set('n', '<space>dl', function() dap.run_last() end, { desc = "run last" })
 
 vim.keymap.set('n', '<space>ds', function() widgets.centered_float(widgets.scopes) end, { desc = "scopes" })
 vim.keymap.set('n', '<space>dvs', function() widgets.sidebar(widgets.scopes).open() end, { desc = "scopes in sidebar" })
