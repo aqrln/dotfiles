@@ -107,3 +107,10 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 nnoremap <silent> - :Oil<CR>
+
+nnoremap <space>q :quit<CR>
+
+nnoremap <space>y "+y
+vnoremap <space>y "+y
+nnoremap <space>p "+p
+vnoremap <space>p "+p

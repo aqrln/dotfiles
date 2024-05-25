@@ -40,8 +40,6 @@ local on_attach = function(client, bufnr)
 
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>llr', '<cmd>LspRestart<CR>', opts)
 
-  -- vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>pw', '<cmd>lua vim.lsp.buf.formatting()<CR><cmd>write<CR>', opts)
-  -- vim.api.nvim_buf_set_keymap(bufnr, 'x', '<space>p', '<cmd>lua vim.lsp.buf.range_formatting({})<CR>', opts)
   vim.keymap.set('n', '<space>lf', function()
     vim.lsp.buf.format { async = true }
   end, { buffer = bufnr, desc = "format buffer" })
