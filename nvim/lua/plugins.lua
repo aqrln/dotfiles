@@ -140,8 +140,8 @@ return require('lazy').setup({
 
   {
     'mrcjkb/rustaceanvim',
-    version = '^3',
-    ft = { 'rust' },
+    version = '^4',
+    lazy = false,
   },
 
   'mfussenegger/nvim-dap',
