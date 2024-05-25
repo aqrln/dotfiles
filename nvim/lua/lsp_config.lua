@@ -44,12 +44,12 @@ local on_attach = function(client, bufnr)
   -- vim.api.nvim_buf_set_keymap(bufnr, 'x', '<space>p', '<cmd>lua vim.lsp.buf.range_formatting({})<CR>', opts)
   vim.keymap.set('n', '<space>lf', function()
     vim.lsp.buf.format { async = true }
-  end, { buffer = bufnr })
+  end, { buffer = bufnr, desc = "format buffer" })
 
   vim.keymap.set('n', '<space>w', function()
     vim.lsp.buf.format()
     vim.api.nvim_command('write')
-  end, { buffer = bufnr })
+  end, { buffer = bufnr, desc = "format and save" })
 
   vim.keymap.set('n', '<space>lI', function()
     vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
@@ -140,12 +140,12 @@ vim.g.rustaceanvim = {
 
       vim.keymap.set("n", "K", function() vim.cmd.RustLsp { 'hover', 'actions' } end, { buffer = bufnr })
       vim.keymap.set("x", "K", function() vim.cmd.RustLsp { 'hover', 'range' } end, { buffer = bufnr })
-      vim.keymap.set("n", "<space>e", function() vim.cmd.RustLsp('renderDiagnostic') end, { buffer = bufnr })
-      vim.keymap.set({"n", "x"}, "<space>a", function() vim.cmd.RustLsp('codeAction') end, { buffer = bufnr })
+      vim.keymap.set("n", "<space>e", function() vim.cmd.RustLsp('renderDiagnostic') end, { buffer = bufnr, desc = "diagnostic" })
+      vim.keymap.set({"n", "x"}, "<space>a", function() vim.cmd.RustLsp('codeAction') end, { buffer = bufnr, desc = "code actions" })
 
-      vim.keymap.set("n", "<space>K", function() vim.cmd.RustLsp("openDocs") end, { buffer = bufnr })
-      vim.keymap.set("n", "gp", function() vim.cmd.RustLsp("parentModule") end, { buffer = bufnr })
-      vim.keymap.set("n", "gC", function() vim.cmd.RustLsp("openCargo") end, { buffer = bufnr })
+      vim.keymap.set("n", "<space>K", function() vim.cmd.RustLsp("openDocs") end, { buffer = bufnr, desc = "open docs" })
+      vim.keymap.set("n", "gp", function() vim.cmd.RustLsp("parentModule") end, { buffer = bufnr, desc = "parent module" })
+      vim.keymap.set("n", "gC", function() vim.cmd.RustLsp("openCargo") end, { buffer = bufnr, desc = "open Cargo.toml" })
     end,
 
     settings = {
