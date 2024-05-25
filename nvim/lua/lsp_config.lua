@@ -50,6 +50,10 @@ local on_attach = function(client, bufnr)
     vim.lsp.buf.format()
     vim.api.nvim_command('write')
   end, { buffer = bufnr })
+
+  vim.keymap.set('n', '<space>lI', function()
+    vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+  end, { buffer = bufnr, desc = "toggle inlay hints" })
 end
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
