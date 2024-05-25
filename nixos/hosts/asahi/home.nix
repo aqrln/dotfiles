@@ -103,6 +103,10 @@
     VISUAL = "nvim";
   };
 
+  home.sessionPath = [
+    "$HOME/.local/bin"
+  ];
+
   home.shellAliases = {
     ls = "ls --color=auto";
   };
