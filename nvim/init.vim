@@ -114,3 +114,5 @@ nnoremap <space>y "+y
 vnoremap <space>y "+y
 nnoremap <space>p "+p
 vnoremap <space>p "+p
+nnoremap <space>P "+P
+vnoremap <space>P "+P
