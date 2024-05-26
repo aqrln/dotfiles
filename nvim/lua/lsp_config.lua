@@ -143,6 +143,7 @@ vim.g.rustaceanvim = {
       vim.keymap.set("n", "K", function() vim.cmd.RustLsp { 'hover', 'actions' } end, { buffer = bufnr })
       vim.keymap.set("x", "K", function() vim.cmd.RustLsp { 'hover', 'range' } end, { buffer = bufnr })
       vim.keymap.set("n", "<space>e", function() vim.cmd.RustLsp('renderDiagnostic') end, { buffer = bufnr, desc = "diagnostic" })
+      vim.keymap.set("n", "<space>E", function() vim.cmd.RustLsp('explainError') end, { buffer = bufnr, desc = "explain error" })
       vim.keymap.set({"n", "x"}, "<space>a", function() vim.cmd.RustLsp('codeAction') end, { buffer = bufnr, desc = "code actions" })
 
       vim.keymap.set("n", "<space>K", function() vim.cmd.RustLsp("openDocs") end, { buffer = bufnr, desc = "open docs" })
