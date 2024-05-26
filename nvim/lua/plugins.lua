@@ -145,6 +145,8 @@ return require('lazy').setup({
 
   'mfussenegger/nvim-dap',
 
+  { "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } },
+
   -- 'akinsho/bufferline.nvim',
 
   'LnL7/vim-nix',
@@ -159,7 +161,7 @@ return require('lazy').setup({
   },
 
   'nvim-orgmode/orgmode',
-  
+
   'akinsho/org-bullets.nvim',
 
   'akinsho/git-conflict.nvim',

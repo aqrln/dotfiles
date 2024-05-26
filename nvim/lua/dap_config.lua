@@ -1,5 +1,8 @@
 local dap = require('dap')
 local widgets = require('dap.ui.widgets')
+local dapui = require('dapui')
+
+dapui.setup()
 
 vim.keymap.set('n', '<space>dc', function() dap.continue() end, { desc = "continue" })
 vim.keymap.set('n', '<space>do', function() dap.step_over() end, { desc = "step over" })
@@ -26,11 +29,14 @@ vim.keymap.set('n', '<space>dvs', function() widgets.sidebar(widgets.scopes).ope
 vim.keymap.set('n', '<space>df', function() widgets.centered_float(widgets.frames) end, { desc = "frames" })
 vim.keymap.set('n', '<space>dvf', function() widgets.sidebar(widgets.frames).open() end, { desc = "frames in sidebar" })
 
-vim.keymap.set('n', '<space>de', function() widgets.centered_float(widgets.expression) end, { desc = "expressions" })
-vim.keymap.set('n', '<space>dve', function() widgets.sidebar(widgets.expression).open() end, { desc = "expressions in sidebar" })
+vim.keymap.set('n', '<space>dE', function() widgets.centered_float(widgets.expression) end, { desc = "expression" })
+vim.keymap.set('n', '<space>dvE', function() widgets.sidebar(widgets.expression).open() end, { desc = "expression in sidebar" })
 
 vim.keymap.set('n', '<space>dt', function() widgets.centered_float(widgets.threads) end, { desc = "threads" })
 vim.keymap.set('n', '<space>dvt', function() widgets.sidebar(widgets.threads).open() end, { desc = "threads in sidebar" })
 
 vim.keymap.set('n', '<space>dS', function() widgets.centered_float(widgets.sessions) end, { desc = "sessions" })
 vim.keymap.set('n', '<space>dvS', function() widgets.sidebar(widgets.sessions).open() end, { desc = "sessions in sidebar" })
+
+vim.keymap.set('n', '<space>du', function() dapui.toggle() end, { desc = "toggle dap ui" })
+vim.keymap.set({'n', 'v'}, '<space>de', function() dapui.eval() end, { desc = "dap ui eval" })
