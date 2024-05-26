@@ -59,13 +59,13 @@ local keybindings = {
   fb = 'buffers()',
   fh = 'help_tags()',
 
-  lr = 'lsp_references()',
-  ls = 'lsp_document_symbols()',
-  lS = 'lsp_dynamic_workspace_symbols()',
-  lD = 'diagnostics()',
-  li = 'lsp_implementations()',
-  ld = 'lsp_definitions()',
-  lt = 'lsp_type_definitions()',
+  flr = 'lsp_references()',
+  fls = 'lsp_document_symbols()',
+  flS = 'lsp_dynamic_workspace_symbols()',
+  flD = 'diagnostics()',
+  fli = 'lsp_implementations()',
+  fld = 'lsp_definitions()',
+  flt = 'lsp_type_definitions()',
 }
 
 for key, method in pairs(keybindings) do

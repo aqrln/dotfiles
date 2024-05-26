@@ -198,23 +198,23 @@ require('typescript-tools').setup {
       vim.cmd.TSToolsOrganizeImports()
     end, { buffer = bufnr, desc = "organize imports" })
 
-    vim.keymap.set("n", "<space>To", function()
+    vim.keymap.set("n", "<space>lto", function()
       vim.cmd.TSToolsOrganizeImports()
     end, { buffer = bufnr, desc = "organize imports" })
 
-    vim.keymap.set("n", "<space>Tf", function()
+    vim.keymap.set("n", "<space>ltf", function()
       vim.cmd.TSToolsFixAll()
     end, { buffer = bufnr, desc = "fix all" })
 
-    vim.keymap.set("n", "<space>Tr", function()
+    vim.keymap.set("n", "<space>ltr", function()
       vim.cmd.TSToolsRenameFile()
     end, { buffer = bufnr, desc = "rename file" })
 
-    vim.keymap.set("n", "<space>Ti", function()
+    vim.keymap.set("n", "<space>lti", function()
       vim.cmd.TSToolsAddMissingImports()
     end, { buffer = bufnr, desc = "add missing imports" })
 
-    vim.keymap.set("n", "<space>Tf", function()
+    vim.keymap.set("n", "<space>ltf", function()
       vim.cmd.TSToolsFileReferences()
     end, { buffer = bufnr, desc = "find file references" })
   end,

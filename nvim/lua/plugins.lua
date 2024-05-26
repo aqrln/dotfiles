@@ -17,7 +17,7 @@ return require('lazy').setup({
   {
     'tpope/vim-dispatch',
     lazy = true,
-    cmd = {'Dispatch', 'Make', 'Focus', 'Start'}
+    cmd = { 'Dispatch', 'Make', 'Focus', 'Start' }
   },
 
   'editorconfig/editorconfig-vim',
@@ -178,7 +178,7 @@ return require('lazy').setup({
   'b0o/schemastore.nvim',
 
   {
-   'stevearc/oil.nvim',
+    'stevearc/oil.nvim',
     opts = {
       columns = {
         "icon",
@@ -209,7 +209,19 @@ return require('lazy').setup({
   {
     "pmizio/typescript-tools.nvim",
     dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-  }
+  },
+
+  {
+    "nvim-neotest/neotest",
+    dependencies = {
+      "nvim-neotest/nvim-nio",
+      "nvim-lua/plenary.nvim",
+      "antoinemadec/FixCursorHold.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+  },
+
+  "marilari88/neotest-vitest",
 
   -- {
   -- "folke/todo-comments.nvim",
