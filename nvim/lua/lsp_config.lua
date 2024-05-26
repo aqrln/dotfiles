@@ -148,6 +148,14 @@ vim.g.rustaceanvim = {
       vim.keymap.set("n", "<space>K", function() vim.cmd.RustLsp("openDocs") end, { buffer = bufnr, desc = "open docs" })
       vim.keymap.set("n", "gp", function() vim.cmd.RustLsp("parentModule") end, { buffer = bufnr, desc = "parent module" })
       vim.keymap.set("n", "gC", function() vim.cmd.RustLsp("openCargo") end, { buffer = bufnr, desc = "open Cargo.toml" })
+
+      vim.keymap.set("n", "<space>mu", function()
+        vim.cmd.RustLsp { "moveItem", "up" }
+      end, { buffer = bufnr, desc = "move item up" })
+
+      vim.keymap.set("n", "<space>md", function()
+        vim.cmd.RustLsp { "moveItem", "down" }
+      end, { buffer = bufnr, desc = "move item down" })
     end,
 
     settings = {
