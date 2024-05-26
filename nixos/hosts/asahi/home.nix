@@ -20,6 +20,7 @@
   home.packages = with pkgs; [
     fd
     fzf
+    lua-language-server
     nil
     nodejs_latest
     nodejs_latest.pkgs."@prisma/language-server"

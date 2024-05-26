@@ -14,6 +14,7 @@
     };
 
     home.packages = with pkgs; [
+      lua-language-server
       ncdu
       nixfmt-rfc-style
       tailwindcss-language-server
