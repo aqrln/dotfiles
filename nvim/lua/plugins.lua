@@ -206,6 +206,11 @@ return require('lazy').setup({
 
   'folke/neodev.nvim',
 
+  {
+    "pmizio/typescript-tools.nvim",
+    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+  }
+
   -- {
   -- "folke/todo-comments.nvim",
   --   dependencies = { "nvim-lua/plenary.nvim" },

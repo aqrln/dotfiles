@@ -70,7 +70,6 @@ local servers_with_defaults = {
   'pest_ls',
   'prismals',
   'tailwindcss',
-  'tsserver',
   'yamlls',
 }
 
@@ -176,6 +175,26 @@ vim.g.rustaceanvim = {
   },
 
   dap = {},
+}
+
+require('typescript-tools').setup {
+  on_attach = function (client, bufnr)
+    on_attach(client, bufnr)
+
+    vim.keymap.set("n", "gS", function ()
+      vim.cmd.TSToolsGoToSourceDefinition()
+    end, { buffer = bufnr, desc = "go to source definition" })
+
+    vim.keymap.set("n", "<space>lo", function()
+      vim.cmd.TSToolsOrganizeImports()
+    end, { buffer = bufnr, desc = "organize imports" })
+  end,
+
+  settings = {
+    jsx_close_tag = {
+      enable = true,
+    },
+  },
 }
 
 require('trouble').setup {}
