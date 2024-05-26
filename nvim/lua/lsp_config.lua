@@ -2,6 +2,10 @@
 -- See https://github.com/folke/neoconf.nvim
 require('neoconf').setup {}
 
+-- neodev needs to be configured before nvim-lspconfig too
+-- See https://github.com/folke/neodev.nvim
+require('neodev').setup {}
+
 -- nvim-lspconfig configuration
 -- See https://github.com/neovim/nvim-lspconfig
 
@@ -61,6 +65,7 @@ local servers_with_defaults = {
   'dockerls',
   'gopls',
   'html',
+  'lua_ls',
   'nil_ls',
   'pest_ls',
   'prismals',

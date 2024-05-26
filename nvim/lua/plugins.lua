@@ -202,6 +202,8 @@ return require('lazy').setup({
 
   'github/copilot.vim',
 
+  'folke/neodev.nvim',
+
   -- {
   -- "folke/todo-comments.nvim",
   --   dependencies = { "nvim-lua/plenary.nvim" },
