@@ -31,7 +31,6 @@
     nodejs_latest.pkgs.typescript-language-server
     nodejs_latest.pkgs.vscode-langservers-extracted
     nodejs_latest.pkgs.yarn
-    rustup
     tailwindcss-language-server
     tmux
     vscode-extensions.vadimcn.vscode-lldb.adapter
@@ -122,6 +121,7 @@
 
   programs.bash = {
     enable = true;
+
     bashrcExtra = ''
       if [ -f /etc/bashrc ]; then
           . /etc/bashrc
@@ -149,13 +149,17 @@
             encoded+="''${o}"
         done
         printf '\e]7;file://%s%s\e\\' "''${HOSTNAME}" "''${encoded}"
-    }
-    PROMPT_COMMAND=''${PROMPT_COMMAND:+$PROMPT_COMMAND; }osc7_cwd
+      }
+      PROMPT_COMMAND=''${PROMPT_COMMAND:+$PROMPT_COMMAND; }osc7_cwd
 
-    prompt_marker() {
-        printf '\e]133;A\e\\'
-    }
-    PROMPT_COMMAND=''${PROMPT_COMMAND:+$PROMPT_COMMAND; }prompt_marker
+      prompt_marker() {
+          printf '\e]133;A\e\\'
+      }
+      PROMPT_COMMAND=''${PROMPT_COMMAND:+$PROMPT_COMMAND; }prompt_marker
+    '';
+
+    profileExtra = ''
+      [ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
     '';
   };
 
