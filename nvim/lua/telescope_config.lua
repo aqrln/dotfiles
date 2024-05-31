@@ -1,6 +1,6 @@
 local telescope = require('telescope')
 local actions = require('telescope.actions')
-local trouble = require('trouble.providers.telescope')
+local trouble = require('trouble.sources.telescope')
 
 telescope.setup {
   extensions = {
@@ -19,10 +19,10 @@ telescope.setup {
   defaults = {
     mappings = {
       i = {
-        ['<c-j>'] = trouble.open_with_trouble,
+        ['<c-j>'] = trouble.open,
       },
       n = {
-        ['<c-j>'] = trouble.open_with_trouble,
+        ['<c-j>'] = trouble.open,
       },
     },
   },
