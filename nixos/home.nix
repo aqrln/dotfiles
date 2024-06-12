@@ -15,7 +15,7 @@
 
     home.packages = with pkgs; [
       lua-language-server
-      ncdu
+      # ncdu
       nixfmt-rfc-style
       tailwindcss-language-server
       yaml-language-server
