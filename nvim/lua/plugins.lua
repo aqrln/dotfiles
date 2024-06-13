@@ -167,7 +167,7 @@ return require('lazy').setup({
     }
   },
 
-  'nvim-orgmode/orgmode',
+  -- 'nvim-orgmode/orgmode',
 
   'akinsho/org-bullets.nvim',
 
