@@ -3,9 +3,12 @@ local max_lines = 10000
 require('nvim-treesitter.configs').setup {
   -- One of "all", "maintained" (parsers with maintainers), or a list of languages
   ensure_installed = {
-    'bash', 'c', 'cpp', 'css', 'hcl', 'html', 'javascript', 'json', 'lua', 'make',
-    'markdown', 'markdown_inline', 'nix', 'org', 'prisma', 'python', 'query', 'rust',
-    'scss', 'sql', 'toml', 'tsx', 'typescript', 'vim', 'vimdoc', 'yaml', 'zig',
+    'bash', 'c', 'cmake', 'comment', 'cpp', 'css', 'csv', 'dhall', 'diff', 'disassembly',
+    'dockerfile', 'dot', 'fish', 'git_config', 'git_rebase', 'gitattributes', 'gitcommit', 'gitignore',
+    'glsl', 'gn', 'gnuplot', 'go', 'gosum', 'gpg', 'graphql', 'haskell', 'hcl', 'html', 'http', 'ini',
+    'javascript', 'jq', 'jsdoc', 'json', 'jsonc', 'just', 'kdl', 'latex', 'linkerscript', 'llvm', 'lua',
+    'make', 'markdown', 'markdown_inline', 'nix', 'org', 'prisma', 'proto', 'python', 'query', 'regex',
+    'rust', 'scss', 'sql', 'tmux', 'toml', 'tsx', 'typescript', 'vim', 'vimdoc', 'wgsl', 'yaml', 'zig',
   },
   sync_install = false,
   ignore_install = {},

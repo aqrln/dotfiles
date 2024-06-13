@@ -18,6 +18,7 @@
       # ncdu
       nixfmt-rfc-style
       tailwindcss-language-server
+      tree-sitter
       yaml-language-server
     ];
 
