@@ -239,8 +239,7 @@ lspconfig.vtsls.setup {
   end,
 
   settings = {
-    jsx_close_tag = {
-      enable = true,
+    typescript = {
     },
   },
 }

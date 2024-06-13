@@ -215,6 +215,8 @@ return require('lazy').setup({
 
   'yioneko/nvim-vtsls',
 
+  'windwp/nvim-ts-autotag',
+
   {
     "nvim-neotest/neotest",
     dependencies = {
