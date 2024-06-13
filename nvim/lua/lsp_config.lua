@@ -197,37 +197,45 @@ vim.g.rustaceanvim = {
   dap = {},
 }
 
-require('typescript-tools').setup {
+local vtsls = require("vtsls")
+
+require("lspconfig.configs").vtsls = vtsls.lspconfig
+
+lspconfig.vtsls.setup {
   on_attach = function (client, bufnr)
     on_attach(client, bufnr)
 
     vim.keymap.set("n", "gS", function ()
-      vim.cmd.TSToolsGoToSourceDefinition()
+      vim.cmd.VtsExec("goto_source_definition")
     end, { buffer = bufnr, desc = "go to source definition" })
 
     vim.keymap.set("n", "<space>lo", function()
-      vim.cmd.TSToolsOrganizeImports()
+      vtsls.commands.organize_imports(bufnr)
     end, { buffer = bufnr, desc = "organize imports" })
 
     vim.keymap.set("n", "<space>lto", function()
-      vim.cmd.TSToolsOrganizeImports()
+      vtsls.commands.organize_imports(bufnr)
     end, { buffer = bufnr, desc = "organize imports" })
 
     vim.keymap.set("n", "<space>ltf", function()
-      vim.cmd.TSToolsFixAll()
+      vtsls.commands.fix_all(bufnr)
     end, { buffer = bufnr, desc = "fix all" })
 
     vim.keymap.set("n", "<space>ltr", function()
-      vim.cmd.TSToolsRenameFile()
+      vtsls.commands.rename_file(bufnr)
     end, { buffer = bufnr, desc = "rename file" })
 
     vim.keymap.set("n", "<space>lti", function()
-      vim.cmd.TSToolsAddMissingImports()
+      vtsls.commands.add_missing_imports(bufnr)
     end, { buffer = bufnr, desc = "add missing imports" })
 
     vim.keymap.set("n", "<space>ltf", function()
-      vim.cmd.TSToolsFileReferences()
+      vtsls.commands.file_references(bufnr)
     end, { buffer = bufnr, desc = "find file references" })
+
+    vim.keymap.set("n", "<space>lta", function()
+      vtsls.commands.source_actions(bufnr)
+    end, { buffer = bufnr, desc = "source actions" })
   end,
 
   settings = {
