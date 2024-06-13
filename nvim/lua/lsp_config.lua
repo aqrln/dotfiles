@@ -70,7 +70,6 @@ local servers_with_defaults = {
   'pest_ls',
   'prismals',
   'tailwindcss',
-  'yamlls',
 }
 
 local lspconfig = require('lspconfig')
@@ -83,7 +82,7 @@ for _, lsp in pairs(servers_with_defaults) do
   }
 end
 
-lspconfig['eslint'].setup {
+lspconfig.eslint.setup {
   on_attach = function(client, bufnr)
     on_attach(client, bufnr)
     vim.keymap.set('n', '<space>lef', function()
@@ -123,12 +122,24 @@ require('null-ls').setup {
   on_attach = on_attach
 }
 
-require('lspconfig').jsonls.setup {
+lspconfig.jsonls.setup {
   on_attach = on_attach,
   settings = {
     json = {
       schemas = require('schemastore').json.schemas(),
       validate = { enable = true },
+    },
+  },
+}
+
+lspconfig.yamlls.setup {
+  settings = {
+    yaml = {
+      schemaStore = {
+        enable = false,
+        url = "",
+      },
+      schemas = require('schemastore').yaml.schemas(),
     },
   },
 }
