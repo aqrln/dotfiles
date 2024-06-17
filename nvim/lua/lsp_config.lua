@@ -53,7 +53,7 @@ local on_attach = function(client, bufnr)
     vim.api.nvim_command('write')
   end, { buffer = bufnr, desc = "format and save" })
 
-  vim.keymap.set('n', '<space>lI', function()
+  vim.keymap.set('n', '<space>li', function()
     vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
   end, { buffer = bufnr, desc = "toggle inlay hints" })
 end
