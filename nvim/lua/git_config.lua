@@ -12,7 +12,8 @@ require('neogit').setup {
   disable_commit_confirmation = true,
 
   integrations = {
-    diffview = true
+    telescope = true,
+    diffview = true,
   },
 
   signs = {
