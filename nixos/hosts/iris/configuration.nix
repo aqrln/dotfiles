@@ -29,16 +29,6 @@ with lib;
       ../../home.nix
     ];
 
-  # The global useDHCP flag is deprecated, therefore explicitly set to false here.
-  # Per-interface useDHCP will be mandatory in the future, so this generated config
-  # replicates the default behaviour.
-  networking.useDHCP = false;
-  networking.interfaces.eth0.useDHCP = true;
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
   # Select internationalisation properties.
   # i18n.supportedLocales = [ "all" ];
   i18n.defaultLocale = "en_US.UTF-8";
@@ -56,9 +46,18 @@ with lib;
   # };
 
   users.users.aqrln = {
-    isNormalUser = true;
     description = "Alexey Orlenko";
     extraGroups = [ "wheel" "docker" ];
+
+    # simulate isNormalUser, but with an arbitrary UID
+    uid = 501;
+    isSystemUser = true;
+    group = "users";
+    createHome = true;
+    home = "/home/aqrln";
+    homeMode = "700";
+    useDefaultShell = true;
+
     packages = with pkgs; [
       deno
       flyctl
@@ -79,6 +78,32 @@ with lib;
 
       x-www-browser
     ];
+  };
+
+  # Users created by OrbStack don't have a password.
+  security.sudo.wheelNeedsPassword = false;
+
+  # This being `true` leads to a few nasty bugs, change at your own risk!
+  users.mutableUsers = false;
+
+  time.timeZone = "Europe/Berlin";
+
+  networking = {
+    dhcpcd.enable = false;
+    useDHCP = false;
+    useHostResolvConf = false;
+  };
+
+  systemd.network = {
+    enable = true;
+    networks."50-eth0" = {
+      matchConfig.Name = "eth0";
+      networkConfig = {
+        DHCP = "ipv4";
+        IPv6AcceptRA = true;
+      };
+      linkConfig.RequiredForOnline = "routable";
+    };
   };
 
   environment.systemPackages = with pkgs; [
@@ -141,7 +166,7 @@ with lib;
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "21.05"; # Did you read the comment?
+  system.stateVersion = "24.05"; # Did you read the comment?
 
   # As this is intended as a stadalone image, undo some of the minimal profile stuff
   environment.noXlibs = false;
