@@ -11,6 +11,8 @@ require('diffview').setup {
 require('neogit').setup {
   disable_commit_confirmation = true,
 
+  graph_style = "unicode",
+
   integrations = {
     telescope = true,
     diffview = true,
