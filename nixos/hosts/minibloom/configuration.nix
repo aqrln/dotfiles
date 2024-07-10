@@ -149,7 +149,7 @@
     man-pages
     neovim
     nil
-    nixfmt
+    nixfmt-rfc-style
     nixpkgs-fmt
     pinentry
     python3
