@@ -39,10 +39,7 @@
     "/crypto_keyfile.bin" = null;
   };
 
-  hardware.opengl = {
-    enable = true;
-    driSupport = true;
-  };
+  hardware.graphics.enable = true;
 
   networking.hostName = "minibloom"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
