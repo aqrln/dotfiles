@@ -229,25 +229,9 @@ return require('lazy').setup({
 
   "marilari88/neotest-vitest",
 
-  -- {
-  -- "folke/todo-comments.nvim",
-  --   dependencies = { "nvim-lua/plenary.nvim" },
-  --   opts = {
-  --     -- your configuration comes here
-  --     -- or leave it empty to use the default settings
-  --     -- refer to the configuration section below
-  --   }
-  -- }
-
-  -- {
-  --   'pwntester/octo.nvim',
-  --   dependencies = {
-  --     'nvim-lua/plenary.nvim',
-  --     'nvim-telescope/telescope.nvim',
-  --     'nvim-tree/nvim-web-devicons',
-  --   },
-  --   config = function ()
-  --     require('octo').setup()
-  --   end
-  -- },
+  {
+    "davidmh/mdx.nvim",
+    config = true,
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+  },
 })
