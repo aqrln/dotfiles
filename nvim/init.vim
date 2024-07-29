@@ -32,6 +32,7 @@ set expandtab
 
 set hidden
 set autowrite
+au FocusLost * silent! :wa
 
 set undofile
 
