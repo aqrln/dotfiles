@@ -49,12 +49,12 @@ require('dap-vscode-js').setup {
   adapters = { 'pwa-node', 'pwa-chrome', 'node-terminal' },
 }
 
-for _, language in ipairs({ 'javascript', 'typescript', 'javascriptreact', 'typescriptreact' }) do
+for _, language in ipairs({ 'javascript', 'javascriptreact' }) do
   dap.configurations[language] = {
     {
       type = "pwa-node",
       request = "launch",
-      name = "Launch file",
+      name = "Launch file with node",
       program = "${file}",
       cwd = "${workspaceFolder}",
     },
@@ -64,6 +64,28 @@ for _, language in ipairs({ 'javascript', 'typescript', 'javascriptreact', 'type
       name = "Attach",
       processId = require 'dap.utils'.pick_process,
       cwd = "${workspaceFolder}",
+    },
+  }
+end
+
+for _, language in ipairs({ 'typescript', 'typescriptreact' }) do
+  dap.configurations[language] = {
+    {
+      type = "pwa-node",
+      request = "launch",
+      name = "Launch file with tsx",
+      cwd = "${workspaceFolder}",
+      sourceMaps = true,
+      runtimeExecutable = "tsx",
+      args = { "${file}" },
+    },
+    {
+      type = "pwa-node",
+      request = "attach",
+      name = "Attach",
+      processId = require 'dap.utils'.pick_process,
+      cwd = "${workspaceFolder}",
+      sourceMaps = true,
     },
   }
 end
