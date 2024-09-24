@@ -26,10 +26,14 @@ fi
 
 export PATH="$HOME/bin:$PATH"
 
-source ~/.zprofile.local
-
-export ZPROFILE_SOURCED=true
-
 if [ -f ~/.orbstack/shell/init.zsh ]; then
     source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 fi
+
+if [ -f "$HOME/.zsh_kraft_completion" ]; then
+    source "$HOME/.zsh_kraft_completion"
+fi
+
+source ~/.zprofile.local
+
+export ZPROFILE_SOURCED=true
