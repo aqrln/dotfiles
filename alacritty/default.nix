@@ -13,7 +13,8 @@ in {
           # ./catppuccin_mocha.toml
           # ./kanagawa.toml
           # ./solarized_light.toml
-          ./gruvbox_dark.toml
+          #./gruvbox_dark.toml
+          ./gruvbox_light.toml
         ];
 
         font = {

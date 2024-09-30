@@ -18,12 +18,9 @@ set nowrap
 
 set mouse=a
 set termguicolors
-" colorscheme kanagawa
-" set bg=light
-" colorscheme solarized
-set bg=dark
+
+set bg=light
 colorscheme gruvbox
-" colorscheme catppuccin
 
 set shiftwidth=4
 set softtabstop=4
