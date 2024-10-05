@@ -3,7 +3,6 @@ lua require('lsp_config')
 lua require('dap_config')
 lua require('treesitter_config')
 lua require('telescope_config')
-lua require('git_config')
 lua require('ui_config')
 lua require('cmp_config')
 lua require('prettier_config')
@@ -21,6 +20,8 @@ set termguicolors
 
 set bg=light
 colorscheme gruvbox
+
+lua require('git_config')
 
 set shiftwidth=4
 set softtabstop=4
