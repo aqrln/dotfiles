@@ -2,6 +2,8 @@ if [[ -z $ZPROFILE_SOURCED ]]; then
     source ~/.zprofile
 fi
 
+unsetopt share_history
+
 export GPG_TTY=$(tty)
 export CLICOLOR=1
 export VISUAL=nvim
