@@ -18,11 +18,12 @@ in {
         ];
 
         font = {
-          size = if isDarwin then 14 else 11;
+          size = 10;
 
           normal = {
             # family = if isDarwin then "IosevkaTerm NF" else "IosevkaTerm Nerd Font";
-            family = "Inconsolata Nerd Font";
+            # family = "Inconsolata Nerd Font";
+            family = "FiraMono Nerd Font";
             style = if isDarwin then "Regular" else "Medium";
           };
 
@@ -40,7 +41,7 @@ in {
 
           offset = {
             x = 0;
-            y = -2;
+            y = 0;
           };
         };
 
