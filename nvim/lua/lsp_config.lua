@@ -39,8 +39,8 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>lwr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>lwl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
 
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>a', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'x', '<space>a', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'x', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
 
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>llr', '<cmd>LspRestart<CR>', opts)
@@ -156,7 +156,7 @@ vim.g.rustaceanvim = {
       vim.keymap.set("x", "K", function() vim.cmd.RustLsp { 'hover', 'range' } end, { buffer = bufnr })
       vim.keymap.set("n", "<space>e", function() vim.cmd.RustLsp('renderDiagnostic') end, { buffer = bufnr, desc = "diagnostic" })
       vim.keymap.set("n", "<space>E", function() vim.cmd.RustLsp('explainError') end, { buffer = bufnr, desc = "explain error" })
-      vim.keymap.set({"n", "x"}, "<space>a", function() vim.cmd.RustLsp('codeAction') end, { buffer = bufnr, desc = "code actions" })
+      vim.keymap.set({"n", "x"}, "<space>ca", function() vim.cmd.RustLsp('codeAction') end, { buffer = bufnr, desc = "code actions" })
 
       vim.keymap.set("n", "<space>K", function() vim.cmd.RustLsp("openDocs") end, { buffer = bufnr, desc = "open docs" })
       vim.keymap.set("n", "gp", function() vim.cmd.RustLsp("parentModule") end, { buffer = bufnr, desc = "parent module" })

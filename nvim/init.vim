@@ -1,3 +1,5 @@
+let mapleader = "\<Space>"
+
 lua require('plugins')
 lua require('lsp_config')
 lua require('dap_config')
@@ -76,8 +78,6 @@ augroup init
     autocmd FileType text       setlocal spell
     autocmd FileType typescript setlocal spell
 augroup END
-
-let mapleader = "\<Space>"
 
 " Switch between buffers
 nnoremap <silent> <C-n> :bn<CR>

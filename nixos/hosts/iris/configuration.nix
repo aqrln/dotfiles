@@ -121,7 +121,9 @@ with lib;
     man-pages
     man-pages-posix
     nil
+    openssl
     perl
+    pkg-config
     pinentry
     python3
     ripgrep
