@@ -58,9 +58,6 @@ return require('lazy').setup({
 
   'folke/neoconf.nvim',
 
-  -- TODO: deprecated, remove
-  -- 'folke/lsp-colors.nvim',
-
   { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
 
   'nvim-treesitter/playground',
