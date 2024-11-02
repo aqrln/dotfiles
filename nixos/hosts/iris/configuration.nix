@@ -130,6 +130,7 @@ with lib;
     wget
     zsh
     xorg.xauth
+    xpra
   ];
 
   programs.neovim = {
@@ -211,6 +212,10 @@ with lib;
       X11Forwarding = true;
     };
   };
+
+  programs.ssh.setXAuthLocation = lib.mkForce true;
+
+  services.xserver.desktopManager.xfce.enable = true;
 
   home-manager.users.aqrln.home.file.".gnupg/gpg-agent.conf".text =
     let
