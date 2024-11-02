@@ -1,12 +1,11 @@
 local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
--- config.color_scheme = 'catppuccin-mocha'
-config.color_scheme = 'GruvboxDark'
-config.font = wezterm.font 'Inconsolata'
-config.font_size = 16
-config.freetype_load_target = "Light"
--- config.freetype_load_flags = "NO_HINTING"
+config.color_scheme = 'GruvboxLight'
+config.font = wezterm.font 'FiraMono Nerd Font'
+config.font_size = 14
+config.freetype_load_target = "Normal"
+config.freetype_load_flags = "NO_HINTING"
 
 config.keys = {
   {
