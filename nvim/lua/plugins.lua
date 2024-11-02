@@ -41,9 +41,15 @@ return require('lazy').setup({
   -- use 'shaunsingh/solarized.nvim'
   'ishan9299/nvim-solarized-lua',
 
-  { 'ellisonleao/gruvbox.nvim', config = true },
+  {
+    'ellisonleao/gruvbox.nvim',
+    config = true
+  },
 
-  { "catppuccin/nvim", name = "catppuccin" },
+  {
+    "catppuccin/nvim",
+    name = "catppuccin"
+  },
 
   'bluz71/vim-nightfly-guicolors',
 
@@ -58,7 +64,10 @@ return require('lazy').setup({
 
   'folke/neoconf.nvim',
 
-  { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
+  {
+    'nvim-treesitter/nvim-treesitter',
+    build = ':TSUpdate'
+  },
 
   'nvim-treesitter/playground',
 
@@ -142,9 +151,15 @@ return require('lazy').setup({
 
   'mfussenegger/nvim-dap',
 
-  { "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } },
+  {
+    "rcarriga/nvim-dap-ui",
+    dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" }
+  },
 
-  { "mxsdev/nvim-dap-vscode-js", dependencies = { "mfussenegger/nvim-dap" } },
+  {
+    "mxsdev/nvim-dap-vscode-js",
+    dependencies = { "mfussenegger/nvim-dap" }
+  },
 
   {
     "microsoft/vscode-js-debug",
