@@ -269,9 +269,9 @@ return require('lazy').setup({
       provider = "copilot",
       auto_suggestions_provider = "copilot",
     },
-    -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
-    build = "nix-shell -p pkg-config openssl --run 'make BUILD_FROM_SOURCE=true'",
-    -- build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false" -- for windows
+    build = vim.fn.has("unix") and vim.fn.system("uname -s") == "Linux\n" and
+        vim.fn.system("grep -qi nixos /etc/os-release") == 0 and
+        "nix-shell -p pkg-config openssl --run 'make BUILD_FROM_SOURCE=true'" or "make BUILD_FROM_SOURCE=true",
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
       "stevearc/dressing.nvim",
