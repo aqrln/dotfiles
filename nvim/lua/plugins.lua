@@ -181,7 +181,7 @@ return require('lazy').setup({
 
   -- 'nvim-orgmode/orgmode',
 
-  'akinsho/org-bullets.nvim',
+  -- 'akinsho/org-bullets.nvim',
 
   'akinsho/git-conflict.nvim',
 
