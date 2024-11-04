@@ -61,6 +61,7 @@ with lib;
     packages = with pkgs; [
       deno
       flyctl
+      nil
       nodejs_latest
       nodejs_latest.pkgs."@prisma/language-server"
       nodejs_latest.pkgs.dockerfile-language-server-nodejs
@@ -121,7 +122,6 @@ with lib;
     jq
     man-pages
     man-pages-posix
-    nil
     openssl
     perl
     pkg-config
