@@ -112,6 +112,7 @@ with lib;
     file
     fzf
     gcc
+    gdb
     git
     gnumake
     gnupg
