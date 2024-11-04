@@ -26,6 +26,7 @@ with lib;
 
       <home-manager/nixos>
       ../../cachix.nix
+      ../../debug.nix
       ../../home.nix
     ];
 
@@ -113,7 +114,6 @@ with lib;
     file
     fzf
     gcc
-    gdb
     git
     gnumake
     gnupg
