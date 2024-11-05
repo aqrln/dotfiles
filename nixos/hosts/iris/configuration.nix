@@ -120,6 +120,7 @@ with lib;
     graphviz
     htop
     jq
+    lazydocker
     man-pages
     man-pages-posix
     openssl
