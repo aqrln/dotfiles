@@ -121,6 +121,7 @@ with lib;
     htop
     jq
     lazydocker
+    linuxKernel.packages.linux_6_11.perf
     man-pages
     man-pages-posix
     openssl
