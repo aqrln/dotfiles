@@ -9,13 +9,15 @@ in {
       enable = true;
 
       settings = {
-        "import" = [
-          # ./catppuccin_mocha.toml
-          # ./kanagawa.toml
-          # ./solarized_light.toml
-          #./gruvbox_dark.toml
-          ./gruvbox_light.toml
-        ];
+        general = {
+          "import" = [
+            # ./catppuccin_mocha.toml
+            # ./kanagawa.toml
+            # ./solarized_light.toml
+            #./gruvbox_dark.toml
+            ./gruvbox_light.toml
+          ];
+        };
 
         font = {
           size = 10;
