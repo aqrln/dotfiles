@@ -22,7 +22,14 @@
       yaml-language-server
     ];
 
-    programs.bash.enable = true;
+    programs.bash = {
+      enable = true;
+      initExtra = ''
+        if [ -f ~/dotfiles/bash/profile.local ]; then
+          source ~/dotfiles/bash/profile.local
+        fi
+      '';
+    };
 
     programs.direnv = {
       enable = true;
