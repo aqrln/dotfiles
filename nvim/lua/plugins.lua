@@ -266,7 +266,7 @@ return require('lazy').setup({
     lazy = false,
     version = false, -- set this if you want to always pull the latest change
     opts = {
-      provider = "copilot",
+      provider = "claude",
       auto_suggestions_provider = "copilot",
     },
     build = vim.fn.has("unix") and vim.fn.system("uname -s") == "Linux\n" and
