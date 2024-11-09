@@ -270,7 +270,7 @@ return require('lazy').setup({
       auto_suggestions_provider = "copilot",
     },
     build = vim.fn.has("unix") and vim.fn.system("uname -s") == "Linux\n" and
-        vim.fn.system("grep -qi nixos /etc/os-release") == 0 and
+        vim.fn.system("grep -qi nixos /etc/os-release; echo $?") == "0\n" and
         "nix-shell -p pkg-config openssl --run 'make BUILD_FROM_SOURCE=true'" or "make BUILD_FROM_SOURCE=true",
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
