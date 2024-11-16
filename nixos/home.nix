@@ -23,12 +23,12 @@
 
     programs.bash = {
       enable = true;
-      initExtra = ''
+      profileExtra = ''
         if [ -f ~/dotfiles/bash/profile.local ]; then
           source ~/dotfiles/bash/profile.local
         fi
       '';
-      bashrcExtra = ''
+      initExtra = ''
         source <(CARGO_COMPLETE=bash cargo +nightly)
       '';
     };
