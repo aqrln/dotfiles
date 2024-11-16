@@ -15,7 +15,6 @@
 
     home.packages = with pkgs; [
       lua-language-server
-      # ncdu
       nixfmt-rfc-style
       tailwindcss-language-server
       tree-sitter
@@ -28,6 +27,9 @@
         if [ -f ~/dotfiles/bash/profile.local ]; then
           source ~/dotfiles/bash/profile.local
         fi
+      '';
+      bashrcExtra = ''
+        source <(CARGO_COMPLETE=bash cargo +nightly)
       '';
     };
 
