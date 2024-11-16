@@ -249,6 +249,6 @@ with lib;
       };
     in
     ''
-    pinentry-program ${pinentry-mac}/bin/pinentry-mac
+      pinentry-program ${pinentry-mac}/bin/pinentry-mac
     '';
 }
