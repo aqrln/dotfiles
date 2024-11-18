@@ -221,20 +221,20 @@ return require('lazy').setup({
 
   'pest-parser/pest.vim',
 
-  -- 'github/copilot.vim',
-  {
-    'zbirenbaum/copilot.lua',
-    opts = {
-      filetypes = {
-        yaml = true,
-        markdown = true,
-        help = false,
-        gitcommit = true,
-        gitrebase = false,
-        ["."] = true,
-      },
-    },
-  },
+  'github/copilot.vim',
+  -- {
+  --   'zbirenbaum/copilot.lua',
+  --   opts = {
+  --     filetypes = {
+  --       yaml = true,
+  --       markdown = true,
+  --       help = false,
+  --       gitcommit = true,
+  --       gitrebase = false,
+  --       ["."] = true,
+  --     },
+  --   },
+  -- },
 
   'folke/neodev.nvim',
 
@@ -269,7 +269,7 @@ return require('lazy').setup({
       provider = "claude",
       auto_suggestions_provider = "copilot",
       behaviour = {
-        auto_suggestions = true,
+        -- auto_suggestions = true,
       },
     },
     build = (function()
@@ -287,7 +287,7 @@ return require('lazy').setup({
       "MunifTanjim/nui.nvim",
       --- The below dependencies are optional,
       "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
-      "zbirenbaum/copilot.lua",      -- for providers='copilot'
+      -- "zbirenbaum/copilot.lua",      -- for providers='copilot'
       {
         -- support for image pasting
         "HakonHarnes/img-clip.nvim",
