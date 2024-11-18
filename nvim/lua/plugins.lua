@@ -271,7 +271,7 @@ return require('lazy').setup({
     },
     build = vim.fn.has("unix") and vim.fn.system("uname -s") == "Linux\n" and
         vim.fn.system("grep -qi nixos /etc/os-release; echo $?") == "0\n" and
-        "nix-shell -p pkg-config openssl --run 'make BUILD_FROM_SOURCE=true'" or "make BUILD_FROM_SOURCE=true",
+        "nix-shell -p pkg-config openssl --run 'OPENSSL_STATIC=1 make BUILD_FROM_SOURCE=true'" or "make BUILD_FROM_SOURCE=true",
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
       "stevearc/dressing.nvim",
