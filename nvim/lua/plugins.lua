@@ -272,9 +272,14 @@ return require('lazy').setup({
         auto_suggestions = true,
       },
     },
-    build = vim.fn.has("unix") and vim.fn.system("uname -s") == "Linux\n" and
-        vim.fn.system("grep -qi nixos /etc/os-release; echo $?") == "0\n" and
-        "nix-shell -p pkg-config openssl --run 'OPENSSL_STATIC=1 make BUILD_FROM_SOURCE=true'" or "make BUILD_FROM_SOURCE=true",
+    build = (function()
+      if vim.fn.has("unix") and vim.fn.system("uname -s") == "Linux\n" and
+          vim.fn.system("grep -qi nixos /etc/os-release; echo $?") == "0\n" then
+        return "nix-shell -p pkg-config openssl --run 'OPENSSL_STATIC=1 make BUILD_FROM_SOURCE=true'"
+      else
+        return "make BUILD_FROM_SOURCE=true"
+      end
+    end)(),
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
       "stevearc/dressing.nvim",
