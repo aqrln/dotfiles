@@ -268,6 +268,9 @@ return require('lazy').setup({
     opts = {
       provider = "claude",
       auto_suggestions_provider = "copilot",
+      behaviour = {
+        auto_suggestions = true,
+      },
     },
     build = vim.fn.has("unix") and vim.fn.system("uname -s") == "Linux\n" and
         vim.fn.system("grep -qi nixos /etc/os-release; echo $?") == "0\n" and
