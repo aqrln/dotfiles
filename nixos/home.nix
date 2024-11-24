@@ -15,6 +15,7 @@
 
     home.packages = with pkgs; [
       lua-language-server
+      nil
       nixd
       nixfmt-rfc-style
       nodejs_latest.pkgs."@prisma/language-server"
