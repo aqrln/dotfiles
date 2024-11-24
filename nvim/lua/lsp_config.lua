@@ -67,7 +67,7 @@ local servers_with_defaults = {
   'gopls',
   'html',
   'lua_ls',
-  'nil_ls',
+  'nixd',
   'pest_ls',
   'prismals',
   'tailwindcss',

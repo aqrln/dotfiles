@@ -15,7 +15,11 @@
 
     home.packages = with pkgs; [
       lua-language-server
+      nixd
       nixfmt-rfc-style
+      nodejs_latest.pkgs."@prisma/language-server"
+      nodejs_latest.pkgs.dockerfile-language-server-nodejs
+      nodejs_latest.pkgs.vscode-langservers-extracted
       tailwindcss-language-server
       tree-sitter
       vtsls

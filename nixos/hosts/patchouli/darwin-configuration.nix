@@ -23,7 +23,6 @@
     just
     jq
     neovim
-    nil
     nixpkgs-fmt
     pgcli
     probe-rs
