@@ -1,0 +1,47 @@
+# https://github.com/alacritty/alacritty-theme/blob/master/themes/gruvbox_light.toml
+#
+# Copyright 2019-2023 indrajit
+# Copyright 2023-     The Alacritty Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# 	http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Colors (Gruvbox light)
+
+# Default colors
+[colors.primary]
+# hard contrast background = = '#f9f5d7'
+background = '#fbf1c7'
+# soft contrast background = = '#f2e5bc'
+foreground = '#3c3836'
+
+# Normal colors
+[colors.normal]
+black   = '#fbf1c7'
+red     = '#cc241d'
+green   = '#98971a'
+yellow  = '#d79921'
+blue    = '#458588'
+magenta = '#b16286'
+cyan    = '#689d6a'
+white   = '#7c6f64'
+
+# Bright colors
+[colors.bright]
+black   = '#928374'
+red     = '#9d0006'
+green   = '#79740e'
+yellow  = '#b57614'
+blue    = '#076678'
+magenta = '#8f3f71'
+cyan    = '#427b58'
+white   = '#3c3836'

@@ -203,21 +203,14 @@
   programs.alacritty = {
     enable = true;
     settings = {
-      "import" = [ ./gruvbox_dark.toml ];
-
-      # # preset 1:
-      # font = {
-      #   size = 10;
-      #   normal = {
-      #     family = "Iosevka Nerd Font";
-      #     style = "Medium";
-      #   };
-      # };
+      general = {
+        "import" = [ ./gruvbox_light.toml ];
+      };
 
       font = {
         size = 10;
         normal = {
-          family = "Inconsolata Nerd Font";
+          family = "Fira Mono Nerd Font";
           style = "Medium";
         };
       };
