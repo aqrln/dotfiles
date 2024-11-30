@@ -208,10 +208,10 @@
       };
 
       font = {
-        size = 10;
+        size = 9;
         normal = {
           family = "Fira Mono Nerd Font";
-          style = "Medium";
+          style = "Regular";
         };
       };
     };
