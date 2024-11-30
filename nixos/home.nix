@@ -14,6 +14,7 @@
     };
 
     home.packages = with pkgs; [
+      gitu
       lua-language-server
       nil
       nixd
