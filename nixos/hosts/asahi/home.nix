@@ -20,31 +20,31 @@
   home.packages = with pkgs; [
     fd
     fzf
+    gitu
     lua-language-server
     nil
+    nixd
+    nixfmt-rfc-style
     nodejs_latest
     nodejs_latest.pkgs."@prisma/language-server"
     nodejs_latest.pkgs.dockerfile-language-server-nodejs
     nodejs_latest.pkgs.pnpm
     nodejs_latest.pkgs.prettier
-    nodejs_latest.pkgs.typescript
-    nodejs_latest.pkgs.typescript-language-server
     nodejs_latest.pkgs.vscode-langservers-extracted
     nodejs_latest.pkgs.yarn
     tailwindcss-language-server
     tmux
+    tree-sitter
+    vtsls
     vscode-extensions.vadimcn.vscode-lldb.adapter
     yaml-language-server
 
     cargo-espflash
     probe-rs
 
-    # # It is sometimes useful to fine-tune packages, for example, by applying
-    # # overrides. You can do that directly here, just don't forget the
-    # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
-    # # fonts?
-    # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
-    (pkgs.nerdfonts.override { fonts = [ "Iosevka" "FiraMono" "Inconsolata" ]; })
+    nerd-fonts.fira-mono
+    nerd-fonts.inconsolata
+    nerd-fonts.iosevka
 
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
@@ -156,6 +156,8 @@
           printf '\e]133;A\e\\'
       }
       PROMPT_COMMAND=''${PROMPT_COMMAND:+$PROMPT_COMMAND; }prompt_marker
+
+      source <(CARGO_COMPLETE=bash cargo +nightly)
     '';
 
     profileExtra = ''
@@ -193,7 +195,10 @@
     };
   };
 
-  programs.zoxide.enable = true;
+  programs.zoxide = {
+    enable = true;
+    enableBashIntegration = true;
+  };
 
   programs.alacritty = {
     enable = true;
@@ -225,10 +230,40 @@
       main = {
         font = "Inconsolata Nerd Font:size=10";
         # dpi-aware = "yes";
-        include = "${pkgs.foot.themes}/share/foot/themes/gruvbox-dark";
+        include = "${pkgs.foot.themes}/share/foot/themes/gruvbox-light";
       };
       mouse = {
         hide-when-typing = "yes";
+      };
+    };
+  };
+
+
+  programs.atuin = {
+    enable = true;
+    enableBashIntegration = true;
+  };
+
+  programs.helix = {
+    enable = true;
+    settings = {
+      theme = "gruvbox_light";
+      keys.normal.space = {
+        o = "file_picker_in_current_buffer_directory";
+        w = ":w";
+      };
+    };
+    languages = {
+      language-server = {
+        rust-analyzer.config = {
+          check = {
+            command = "clippy";
+            features = "all";
+          };
+          cargo = {
+            features = "all";
+          };
+        };
       };
     };
   };
