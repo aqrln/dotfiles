@@ -208,7 +208,7 @@
       };
 
       font = {
-        size = 9;
+        size = 10;
         normal = {
           family = "Fira Mono Nerd Font";
           style = "Regular";
@@ -221,7 +221,7 @@
     enable = true;
     settings = {
       main = {
-        font = "Inconsolata Nerd Font:size=10";
+        font = "Fira Mono Nerd Font:size=10";
         # dpi-aware = "yes";
         include = "${pkgs.foot.themes}/share/foot/themes/gruvbox-light";
       };
