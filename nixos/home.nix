@@ -14,6 +14,7 @@
     };
 
     home.packages = with pkgs; [
+      clang-tools
       gitu
       lua-language-server
       nil
