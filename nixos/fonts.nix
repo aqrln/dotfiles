@@ -2,8 +2,8 @@
 
 {
   fonts.packages = with pkgs; [
-    iosevka-bin
-    (nerdfonts.override { fonts = [ "Inconsolata" "Iosevka" "IosevkaTerm" "FiraMono" ]; })
+    nerd-fonts.fira-mono
+    nerd-fonts.inconsolata
   ];
 
   fonts.fontconfig = {

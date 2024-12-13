@@ -141,7 +141,6 @@
     fzf
     gcc
     git
-    gnome.gnome-boxes
     gnumake
     gnupg
     htop
@@ -160,6 +159,7 @@
     virt-manager
     wget
     wl-clipboard
+    zed-editor
     zsh
   ];
 
