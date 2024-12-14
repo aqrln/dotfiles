@@ -14,6 +14,7 @@
     };
 
     home.packages = with pkgs; [
+      cargo-watch
       clang-tools
       gitu
       lua-language-server
