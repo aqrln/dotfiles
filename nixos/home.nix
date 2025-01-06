@@ -17,6 +17,7 @@
       cargo-watch
       clang-tools
       gitu
+      jujutsu
       lua-language-server
       nil
       nixd
