@@ -174,7 +174,7 @@ vim.g.rustaceanvim = {
     settings = {
       ['rust-analyzer'] = {
         check = {
-          command = "clippy",
+          -- command = "clippy",
           features = "all";
         },
         cargo = {
