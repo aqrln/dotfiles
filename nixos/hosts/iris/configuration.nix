@@ -124,6 +124,7 @@ with lib;
     fzf
     gcc
     git
+    ghostty.terminfo
     gnumake
     gnupg
     graphviz
