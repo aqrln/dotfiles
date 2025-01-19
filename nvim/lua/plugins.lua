@@ -315,4 +315,7 @@ return require('lazy').setup({
       },
     },
   }
+  },
+
+  'whiteinge/diffconflicts',
 })

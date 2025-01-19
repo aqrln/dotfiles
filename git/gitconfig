@@ -2,28 +2,43 @@
 
 [include]
 	path = ~/.gitconfig.local
+
 [pull]
 	rebase = true
+
 [commit]
 	gpgsign = true
+
 [apply]
 	whitespace = fix
+
 [alias]
 	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
 [core]
 	excludesfile = ~/.gitignore
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
 [merge]
 	conflictStyle = zdiff3
+
 [difftool]
 	prompt = false
+
 [mergetool]
 	prompt = false
+
+[mergetool "diffconflicts"]
+	cmd = nvim -c DiffConflicts "$MERGED" "$BASE" "$LOCAL" "$REMOTE"
+	trustExitCode = true
+
 [init]
 	defaultBranch = main
+
 [rerere]
 	enabled = true
