@@ -17,6 +17,7 @@
       cargo-watch
       clang-tools
       gitu
+      glsl_analyzer
       jujutsu
       lua-language-server
       nil
