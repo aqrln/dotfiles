@@ -314,8 +314,17 @@ return require('lazy').setup({
         ft = { "markdown", "Avante" },
       },
     },
-  }
   },
 
   'whiteinge/diffconflicts',
+
+  'rafikdraoui/jj-diffconflicts',
+
+  {
+    "julienvincent/hunk.nvim",
+    cmd = { "DiffEditor" },
+    config = function()
+      require("hunk").setup()
+    end,
+  },
 })
