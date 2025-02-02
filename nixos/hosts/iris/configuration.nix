@@ -40,6 +40,7 @@ with lib;
       /etc/nixos/orbstack.nix
 
       <home-manager/nixos>
+      ../../../alacritty
       ../../cachix.nix
       ../../debug.nix
       ../../home.nix
