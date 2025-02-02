@@ -15,6 +15,7 @@ let
   xstartup = pkgs.writeShellApplication {
     name = "xstartup";
     text = ''
+      ${pkgs.xorg.xrandr}/bin/xrandr --dpi 192
       ${pkgs.plasma-workspace}/bin/startplasma-x11
     '';
   };
