@@ -113,11 +113,6 @@ lspconfig.eslint.setup {
       '.git'
     )(fname)
   end,
-  settings = {
-    experimental = {
-      useFlatConfig = true,
-    }
-  },
 }
 
 require('null-ls').setup {
