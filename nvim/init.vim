@@ -39,6 +39,8 @@ set undofile
 set splitbelow
 set splitright
 
+set list
+
 set path+=**
 set wildignore=*.o,*.pyc,*.class,*/.git/*,*/node_modules/*,.DS_Store
 
