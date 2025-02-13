@@ -84,7 +84,7 @@ with lib;
       nodejs_latest.pkgs.yarn
       rustup
       turso-cli
-      vscode-extensions.vadimcn.vscode-lldb.adapter
+      # vscode-extensions.vadimcn.vscode-lldb.adapter
       xdg-utils
       yaml-language-server
 
