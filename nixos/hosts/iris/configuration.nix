@@ -89,7 +89,7 @@ with lib;
       yaml-language-server
 
       x-www-browser
-      vnc
+      # vnc
     ];
   };
 
