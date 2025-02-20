@@ -19,6 +19,7 @@
       gitu
       glsl_analyzer
       jujutsu
+      lazydocker
       lua-language-server
       nil
       nixd

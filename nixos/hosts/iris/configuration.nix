@@ -132,7 +132,6 @@ with lib;
     graphviz
     htop
     jq
-    lazydocker
     linuxKernel.packages.linux_6_12.perf
     man-pages
     man-pages-posix
