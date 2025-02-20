@@ -7,7 +7,7 @@ require('nvim-treesitter.configs').setup {
     'dockerfile', 'dot', 'fish', 'git_config', 'git_rebase', 'gitattributes', 'gitcommit', 'gitignore',
     'glsl', 'gn', 'gnuplot', 'go', 'gosum', 'gpg', 'graphql', 'haskell', 'hcl', 'html', 'http', 'ini',
     'javascript', 'jq', 'jsdoc', 'json', 'jsonc', 'just', 'kdl', 'latex', 'linkerscript', 'llvm', 'lua',
-    'make', 'markdown', 'markdown_inline', 'nix', 'org', 'prisma', 'proto', 'python', 'query', 'regex',
+    'make', 'markdown', 'markdown_inline', 'nix', 'prisma', 'proto', 'python', 'query', 'regex',
     'rust', 'scss', 'sql', 'tmux', 'toml', 'tsx', 'typescript', 'vim', 'vimdoc', 'wgsl', 'yaml', 'zig',
   },
   sync_install = false,
@@ -24,7 +24,7 @@ require('nvim-treesitter.configs').setup {
     -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
     -- Using this option may slow down your editor, and you may see some duplicate highlights.
     -- Instead of true it can also be a list of languages
-    additional_vim_regex_highlighting = {'org'},
+    additional_vim_regex_highlighting = {},
   },
 
   indent = {
