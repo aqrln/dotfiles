@@ -44,9 +44,14 @@ vim.keymap.set('n', '<space>dvS', function() widgets.sidebar(widgets.sessions).o
 vim.keymap.set('n', '<space>du', function() dapui.toggle() end, { desc = "toggle dap ui" })
 vim.keymap.set({ 'n', 'v' }, '<space>de', function() dapui.eval() end, { desc = "dap ui eval" })
 
-require('dap-vscode-js').setup {
-  debugger_path = vim.fn.stdpath('data') .. '/lazy/vscode-js-debug',
-  adapters = { 'pwa-node', 'pwa-chrome', 'node-terminal' },
+dap.adapters["pwa-node"] = {
+  type = "server",
+  host = "localhost",
+  port = "${port}",
+  executable = {
+    command = "node",
+    args = {vim.fn.expand("~/.local/share/nvim/lazy/vscode-js-debug/dist/src/dapDebugServer.js"), "${port}"},
+  }
 }
 
 for _, language in ipairs({ 'javascript', 'javascriptreact' }) do
