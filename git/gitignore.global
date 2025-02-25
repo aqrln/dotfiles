@@ -5,3 +5,5 @@
 
 # magit-forge
 forge-database.sqlite
+
+.aider*
