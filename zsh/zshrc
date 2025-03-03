@@ -65,4 +65,8 @@ if type zoxide &>/dev/null; then
   eval "$(zoxide init zsh)"
 fi
 
+if type op &>/dev/null; then
+  eval "$(op completion zsh)"
+fi
+
 [[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
