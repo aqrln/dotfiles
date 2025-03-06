@@ -115,6 +115,7 @@
     extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
     packages = with pkgs; [
       firefox
+      ghostty
       rustup
       nodejs_latest
       nodejs_latest.pkgs.dockerfile-language-server-nodejs
@@ -123,6 +124,7 @@
       nodejs_latest.pkgs."@prisma/language-server"
       nodejs_latest.pkgs.typescript-language-server
       nodejs_latest.pkgs.vscode-langservers-extracted
+      zed-editor
     ];
   };
 
