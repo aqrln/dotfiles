@@ -11,6 +11,7 @@
 
     home.sessionVariables = {
       EDITOR = "nvim";
+      JJ_CONFIG = "$HOME/dotfiles/jj";
     };
 
     home.packages = with pkgs; [
