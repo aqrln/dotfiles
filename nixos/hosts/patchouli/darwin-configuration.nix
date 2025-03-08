@@ -18,7 +18,6 @@
     fx
     fzf
     git
-    # git-branchless
     htop
     just
     jq
@@ -28,9 +27,7 @@
     probe-rs
     ripgrep
     rust-analyzer-unwrapped
-    tailscale
     tmux
-    # visidata
     wget
     xplr
     zoxide
@@ -52,7 +49,10 @@
   # nix.package = pkgs.nix;
   nixpkgs.config.allowUnfree = true;
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   # nix.settings.sandbox = true;
 
   nix.gc = {
