@@ -12,20 +12,20 @@ let
     '';
   };
 
-  xstartup = pkgs.writeShellApplication {
-    name = "xstartup";
-    text = ''
-      ${pkgs.xorg.xrandr}/bin/xrandr --dpi 192
-      ${pkgs.plasma-workspace}/bin/startplasma-x11
-    '';
-  };
+  # xstartup = pkgs.writeShellApplication {
+  #   name = "xstartup";
+  #   text = ''
+  #     ${pkgs.xorg.xrandr}/bin/xrandr --dpi 192
+  #     ${pkgs.plasma-workspace}/bin/startplasma-x11
+  #   '';
+  # };
 
-  vnc = pkgs.writeShellApplication {
-    name = "vnc";
-    text = ''
-      vncserver -vgl -xstartup ${xstartup}/bin/xstartup -geometry 3024x1890
-    '';
-  };
+  # vnc = pkgs.writeShellApplication {
+  #   name = "vnc";
+  #   text = ''
+  #     vncserver -vgl -xstartup ${xstartup}/bin/xstartup -geometry 3024x1890
+  #   '';
+  # };
 
 in
 
@@ -232,8 +232,8 @@ with lib;
 
   programs.ssh.setXAuthLocation = lib.mkForce true;
 
-  services.xserver.desktopManager.plasma5.enable = true;
-  programs.turbovnc.ensureHeadlessSoftwareOpenGL = true;
+  # services.xserver.desktopManager.plasma5.enable = true;
+  # programs.turbovnc.ensureHeadlessSoftwareOpenGL = true;
 
   home-manager.users.aqrln.home.file.".gnupg/gpg-agent.conf".text =
     let
