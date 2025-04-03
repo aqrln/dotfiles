@@ -1,5 +1,3 @@
-if [[ ":$FPATH:" != *":$HOME/.zsh/completions:"* ]]; then export FPATH="$HOME/.zsh/completions:$FPATH"; fi
-
 if [[ -z $ZPROFILE_SOURCED ]]; then
     source ~/.zprofile
 fi
@@ -27,33 +25,15 @@ alias docker-vm-shell="docker run -it --rm --privileged --pid=host justincormack
 
 bindkey -e
 
+source ~/dotfiles/zsh/lib/completions.zsh
 source ~/dotfiles/zsh/lib/iterm.zsh
 source ~/dotfiles/zsh/lib/update.zsh
 source ~/dotfiles/zsh/lib/wsl.zsh
 
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
-  autoload -Uz compinit
-  compinit
-fi
+setup_completions
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files'
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$("$HOME/mambaforge/bin/conda" 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "$HOME/mambaforge/etc/profile.d/conda.sh" ]; then
-        . "$HOME/mambaforge/etc/profile.d/conda.sh"
-    else
-        export PATH="$HOME/mambaforge/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
 if type starship &>/dev/null; then
   eval "$(starship init zsh)"
@@ -72,3 +52,7 @@ if type op &>/dev/null; then
 fi
 
 [[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
+
+# Enable profiling only when ZPROF=1 is set
+# Usage: ZPROF=1 zsh -i -c exit
+[[ $ZPROF == 1 ]] && zprof
