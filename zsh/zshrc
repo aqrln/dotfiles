@@ -1,3 +1,5 @@
+if [[ ":$FPATH:" != *":$HOME/.zsh/completions:"* ]]; then export FPATH="$HOME/.zsh/completions:$FPATH"; fi
+
 if [[ -z $ZPROFILE_SOURCED ]]; then
     source ~/.zprofile
 fi

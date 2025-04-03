@@ -13,7 +13,6 @@
   environment.systemPackages = with pkgs; [
     act
     bun
-    deno
     fd
     fx
     fzf

@@ -32,6 +32,10 @@ if [ -f "$HOME/.zsh_kraft_completion" ]; then
     source "$HOME/.zsh_kraft_completion"
 fi
 
+if [ -f "$HOME/.deno/env" ]; then
+    source "$HOME/.deno/env"
+fi
+
 source ~/.zprofile.local
 
 export ZPROFILE_SOURCED=true
