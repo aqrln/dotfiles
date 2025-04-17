@@ -1,0 +1,5 @@
+# Symlinks added by OrbStack
+/completions/docker.fish
+/completions/kubectl.fish
+
+/fish_variables
