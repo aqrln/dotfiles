@@ -2,4 +2,7 @@
 /completions/docker.fish
 /completions/kubectl.fish
 
+# Generated
+/completions/op.fish
+
 /fish_variables
