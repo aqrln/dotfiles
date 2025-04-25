@@ -70,15 +70,16 @@ augroup init
     autocmd BufRead,BufNewFile .envrc      set filetype=bash
     autocmd BufRead,BufNewFile *.wat       set filetype=wast
 
-    autocmd FileType gitcommit  setlocal spell
-    autocmd FileType html       setlocal spell
-    autocmd FileType markdown   setlocal spell
-    autocmd FileType plaintex   setlocal spell
-    autocmd FileType rst        setlocal spell
-    autocmd FileType rust       setlocal spell
-    autocmd FileType tex        setlocal spell
-    autocmd FileType text       setlocal spell
-    autocmd FileType typescript setlocal spell
+    autocmd FileType gitcommit     setlocal spell
+    autocmd FileType html          setlocal spell
+    autocmd FileType jjdescription setlocal spell
+    autocmd FileType markdown      setlocal spell
+    autocmd FileType plaintex      setlocal spell
+    autocmd FileType rst           setlocal spell
+    autocmd FileType rust          setlocal spell
+    autocmd FileType tex           setlocal spell
+    autocmd FileType text          setlocal spell
+    autocmd FileType typescript    setlocal spell
 augroup END
 
 " Switch between buffers
