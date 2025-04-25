@@ -88,6 +88,6 @@ end
 function update_completions
     __update_show_header "Updating completions"
     if command -v op &>/dev/null
-        op completion fish > fish/completions/op.fish
+        op completion fish > ~/dotfiles/fish/completions/op.fish
     end
 end
