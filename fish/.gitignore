@@ -1,6 +1,7 @@
 # Symlinks added by OrbStack
 /completions/docker.fish
 /completions/kubectl.fish
+/completions/orbctl.fish
 
 # Generated
 /completions/op.fish
