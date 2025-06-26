@@ -6,4 +6,7 @@
 # Generated
 /completions/op.fish
 
+# Local symlink to `./x.py` completions for Rust
+/completions/rust-x.fish
+
 /fish_variables
