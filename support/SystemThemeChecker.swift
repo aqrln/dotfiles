@@ -1,10 +1,13 @@
 import AppKit
 
-switch NSAppearance.currentDrawing().name {
-case .aqua, .vibrantLight:
+let appearanceName: NSAppearance.Name = NSAppearance.currentDrawing().name
+
+switch appearanceName {
+case .aqua, .vibrantLight, .accessibilityHighContrastAqua, .accessibilityHighContrastVibrantLight:
     print("light")
-case .darkAqua, .vibrantDark:
+case .darkAqua, .vibrantDark, .accessibilityHighContrastDarkAqua,
+    .accessibilityHighContrastVibrantDark:
     print("dark")
 default:
-    print("unknown")
+    fatalError("unknown NSAppearance.Name variant \(appearanceName)")
 }
