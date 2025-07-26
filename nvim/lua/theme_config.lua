@@ -50,14 +50,19 @@ function M.toggle_theme()
     M.set_theme(new_theme, false)
 end
 
+function M.get_available_themes()
+    local available = {}
+    for k, _ in pairs(CONFIG.themes) do
+        table.insert(available, k)
+    end
+    return available
+end
+
 function M.set_theme(theme, silent)
     local theme_config = CONFIG.themes[theme]
 
     if not theme_config then
-        local available = {}
-        for k, _ in pairs(CONFIG.themes) do
-            table.insert(available, k)
-        end
+        local available = M.get_available_themes()
         print("Invalid theme: " .. theme .. ". Available themes: " .. table.concat(available, ", "))
         return
     end
@@ -121,7 +126,7 @@ vim.api.nvim_create_user_command("ThemeSet", function(opts)
 end, {
     nargs = 1,
     complete = function()
-        return { "light", "dark" }
+        return M.get_available_themes()
     end,
     desc = "Set theme to light or dark"
 })
