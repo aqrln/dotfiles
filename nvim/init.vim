@@ -13,15 +13,13 @@ lua require('autopairs_config')
 " lua require('orgmode_config')
 lua require('neotest_config')
 lua require('neovide_config')
+lua require('theme_config')
 
 set number
 set nowrap
 
 set mouse=a
 set termguicolors
-
-set bg=light
-colorscheme gruvbox
 
 lua require('git_config')
 
