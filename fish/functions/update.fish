@@ -25,7 +25,7 @@ function update_nix
         __update_show_header "Updating Darwin with Nix"
         nix-channel --update
         sudo nix-channel --update
-        darwin-rebuild switch
+        sudo darwin-rebuild switch
     end
 end
 
