@@ -75,7 +75,13 @@ function update_npm
     if command -v npm &>/dev/null && string match -qr "^$HOME" (which npm)
         __update_show_header "Updating npm packages"
         npm update -g
-        npm i -g prettier@latest vscode-langservers-extracted@latest @prisma/language-server@dev @vtsls/language-server@latest
+        npm i -g \
+            prettier@latest \
+            vscode-langservers-extracted@latest \
+            @prisma/language-server@dev \
+            @vtsls/language-server@latest \
+            mcp-remote@latest \
+            @upstash/context7-mcp@latest
     end
 end
 
