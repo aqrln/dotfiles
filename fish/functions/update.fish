@@ -76,6 +76,7 @@ function update_npm
         __update_show_header "Updating npm packages"
         npm update -g
         npm i -g \
+            corepack@latest \
             prettier@latest \
             vscode-langservers-extracted@latest \
             @prisma/language-server@dev \
