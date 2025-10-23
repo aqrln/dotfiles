@@ -53,6 +53,8 @@ return require('lazy').setup({
 
   'bluz71/vim-nightfly-guicolors',
 
+  'navarasu/onedark.nvim',
+
   {
     'ggandor/leap.nvim',
     config = function()
