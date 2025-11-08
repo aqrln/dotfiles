@@ -29,5 +29,8 @@ merge-tool-edits-conflict-markers = true
 program = "nvim"
 merge-args = ["-c", "DiffEditor $left $right $output"]
 
+[templates]
+git_push_bookmark = '"aqrln-" ++ change_id.short()'
+
 # [ui]
 # diff-editor = ["nvim", "-c", "DiffEditor $left $right $output"]
