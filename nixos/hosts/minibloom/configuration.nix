@@ -5,21 +5,20 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [
-      <home-manager/nixos>
-      <nixos-hardware/common/gpu/intel>
-      <nixos-hardware/common/pc>
-      <nixos-hardware/common/pc/ssd>
-      ./hardware-configuration.nix
-      ../../cachix.nix
-      ../../home.nix
-      # ../../sway.nix
-      # ../../emacs.nix
-      ../../../alacritty
-      ../../debug.nix
-      ../../fonts.nix
-    ];
+  imports = [
+    <home-manager/nixos>
+    <nixos-hardware/common/gpu/intel>
+    <nixos-hardware/common/pc>
+    <nixos-hardware/common/pc/ssd>
+    ./hardware-configuration.nix
+    ../../cachix.nix
+    ../../home.nix
+    # ../../sway.nix
+    # ../../emacs.nix
+    ../../../alacritty
+    ../../debug.nix
+    ../../fonts.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -112,13 +111,17 @@
   users.users.aqrln = {
     isNormalUser = true;
     description = "Alexey Orlenko";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "libvirtd"
+    ];
     packages = with pkgs; [
       firefox
       ghostty
       rustup
       nodejs_latest
-      nodejs_latest.pkgs.dockerfile-language-server-nodejs
+      dockerfile-language-server
       nodejs_latest.pkgs.pnpm
       nodejs_latest.pkgs.prettier
       nodejs_latest.pkgs."@prisma/language-server"
@@ -212,7 +215,10 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "22.11"; # Did you read the comment?
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   virtualisation.libvirtd.enable = true;
 

@@ -17,6 +17,7 @@
     home.packages = with pkgs; [
       cargo-watch
       clang-tools
+      dockerfile-language-server
       gitu
       glsl_analyzer
       jujutsu
@@ -26,7 +27,6 @@
       nixd
       nixfmt-rfc-style
       # nodejs_latest.pkgs."@prisma/language-server"
-      nodejs_latest.pkgs.dockerfile-language-server-nodejs
       nodejs_latest.pkgs.vscode-langservers-extracted
       sccache
       tailwindcss-language-server

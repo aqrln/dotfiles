@@ -23,7 +23,7 @@
     neovim
     nixpkgs-fmt
     pgcli
-    probe-rs
+    probe-rs-tools
     ripgrep
     rust-analyzer-unwrapped
     tmux

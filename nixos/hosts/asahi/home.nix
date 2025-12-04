@@ -189,7 +189,7 @@
 
   programs.starship = {
     enable = true;
-    settings =  {
+    settings = {
       character.success_symbol = "[\\$](bold green)";
       character.error_symbol = "[\\$](bold red)";
     };
@@ -230,7 +230,6 @@
       };
     };
   };
-
 
   # programs.atuin = {
   #   enable = true;

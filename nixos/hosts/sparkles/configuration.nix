@@ -5,18 +5,17 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [
-      <home-manager/nixos>
-      ./hardware-configuration.nix
-      ../../cachix.nix
-      ../../embedded-dev.nix
-      ../../home.nix
-      # ../../sway.nix
-      # ../../emacs.nix
-      ../../fonts.nix
-      ../../../alacritty
-    ];
+  imports = [
+    <home-manager/nixos>
+    ./hardware-configuration.nix
+    ../../cachix.nix
+    ../../embedded-dev.nix
+    ../../home.nix
+    # ../../sway.nix
+    # ../../emacs.nix
+    ../../fonts.nix
+    ../../../alacritty
+  ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -103,7 +102,10 @@
   users.users.aqrln = {
     isNormalUser = true;
     description = "Alexey Orlenko";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     packages = with pkgs; [
       firefox
       rustup
@@ -112,7 +114,6 @@
       cargo-show-asm
       cargo-watch
       nodejs_latest
-      nodejs_latest.pkgs.dockerfile-language-server-nodejs
       nodejs_latest.pkgs.pnpm
       nodejs_latest.pkgs.prettier
       nodejs_latest.pkgs."@prisma/language-server"
@@ -204,7 +205,10 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "22.11"; # Did you read the comment?
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   virtualisation.docker.enable = true;
   virtualisation.docker.rootless = {
@@ -218,4 +222,3 @@
     dev.enable = true;
   };
 }
-
