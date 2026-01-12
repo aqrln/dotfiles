@@ -1,9 +1,3 @@
-if status is-interactive
-    if command -v direnv &>/dev/null
-        direnv hook fish | source
-    end
+fish_add_path -pP ~/bin
 
-    if command -v zoxide &>/dev/null
-        zoxide init fish | source
-    end
-end
+set -gx JJ_CONFIG ~/dotfiles/jj
