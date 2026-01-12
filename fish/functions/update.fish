@@ -7,6 +7,7 @@ function update
     update_npm
     update_deno
     update_rudy_lldb_client
+    update_go_pkgs
 
     update_completions
 end
@@ -104,4 +105,9 @@ function update_rudy_lldb_client
     __update_show_header "Updating rudy-lldb client"
     mkdir -p ~/.lldb
     curl https://raw.githubusercontent.com/samscott89/rudy/refs/heads/main/rudy-lldb/python/rudy_lldb.py -o ~/.lldb/rudy_lldb.py
+end
+
+function update_go_pkgs
+    __update_show_header "Updating Go packages"
+    go install github.com/Dicklesworthstone/beads_viewer/cmd/bv@latest
 end
