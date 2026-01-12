@@ -87,11 +87,6 @@
     programs.helix = {
       enable = true;
       settings = {
-        theme = "gruvbox_light";
-        keys.normal.space = {
-          o = "file_picker_in_current_buffer_directory";
-          w = ":w";
-        };
       };
       languages = {
         language-server = {
