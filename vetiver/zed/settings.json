@@ -1,0 +1,94 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "theme": "Gruvbox Dark",
+  "use_system_path_prompts": false,
+  "which_key": {
+    "delay_ms": 0,
+    "enabled": true,
+  },
+  "colorize_brackets": true,
+  "sticky_scroll": {
+    "enabled": true,
+  },
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": false,
+  },
+  "features": {
+    "edit_prediction_provider": "zed",
+  },
+  "edit_predictions": {
+    "disabled_globs": [".env*", "*.env"],
+    "mode": "subtle",
+  },
+  "vim_mode": true,
+  "helix_mode": false,
+  "ui_font_size": 13,
+  "agent_ui_font_size": 13.0,
+  "agent_buffer_font_size": 13.0,
+  "buffer_font_size": 13.0,
+  "buffer_font_family": "Fira Mono",
+  "buffer_line_height": "standard",
+  // "unstable.ui_density": "compact",
+  "project_panel": {
+    "entry_spacing": "standard",
+    "hide_root": true,
+  },
+  "terminal": {
+    "line_height": "standard",
+    "shell": {
+      "program": "fish",
+    },
+  },
+  "vim": {
+    "use_system_clipboard": "never",
+  },
+  "cursor_blink": false,
+  // "scroll_beyond_last_line": "off",
+  "use_system_prompts": false,
+  "tab_bar": {
+    "show": true,
+  },
+  "scrollbar": {
+    // "show": "never"
+  },
+  "pane_split_direction_horizontal": "down",
+  "pane_split_direction_vertical": "right",
+  "file_types": {
+    "Dockerfile": ["Dockerfile*", "*.Dockerfile", "*.dockerfile"],
+    "Markdown": ["*.md", "*.mdc"],
+  },
+  "diagnostics": {
+    "inline": {
+      "enabled": true,
+    },
+  },
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": {
+        "check": {
+          // "command": "clippy",
+          // "target": "wasm32-unknown-unknown",
+          "features": "all",
+        },
+        "cargo": {
+          // "target": "wasm32-unknown-unknown",
+          "features": "all",
+          "targetDir": true,
+        },
+        "hover": {
+          "memoryLayout": {
+            "niches": true,
+          },
+        },
+      },
+    },
+  },
+}

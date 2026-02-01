@@ -1,0 +1,13 @@
+[general]
+import = [
+  "themes/gruvbox_dark.toml"
+]
+
+[font]
+size = 9.25
+offset.y = -1
+normal.family = "Fira Mono"
+
+[window]
+startup_mode = "Maximized"
+decorations = "None"

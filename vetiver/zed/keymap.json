@@ -1,0 +1,68 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    },
+  },
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      "space": null,
+      "space b": "tab_switcher::ToggleAll",
+      "space shift-b": "editor::ToggleTabBar",
+      "space d": "diagnostics::Deploy",
+      "space f": "file_finder::Toggle",
+      // "space e": "workspace::ToggleLeftDock",
+      // "space /": "workspace::NewSearch",
+      "space t": "workspace::NewCenterTerminal",
+      "space c": "pane::CloseActiveItem",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == visual && !VimWaiting && !VimObject",
+    "bindings": {
+      "shift-s": "vim::PushAddSurrounds",
+      // "shift-j": "editor::MoveLineDown",
+      // "shift-k": "editor::MoveLineUp"
+    },
+  },
+  {
+    "context": "Dock || Editor || Terminal",
+    "bindings": {
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
+    },
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "alt-b": ["terminal::SendText", "\u001bb"],
+      "alt-d": ["terminal::SendText", "\u001bd"],
+      "alt-f": ["terminal::SendText", "\u001bf"],
+      "alt-l": ["terminal::SendText", "\u001bl"],
+      "alt-q": ["terminal::SendText", "\u001bq"],
+      "ctrl-shift-h": ["terminal::SendText", "\u0008"],
+      "ctrl-shift-j": ["terminal::SendText", "\u000a"],
+      "ctrl-shift-k": ["terminal::SendText", "\u000b"],
+      "ctrl-shift-l": ["terminal::SendText", "\u000c"],
+      "ctrl-space b": "tab_switcher::Toggle",
+      "ctrl-space shift-b": "editor::ToggleTabBar",
+    },
+  },
+]
