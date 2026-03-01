@@ -1,4 +1,5 @@
 alias hx="helix"
+alias zed="zeditor"
 
 set -gx VISUAL helix
 set -gx EDITOR helix
