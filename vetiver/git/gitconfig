@@ -8,3 +8,5 @@
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICJNVFYoy4BuuFkv3jqiFzti+IkGA0dUW0DnJr6dxl+T
 	email = alex@aqrln.net
 	name = Oleksii Orlenko
+[init]
+	defaultBranch = main
