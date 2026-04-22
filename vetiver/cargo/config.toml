@@ -1,3 +1,2 @@
 [target.x86_64-unknown-linux-gnu]
-linker = "clang"
-rustflags = ["-Ctarget-cpu=native", "-Clink-arg=--ld-path=wild"]
+rustflags = ["-Ctarget-cpu=native"]
