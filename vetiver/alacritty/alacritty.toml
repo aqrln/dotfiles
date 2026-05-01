@@ -4,9 +4,9 @@ import = [
 ]
 
 [font]
-size = 9.25
+size = 12
 offset.y = -1
-normal.family = "Fira Mono"
+normal.family = "Fantasque Sans Mono"
 
 [window]
 startup_mode = "Maximized"
