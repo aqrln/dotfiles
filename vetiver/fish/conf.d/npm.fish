@@ -1,2 +1,2 @@
-set -x NPM_PACKAGES ~/.local/share/npm-packages
-fish_add_path --path "$NPM_PACKAGES/bin"
+set -x NPM_CONFIG_PREFIX ~/.local
+fish_add_path -pP ~/.local/bin
