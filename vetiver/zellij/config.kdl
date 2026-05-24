@@ -264,7 +264,8 @@ web_client {
 // Choose the theme that is specified in the themes section.
 // Default: default
 // 
-theme "gruvbox-dark"
+// theme "gruvbox-dark"
+theme "adwaita-dark"
  
 // Choose the base input mode of zellij.
 // Default: normal
@@ -513,3 +514,33 @@ support_kitty_keyboard_protocol false
 // can be useful for removing wrappers around commands
 // Note: be sure to escape backslashes and similar characters properly
 // post_command_discovery_hook "echo $RESURRECT_COMMAND | sed <your_regex_here>"
+
+themes {
+    adwaita-dark {
+        fg "#ffffff"
+        bg "#1e1e1e"
+        black "#241f31"
+        red "#c01c28"
+        green "#2ec27e"
+        yellow "#f5c211"
+        blue "#1e78e4"
+        magenta "#9841bb"
+        cyan "#0ab9dc"
+        white "#c0bfbc"
+        orange "#ff7800"
+    }
+    
+    adwaita-light {
+        fg "#000000"
+        bg "#ffffff"
+        black "#241f31"
+        red "#c01c28"
+        green "#2ec27e"
+        yellow "#f5c211"
+        blue "#1e78e4"
+        magenta "#9841bb"
+        cyan "#0ab9dc"
+        white "#c0bfbc"
+        orange "#ff7800"
+    }
+}

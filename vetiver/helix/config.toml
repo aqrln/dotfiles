@@ -1,4 +1,5 @@
-theme = "gruvbox_dark_hard"
+# theme = "gruvbox_dark_hard"
+theme = "adwaita-dark"
 editor.shell = ["fish", "-c"]
 
 [keys.normal]
